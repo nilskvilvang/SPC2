@@ -40,3 +40,15 @@ kbl(versjon) %>%
 
 
 
+
+<!--chapter:end:index.Rmd-->
+
+# The pool of tears
+
+
+<!--chapter:end:02-tears.Rmd-->
+
+# A caucus-race and a long tale
+
+<!--chapter:end:03-race.Rmd-->
+
