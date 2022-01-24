@@ -1,0 +1,22 @@
+"0",""
+"0","## Dette er ikke brukt"
+"0","## Importerer excel-fil"
+"0",""
+"0","prepost_eksempel <- as_tibble(read_excel(""prepost_eksempel.xlsx""))"
+"2","New names:
+* `` -> ...2
+* `` -> ...3
+* `` -> ...5
+* `` -> ...6
+* `` -> ...9
+"
+"0","## Rydder vekk kolonner og rader fra excel-importen som ikke er nødvendige"
+"0",""
+"0","prepost_eksempel <- subset (prepost_eksempel, select = -1)"
+"0","prepost_eksempel <- prepost_eksempel[-c(13,14,15,16), ]"
+"0",""
+"0","## Definerer antall sifre "
+"0",""
+"0","options(digits=3)"
+"0",""
+"0","## Endrer dataform"

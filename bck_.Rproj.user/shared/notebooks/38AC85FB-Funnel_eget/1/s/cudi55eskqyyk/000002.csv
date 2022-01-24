@@ -1,0 +1,6 @@
+"0",""
+"0","ggarrange(regel1_plot, regel2_plot, regel3_plot, regel4_plot "
+"0"," + rremove(""x.text""), ncol = 2, nrow = 2)"
+"2","Removed 2 rows containing missing values (geom_point)."
+"2","Removed 35 rows containing missing values (geom_point)."
+"2","Removed 32 rows containing missing values (geom_point)."

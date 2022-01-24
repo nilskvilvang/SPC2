@@ -1,0 +1,4 @@
+"0",""
+"0","pacman::p_load(ggplot2, tidyverse, readxl, ggpubr)"
+"0",""
+"0","ggqqplot(qqnorm$value) + ggtitle(""Normal Q-Q plott"") + labs(x = ""Teoretisk forventning"", y = ""Data"")"

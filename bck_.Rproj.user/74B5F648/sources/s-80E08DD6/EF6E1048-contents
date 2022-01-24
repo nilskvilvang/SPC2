@@ -1,0 +1,72 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+
+set.seed(91)
+
+regel1_x <- as_tibble(rnorm(100, mean = 0, sd = 1)) %>%
+  rename(x = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+regel1_y <- as_tibble(rnorm(100, mean = 0, sd = 1)) %>%
+  rename(y = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+regel1 <- merge(regel1_x,regel1_y,by="nr")
+
+regel1_plot <- ggplot(regel1, aes(x = x, y = y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 1") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+
+# Genererer tilfeldig tall for regel 2:
+
+
+set.seed(92)
+
+regel2_x <- as_tibble(rnorm(100, mean = 0, sd = 2)) %>%
+  rename(x = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+## Setter sd = 2 fordi variasjonen med regel 2 er dobbel av regel 1 (jfr SPC for Excel)
+
+regel2_y <- as_tibble(rnorm(100, mean = 0, sd = 2)) %>%
+  rename(y = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+regel2 <- merge(regel2_x,regel2_y,by="nr")
+
+regel2_plot <- ggplot(regel2, aes(x = x, y = y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 2") + xlim(-5,5) + ylim(-5,5) + geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+
+# Henter tall fra Excel for regel 3:
+
+regel3 <- read.xlsx("Funnel_blankedata_regel3.xlsx", 1)
+
+regel3_plot <- ggplot(regel3, aes(x = Regel_3_x, y = Regel_3_y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 3") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+ 
+
+# Henter tall fra Excel for regel 4:
+
+regel4 <- read.xlsx("Funnel_blankedata_regel4.xlsx", 1)
+
+regel4_plot <- ggplot(regel4, aes(x = Regel_4_x, y = Regel_4_y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 4") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+
+
+# Setter plottene sammen:
+
+ggarrange(regel1_plot, regel2_plot, regel3_plot, regel4_plot 
+ + rremove("x.text"), ncol = 2, nrow = 2)
+```
+
+library(xlsx)

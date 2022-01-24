@@ -1,0 +1,66 @@
+---
+bibliography: referanser.bib  
+---
+
+# Prosesskapabilitet
+
+Gitt at en prosess er kontrollert, altså at vi kun har normal variasjon, kan vi være interessert i å se nærmere på hvordan prosessen "leverer" (resultatene sett opp mot forventninger). Som tidligere nevnt betyr ikke en kontrollert prosess at vi er fornøyde med resultatene, men det betyr at vi ikke ser unormal variasjon. Dermed kan vi jobbe for å forbedre prosessen gjennom å addressere de normale årsakene til variasjon i prosessen, som kan være en lang rekke forhold. 
+La oss understreke dette poenget med et eksempel fra @Leavengood2015a. Hvis en kunde stiller krav om et fuktighetsinnhold (i et gitt produkt) på 6% $\pm$ 1% og vi har en kontrollert prosess som gir produkter med 10% $\pm$ 5% så har vi en stabil prosess som ikke er kapabel. For en kunde kan det derfor være avgjørende at vi kan vise vår prosesskapabilitet - de vil sikre seg at vår prosess vil gi produkter (eller tjenester) som er ikke bare stabile, men kapable (møter deres forventninger og krav).
+
+La oss starte med et tenkt eksempel der vi har to prosesser som skal forholde seg til samme spesifikasjonsgrenser (basert på @Leavengood2015a). Det kan f.eks. være to like maskiner som produserer samme proodukt med samme krav til kvalitet (samme spesifikasjonsgrenser). I figuren under illustrerer vi to fiktive prosesser. Nedre spesifikasjonsgrense (LSL) og øvre spesifikasjonsgrense (USL) er tegnet inn. Spesifikasjonsgrensene er *ikke* det samme som kontrollgrenser. Kontrollgrenser er regnet ut fra dataene prosessen faktisk gir, mens spesifikasjonsgrensene er grenser for akseptabelt avvik i produksjon/spesifikasjoner vi (eller noen andre, f.eks. en kunde) har satt. Vi kunne også omtalt spesifikasjonsgrenser som toleransegrenser - hva tolererer vi av resultat fra prosessen før vi vil si at kvaliteten ikke er god nok. Differansen mellom de to spesifikasjonsgrensene (USL og LSL) er et uttrykk for hvilken toleranse vi har for resultatet av prosessen. Som @wheelerProblemLongTermCapability2013 uttrykker det: "The difference between the specification limits, USL – LSL, is the specified tolerance. It defines the total space available for the process." Med andre ord: Spesifikasjonsgrenser sier hva vi ønsker fra prosessen, kontrollgrensene hva vi fikk.
+
+Prosessen med blå kurve har snitt = 0 og standardavvik = 0.5, den røde prosessen har snitt = 0.5 og standardavvik = 1. Den røde prosessen er således noe usentrert. Spesifikasjonsgrensene er satt til hhv -2 og 2. 
+
+Det vi kan se er at den røde prosessen er noe usentrert (snittet er 0.5 fra 0) og spredningen (standardavviket) er noe større enn den blå prosessen. Med andre ord - gitt den akseptable grensen for spesifikasjoner som er satt ser vi at den røde prosessen vil produsere flere defekter enn den blå prosesen.
+
+```{r echo = FALSE, fig.cap = "Eksempel på to ulike prosesser"}
+
+pacman::p_load(ggplot2)
+
+ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, args = list(mean = 0.5, sd = 1), col='red', size = 1.1) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = 0.5), col='blue', size = 1.1) + 
+  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 0.79), color="blue", linetype = "dotted", size = 1.1) +
+  geom_segment(aes(x = 0.5, y = 0, xend = 0.5, yend = 0.39), color = "red", linetype = "dotted", size = 1.1) +
+  geom_segment(aes(x = 2, y = 0, xend = 2, yend = 0.13), color = "black") +
+  geom_segment(aes(x = -2, y = 0, xend = -2, yend = 0.015), color = "black") +
+  geom_text(x=2.25, y=0.02, label="USL") +
+  geom_text(x=-2.2, y=0.02, label="LSL")
+
+```
+Vi skal nå se på ulike verktøy vi kan bruke for å jobbe med prosesskapabilitet.
+
+## Histogrammer
+
+Vi har tidligere i boka vært innom histogrammer, f.eks. i kapittel 4 der vi så på ulike datafordelingsmodeller (normalfordeling, binomialfordeling, geometrisk fordeling og eksponensiell fordeling). @delerydPragmaticViewProcess1999a påpeker at histogrammer er den enkleste måten å tilnærme seg prosesskapabilitet. Man plotter spesifikasjonsgrensene på x-aksen og lager forøvrig et vanlig histogram av dataene. Dette historgrammet vil da vise oss noe om sentrering, spredning og den generelle formen på dataene 
+
+
+
+
+## Boxplots
+
+
+## Kapabilitetsindekser
+
+### Måledata
+
+#### *C~p~*
+
+
+#### *C~pk~*
+
+
+#### *C~pm~*
+
+
+#### *C~pmk~*
+
+### Telledata
+
+
+## Loss function
+
+
+## Ikke-normale data
+
+

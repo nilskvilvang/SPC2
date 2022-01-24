@@ -1,0 +1,6 @@
+"0","XbarR_diagram_long <- melt(XbarR_diagram,
+                           id.vars = c(""Dag""))
+"
+"2","Error in melt(XbarR_diagram, id.vars = c(""Dag"")) : 
+  could not find function ""melt""
+"

@@ -1,0 +1,8 @@
+"0",""
+"0","plot(k, "
+"0","     auc.percent, "
+"0","     col = 'blue', "
+"0","     pch = 10, "
+"0","     xlab = 'k', "
+"0","     ylab = 'Prosent', "
+"0","     main = 'Chebyshevs teorem' )"

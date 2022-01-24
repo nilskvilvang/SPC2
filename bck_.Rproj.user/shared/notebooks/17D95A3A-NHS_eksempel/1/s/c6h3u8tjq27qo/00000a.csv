@@ -1,0 +1,16 @@
+"0",""
+"0",""
+"0",""
+"0","prepost_eksempel_long <- as_tibble(read_excel(""prepost_eksempel_long.xlsx""))"
+"0",""
+"0","## Endrer kolonnenavn"
+"0",""
+"0","colnames(prepost_eksempel_long) <- c(""Periode"",""Gjennomsnitt i perioden"")"
+"0",""
+"0","## Plotter snitt i histogram"
+"0",""
+"0","ggbarplot(prepost_eksempel_long, x = ""Periode"", y = ""Gjennomsnitt i perioden"", add = c(""mean""), color = ""blue"", fill = ""lightblue"")"
+"2","Error in parse(text = x) : <text>:1:14: unexpected symbol
+1: Gjennomsnitt i
+                 ^
+"

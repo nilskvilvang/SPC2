@@ -1,0 +1,2 @@
+"0","library(ggfortify)"
+"0","ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1)"

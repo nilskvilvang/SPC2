@@ -1,0 +1,8 @@
+"0",""
+"0","pacman::p_load(tidyverse, kableExtra)"
+"0","k <- seq(1,4,by = 0.1)"
+"0","auc <- 1-(1/k^2)"
+"0","auc.percent <- round(auc*100)"
+"0","cheb_table <- as_tibble(cbind(k,auc.percent))"
+"0",""
+"0","kbl(cheb_table)"

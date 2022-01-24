@@ -1,0 +1,25 @@
+---
+bibliography: referanser.bib 
+---
+
+# Vedlegg 2 - Kritiske verdier i kontrolldiagram {.unnumbered}
+
+Basert på @anhojQualityImprovementCharts2021:
+
+```{r echo=FALSE}
+
+pacman::p_load(kableExtra)
+
+n <- 10:100
+hendelser <- data.frame(
+  "Antall observasjoner"                = n,
+  "Øvre grense for serie"               = round(log2(n) + 3),
+  "Nedre grense for antall krysninger"  = qbinom(0.05, n - 1, 0.5),
+  check.names = FALSE)
+
+kbl(hendelser, booktabs = T,  longtable = T, caption = "Kritiske verdier", align = 'c') %>%
+  kable_styling(latex_options = "striped") %>%
+  kable_styling(latex_options = "repeat_header") %>%
+  row_spec(0, bold = T)
+
+```

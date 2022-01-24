@@ -1,0 +1,3 @@
+"0","pacman::p_load(ggplot2, readxl, tidyverse, ggpubr, dplyr, hrbrthemes)"
+"0",""
+"0","xfun::embed_file('prepost_eksempel_long.xlsx')"

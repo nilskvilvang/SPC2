@@ -1,0 +1,6 @@
+"0",""
+"0","nford <- ggplot(data = data.frame(x = c(-4, 4)), aes(x)) +"
+"0","  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1)) + ylab("""") +"
+"0","  scale_y_continuous(breaks = NULL)"
+"0",""
+"0","nford"

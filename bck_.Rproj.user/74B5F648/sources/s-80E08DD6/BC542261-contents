@@ -1,0 +1,356 @@
+# Variasjon
+
+Vi skal tilnærme oss begrepet variasjon gjennom å vise til et velkjent eksperiment – «The Funnel Experiment», eller trakteksperimentet som vi kan kalle det på norsk. Hensikten med trakteksperimentet var å vise at dersom vi ikke forstår variasjon, og introduserer korrigerende tiltak i prosesser som ikke trenger det, står vi i fare for å forverre resultatet (og ofte ha brukt mye tid og ressurser på å justere prosessen i den tro at resultatet vil bli bedre). Eksperimentet illustrerer at mange tiltak i organisasjoner for å «rette på feil» eller «forbedre kvaliteten» ender opp med å ha motsatt virkning.
+
+![Trakteksperimentet - oppsett](trakteksp.png)
+
+Trakteksperimentet ble popularisert av @Deming1986 for å beskrive de negative effektene prosessendringer kan ha hvis man ikke forstår årsakene til variasjonen i resultatene (Deming krediterer selv Lloyd Nelson for å ha designiet ekseperimentet, og enkelte kilder omtaler derfor dette som "the Deming-Nelson funnel experiment" [@georgantzasTamperingDynamics2003] . I trakteksperimentet lar vi en klinkekule falle gjennom en trakt vi har sentrert rett over et mål. Der kula treffer arket setter vi et merke. Kula vil aldri treffe nøyaktig på målet og aldri nøyaktig på samme sted fra gang til gang. 
+
+La oss si at vi slipper kula gjennom trakta første gang. Trakta er plassert slik at senterlinja gjennom trakta treffer nøyaktig midt i målet. Så slipper vi kula og registerer treffpunktet. 
+
+![Trakteksperimentet - oppsett](trakteksp2.png)
+
+Deretter bruker vi 1 av 4 regler for korreksjon for å justere prosessen for å forsøke å få kula til å treffe nærmere målet (se f.eks. [@sparksUsingDemingFunnel2000]. 
+
+**Regel 1**
+Ingen justering. Selv om kula ikke treffer målet fortsetter vi med neste forsøk uten å gjøre noen justeringer. Vi holder trakta på nøyaktig samme sted. 
+
+**Regel 2**
+Trakta justeres etter forrige treffpunkt (treff 1). Hvis kula treffer i z avstand fra målets senterpunkt vil trakta justeres med -z før neste forsøk.
+
+![Trakteksperimentet - treff etter første forsøk](trakteksp3.png)
+
+Så gjentar vi prosessen og korrigerer trakta fra traktas forrige posisjon etter hvert treffpunkt ut fra kulas avstand fra det nye treffpunktet til målets senterpunkt. Justering av trakta skjer etter følgende metode: Plassering av trakta starter i målsenteret (0,0) og justeres deretter slik at ny plassering blir målsenteret blir minus offset (retning og avstand) for forrige kule fra treffpunkt til målsenteret. 
+
+@sparksUsingDemingFunnel2000 beskriver regelen slik: "At drop *i* (*i* = 1,2,3, .) the marble will come to rest at point y~i~, measured from the target. (In other words, y~i~ is the error at drop *i*.) Move the funnel the distance -*y*~i~ from its last position to aim for the next drop."
+
+@Deming1986 gir noen eksempler på bruk av regel 2: feedback-mekanismer som reagerer på enkelttilfeller, endring av en policy, rutine e.l. på bakgrunn av (kun) siste kundeundersøkelse, bruke variasjon/avvik til å lage budsjetter og vurdering av en aksje basert på forrige måneds underskudd.
+
+**Regel 3**
+Her registrerer vi treff 1 som i regel 2. Vi flytter trakta til et punkt nøyaktig motsatt av det punktet kula fikk. Vi beregner offset for kula på samme måte som i regel 2 – retning og avstand fra målsenteret til kulas treffpunkt. Før vi justerer flytter vi imidlertid trakta tilbake til (0,0) og justerer derfra (i motsetning til regel 2 da vi ikke flyttet trakta til (0,0) før vi begynte korreksjonen, men i stedet foretok justeringen fra det punktet trakta befant seg da kula ble sluppet). Her eksemplifiserer @Deming1986 ved å vise til hvordan mer effektiv narkotikabekjempelse fører til høyere priser på narkotika som stimulerer til smugling av mer narkotika, eller en gambler som høyner innsatsen for å dekke forrige tap.
+
+@sparksUsingDemingFunnel2000 beskriver regelen slik: "At drop *i* the marble comes to rest at point *y*~i~ from the target, then for the next drop aim the funnel over the point -*y*~i~ from the target."
+
+**Regel 4**
+Her flytter vi trakta hele tiden til siste treffpunkt og slipper ny kule der. Her viser @Deming1986 til eksempler som den kjente «hviskeleken» der et antall personer sitter i en ring og gjenforteller en historie ved å hviske den til neste person, som igjen hvisker den til neste osv til den kommer til siste person som forteller historien vedkommende nettopp hørte. Historien som til slutt blir fortalt er som regel ganske annerledes enn den opprinnelige. Et annet eksempel kan være produksjon av en gjenstand basert på forrige produserte gjenstands mål.
+
+@sparksUsingDemingFunnel2000 beskriver regelen slik: "At drop *i* the marble comes to rest at point *y*~i~ from the target, then for the next drop aim the funnel over the spot *y*~i~ where the marble last came to rest."
+
+En kort og instruktiv video [@Crostic2015] om gjennomføringen av trakteksperimentet vises kan dere se [her](https://www.youtube.com/watch?v=t5DV69_2VeQ&ab_channel=MichaelCrostic).
+
+## Simulering av trakteksperimentet i R
+
+Vi kan kjøre en simulasjon som viser at resultatet blir suksessivt dårligere etter hvert som vi implementerer reglene. Best resultat kommer fra ingen justering. Dernest gir regel 2 nest best resultat, regel 3 nest dårligst, og til slutt regel 4 det dårligste resultatet. Ved en simulering av 100 repetisjoner kan vi grafisk se hvilket resultat vi får gjennom å anvende de fire ulike reglene. For å kjøre R-koden (jfr vedlegg) må du laste ned disse Excel-filene:
+
+```{r echo = FALSE, message = FALSE, warning=FALSE}
+xfun::embed_file('Funnel_blankedata_regel3.xlsx')
+
+xfun::embed_file('Funnel_blankedata_regel4.xlsx')
+
+```
+
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "Simulering av trakteksperimentet"}
+
+# Genererer tilfeldig tall for regel 1:
+
+pacman::p_load(xlsx, ggplot2, tidyverse, ggpubr)
+
+set.seed(91)
+
+regel1_x <- as_tibble(rnorm(100, mean = 0, sd = 1)) %>%
+  rename(x = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+regel1_y <- as_tibble(rnorm(100, mean = 0, sd = 1)) %>%
+  rename(y = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+regel1 <- merge(regel1_x,regel1_y,by="nr")
+
+regel1_plot <- ggplot(regel1, aes(x = x, y = y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 1") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+
+# Genererer tilfeldig tall for regel 2:
+
+
+set.seed(92)
+
+regel2_x <- as_tibble(rnorm(100, mean = 0, sd = 2)) %>%
+  rename(x = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+## Setter sd = 2 fordi variasjonen med regel 2 er dobbel av regel 1 (jfr SPC for Excel)
+
+regel2_y <- as_tibble(rnorm(100, mean = 0, sd = 2)) %>%
+  rename(y = value) %>%
+  add_column(nr = 1:100) %>%
+  relocate(nr)
+
+regel2 <- merge(regel2_x,regel2_y,by="nr")
+
+regel2_plot <- ggplot(regel2, aes(x = x, y = y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 2") + xlim(-5,5) + ylim(-5,5) + geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+
+# Henter tall fra Excel for regel 3:
+
+regel3 <- read.xlsx("Funnel_blankedata_regel3.xlsx", 1)
+
+regel3_plot <- ggplot(regel3, aes(x = Regel_3_x, y = Regel_3_y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 3") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+ 
+
+# Henter tall fra Excel for regel 4:
+
+regel4 <- read.xlsx("Funnel_blankedata_regel4.xlsx", 1)
+
+regel4_plot <- ggplot(regel4, aes(x = Regel_4_x, y = Regel_4_y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 4") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+
+
+# Setter plottene sammen:
+
+ggarrange(regel1_plot, regel2_plot, regel3_plot, regel4_plot 
+ + rremove("x.text"), ncol = 2, nrow = 2)
+
+```
+
+Det vi kan se er at resultatet etter regel 1 og 2 er sentrert rundt målet, men at regel 2 gir større spredning. Simuleringer viser at regel to gir 40-41 % større areal i plottet – eller dobbelt så stor varians [@Prevette2008;@SPCforExcel2006] ^[Matematisk sett vil standardavviket ved å legge til n uavhengige tilfeldige observasjoner øke med kvadratroten av n ganger standardavviket for den individuelle observasjonen. Samlet sett dobles variansen, hvilket gir 1,4 ganger høyere standardavvik (siden standardavvik er kvadratroten av variansen, og $\sqrt{2}$ $\approx$ 1.4].
+
+Regel 3 vil gi et økende oscillerende mønster. Med en start i nærheten av målet (0,0) vil treffpunktene flytte seg fra side til side stadig lengre vekk fra målet. Mønsteret vil variere, men treffpunktene vil stadig flytte seg lenger unna målet. Hvis vi har et annet førstetreff, vil dette påvirke hvordan mønsteret utvikler seg.
+
+For å kjøre R-koden for alternativt førstetreffpunkt må du laste ned denne Excel-fila:
+
+```{r echo = FALSE, message = FALSE, warning=FALSE}
+xfun::embed_file('Funnel_blankedata_regel3_2.xlsx')
+```
+
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "Regel 3 - annet førstetreff"}
+
+regel3_2 <- read.xlsx("Funnel_blankedata_regel3_2.xlsx", 1)
+
+regel3_2_plot <- ggplot(regel3_2, aes(x = x, y = y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 3 - annet førstetreff") + xlim(-5,5) + ylim(-5,5)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+regel3_2_plot   
+
+```
+
+Regel 4 vil alltid medføre at treffpunktet vil bevege seg lenger og lenger unna målet. Med et annet førstetreff vil mønsteret se annerledes ut. 
+
+For å kjøre R-koden for alternativt førstetreffpunkt må du laste ned denne Excel-fila:
+
+```{r echo = FALSE, message = FALSE, warning=FALSE}
+xfun::embed_file('Funnel_blankedata_regel4_2.xlsx')
+```
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "Regel 4 - annet førstetreff"}
+
+regel4_2 <- read.xlsx("Funnel_blankedata_regel4_2.xlsx", 1)
+
+regel4_2_plot <- ggplot(regel4_2, aes(x = x, y = y)) +
+  geom_point(size = 1) + labs(x = "x", y = "y", title = "Regel 4 - annet førstetreff") + xlim(-2,10) + ylim(-10,2)+ geom_vline(xintercept = 0, col = "red") + geom_hline(yintercept = 0, col = "red")
+
+regel4_2_plot  
+
+```
+
+Eksperimentet, som altså som regel refereres til som Deming’s trakteksperiment ("Funnel experiment"), men som også omtales som Nelsons trakteksperiment (se f.eks. @Alwan1991) illustrerer en viktig erkjennelse i alt kvalitetsarbeid: hvis man ikke vet hva man driver med kan man i beste hensikt fort ende opp med å korrigere en prosess "ut i evigheten" vekk fra målet. Dessverre er det grunn til å tro at mange forbedringsprosesser ender opp på denne måten.
+
+Eksperimentet illustrerer videre en viktig observasjon: alle prosesser har variasjon. Hvis vi tenker over det, vil vi lett finne eksempler fra dagliglivet. Vi sover et antall timer og minutter sammenhengende søvn hver natt som ikke vil være det samme fra natt til natt, men som regel ligge innenfor et visst intervall. Vi har en hvilepuls når vi våkner om morgenen. Måler vi den vil vi se variasjon. Vi kjører til jobben, og tidsbruken vil variere fra dag til dag. Vi tar en treningstur på kvelden. Selv om vi løper samme runde med samme utstyr vil tiden vi bruker variere. Eller strømregningen vi betaler hver måned. Hva med kostnader for en sykehusavdeling? Antall overtidstimer i en organisasjon? Mengde materialer i en bestemt produksjonslinje? Alle de ovennevnte er prosesser som har en variasjon. 
+
+## Normal og unormal variasjon
+
+Et sentralt poeng i organisasjonsutvikling og beslutningstaking er om den variasjonen man ser i resultatene er et tegn på endring eller "bare" tilfeldig variasjon. For beslutningstakere er det åpenbart avgjørende å kunne skille mellom de to [@Nolan2016].
+
+Variasjon kan være normal eller unormal. Med normal variasjon mener vi variasjon som ikke kan tilskrives en spesiell årsak (ofte omtalt som "common cause variation", opprinnelig av Shewhart som "assignable cause" og av f.eks. @Benneyan1998 som "systemic variation"). Tilsvarende kan unormal variasjon tilskrives en eller flere spesifikke årsaker ("special cause variation", av Shewhart benevnt som "chance cause"). Normal variasjon skyldes fenomen som alltid er til stede i en prosess [@plsekTutorialIntroductionControl23], og kan dermed ikke endres uten at man endrer selve prosessen. Det betyr også at normal variasjon er det som gjør prosesser forutsigbare i større eller mindre grad.
+
+Unormal variasjon på sin side skyldes en (eller flere) ikke-tilfeldige påvirkninger som ikke vanligvis er til stede i prosessen. Dette gjør prosessen uforutsigbar. Problemene oppstår når man ikke skiller mellom de to typene variasjon, og jager etter spesielle årsaker til variasjon når det i realiteten kun er normal variasjon man observerer. Da jager man etter å løse problemer uten å forstå årsakene. 
+
+La oss se på dataene fra trakteksperimentet igjen, og denne gangen skal vi plotte datapunktene på en måte som gjør at vi ser hvordan treffpunktene varierer ved at vi plotter på en tidsakse (første forsøk til venstre, siste til høyre på x-aksen). Vi kan først se på treffpunkter for x- og y-verdi for hhv regel 1 og 2. 
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "x- og y-verdier for regel 1"}
+
+pacman::p_load(qicharts2)
+
+regel1x <- regel1 %>% pull(2)
+
+regel1y <- regel1 %>% pull(3)
+
+regel1xrun <- qic(regel1x, title = 'x-verdi ved regel 1', ylab = "verdi", xlab = "Forsøk nr.")
+
+regel1yrun <- qic(regel1y, title = 'y-verdi ved regel 1', ylab = "verdi", xlab = "Forsøk nr.")
+
+ggarrange(regel1xrun, regel1yrun + rremove("x.text"), ncol = 2, nrow = 1,  widths = c(1, 1))
+
+```
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "x- og y-verdier for regel 2"}
+
+pacman::p_load(qicharts2)
+
+regel2x <- regel2 %>% pull(2)
+
+regel2y <- regel2 %>% pull(3)
+
+regel2xrun <- qic(regel2x, title = 'x-verdi ved regel 2', ylab = "verdi", xlab = "Forsøk nr.")
+
+regel2yrun <- qic(regel2y, title = 'y-verdi ved regel 2', ylab = "verdi", xlab = "Forsøk nr.")
+
+ggarrange(regel2xrun, regel2yrun + rremove("x.text"), ncol = 2, nrow = 1,  widths = c(1, 1))
+
+```
+
+Det vi kan se er:
+* Mønstrene likner på hverandre i hvordan de varierer
+* De varierer like mer eller mindre like mye over og under x = 0 og y = 0. En absolutt perfekt prosess ville gitt null avvik fra 0,0 for hvert forsøk. Dette tyder på at variasjonen er sentrert rundt målpunktet.
+* Vi kan se at avviket er noe større for regel 2, spesielt på x-verdiene. Dette er iht forventning siden vi vet at variansen er dobbelt så stor for regel 2 som for regel 1.
+* Vi ser også at gjennomsnittet (markert med horisontal linje) er nærme 0 for både x- og y-verdi for regel 1, mens den er noe mer avvikende for begge verdiene for regel 2.
+
+Hvis vi ser på x- og y-verdiene for regel 3 får vi et helt annet bilde.
+
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "x- og y-verdier for regel 3"}
+
+pacman::p_load(qicharts2)
+
+regel3x <- regel3 %>% pull(2)
+
+regel3y <- regel3 %>% pull(3)
+
+regel3xrun <- qic(regel3x, title = 'x-verdi ved regel 3', ylab = "verdi", xlab = "Forsøk nr.")
+
+regel3yrun <- qic(regel3y, title = 'y-verdi ved regel 3', ylab = "verdi", xlab = "Forsøk nr.")
+
+ggarrange(regel3xrun, regel3yrun + rremove("x.text"), ncol = 2, nrow = 1,  widths = c(1, 1))
+
+```
+
+Vi ser at vi får en økende oscillerende trend. Samtidig ser vi at treffene er sentrert rundt 0, men at treffpunktene i stadig økende grad fjerner seg fra 0. Mønsteret er også veldig likt for x-verdi og y-verdi.
+
+Til slutt kan vi se på regel 4.
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "x- og y-verdier for regel 4"}
+
+pacman::p_load(qicharts2)
+
+regel4x <- regel4 %>% pull(2)
+
+regel4y <- regel4 %>% pull(3)
+
+regel4xrun <- qic(regel4x, title = 'x-verdi ved regel 4', ylab = "verdi", xlab = "Forsøk nr.")
+
+regel4yrun <- qic(regel4y, title = 'y-verdi ved regel 4', ylab = "verdi", xlab = "Forsøk nr.")
+
+ggarrange(regel4xrun, regel4yrun + rremove("x.text"), ncol = 2, nrow = 1,  widths = c(2, 2))
+
+```
+
+Det vi kan legge merke til er at begge verdiene starter nærme 0, men at de – som forventet – etter hvert fjerner seg i en trend vekk fra 0. Hadde man kjørt 1000 eller 10000 forsøk ville denne trenden vært enda tydeligere. 
+
+Dette leder oss til to begrep som er vesentlige i kvalitetsarbeid. Er prosessen kontrollert («in control») eller er den ukontrollert («out of control»)? Prosesser med kun normal variasjon er kontrollerte prosesser, mens prosesser med unormal variasjon er ukontrollerte prosesser. I en kontrollert, stabil prosess er årsakene til variasjon i ytelse/resultater konstant over tid. Dette betyr altså ikke at det ikke er variasjon i ytelse/resultater/kvalitet, at variasjonen er liten eller at kvaliteten er god nok. 
+
+Under har vi simulert to team som jobber parallelt med å produsere samme produkt, samme maskiner, med samme råmaterialer. Vi skal ikke gå nærmere inn på variasjon o.l., men kan kort konstatere at begge prosessene er i kontroll. Vi kommer tilbake til kontrollgrenser om kort tid, men kort fortalt må alle punkter ligge innenfor kontrollgrensene for at prosessen skal være i kontroll. For å kjøre R-koden må du laste ned følgende fil:
+
+```{r echo = FALSE, message = FALSE, warning=FALSE}
+xfun::embed_file('toteam.xlsx')
+```
+
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "To teams kontrolldiagrammer"}
+
+pacman::p_load(xlsx, qicharts2, tidyverse, ggplot2, ggpubr)
+
+toteam1 <- read.xlsx("toteam.xlsx", 1)
+
+team1 <- qic(Team.1,
+    data      = toteam1, 
+    chart     = 'i',
+    show.grid = TRUE,
+    title     = "Team 1",
+    ylab      = "Antall defekter pr uke",
+    xlab      = "Uke #")
+
+team2 <- qic(Team.2,
+    data      = toteam1, 
+    chart     = 'i',
+    show.grid = TRUE,
+    title     = "Team 2",
+    ylab      = "Antall defekter pr uke",
+    xlab      = "Uke #")
+
+ggarrange(team1, team2 + rremove("x.text"), ncol = 2, nrow = 1,  widths = c(1, 1))
+```
+
+Imidlertid ser vi at Team 1’s prosess har større variasjon enn team 2’s (selv om de ser like ut må vi ta hensyn til at y-aksene er ulike (legg merke til verdiene 1,2 og 0,4 som viser den øvre kontrollgrensen. Vi ser også at gjennomsnittet ligger på hhv 0.5 og 0.1 for team 1 og 2. Dersom vi arrangerer plottene med samme skala på y-aksen ser vi en klar forskjell mellom de to teamene:
+
+```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "To teams - like prosesser - ulik variasjon"}
+
+pacman::p_load(xlsx, qicharts2, tidyverse, ggplot2, ggpubr)
+
+toteam2 <- readxl::read_excel("toteam.xlsx") %>%
+  pivot_longer(c("Team 1", "Team 2"))
+
+qic(Nr, value,
+    data = toteam2,
+    facets = ~name,
+    xlab = "Uke #",
+    ylab = "Antall defekter pr uke",
+    title = "To team - like prosesser - ulik variasjon")
+
+```
+
+Vi trenger altså ikke være fornøyde med en stabil og kontrollert prosess. Det betyr bare at variasjonen er forutsigbar innenfor statistisk etablerte grenser [@Nolan2016], og at ytelsen fra prosessen ikke vil endre seg vesentlig med mindre man endrer selve prosessen.Begge prosessene over er kontrollerte, men det kan virke åpenbart at man vil se nærmere på hvorfor det ene teamet skiller seg veldig fra det andre. 
+
+Arbeidet med statistisk prosesskontroll handler i hovedsak om dette: Forstå prosessen og forstå variasjonen. Trakteksperimentet viser oss også at korreksjon av prosesser kan lede oss lenger og lenger fra målet om vi ikke forstår variasjon og kontrollerte vs. ukontrollerte prosesser. Deming omtaler dette som «tampering with the process» - tukling med prosessen («If it ain’t broken, don’t fix it»). I jakten på små forbedringer er det fristende å gjøre små justeringer ofte. Det kan være en smart strategi, men det kan også gi motsatt effekt: variasjonen i resultatene blir bare større og større (i takt med desperasjonen etter ønskede forbedringer). Dette vil vi kalle for over-kontrollering av prosesser. 
+
+Erkjennelsen av variasjon i prosesser og om prosesser i kontrollert eller ukontrollert har klare ledelsesmessige utfordringer og konsekvenser. @Nolan2016 [s.3, figur 1] illustrerer to ulike tilnærminger til variasjon:
+
+```{r echo = FALSE}
+
+pacman::p_load(kableExtra)
+
+nolan_provost <- data.frame(Områder = c("", "Fokus", "Mål", "Grunnlag", "Metoder"),
+                            Tradisjonell = c("Som indikator på god eller dårlig ytelse", "Resultat av prosessen (produkt, tjeneste)", "Klassifisere resultat som akseptabelt eller ikke", "Hva kunden ønsker eller trenger", "Spesifikasjoner, budsjetter, prognoser, numeriske mål, verktøy for å måle ytelse"),
+                            SPC = c("
+Som resultat av normal eller unormal variasjon", "Årsaker til variasjon i prosessen", "Gi grunnlag for endring av prosess", "Hva prosessen faktisk gir", "Kontrolldiagram"))
+
+kbl(nolan_provost) %>%
+  kable_paper("striped", full_width = F) %>%
+  column_spec(1, width = "8em") %>%
+  column_spec(2, width = "40em") %>%
+  column_spec(3, width = "40em") %>%
+  row_spec(1, bold = TRUE)
+```
+
+En klar svakhet ved den første tilnærmingen – som indikator på god eller dårlig ytelse – er at det tilbyr lite informasjon og grunnlag for forbedring. Likevel, mange vil nok kjenne seg igjen i fokus, mål, grunnlag og metoder i denne tilnærmingen. 
+
+En kjerne i ledelse i organisasjoner må derfor være å kunne avgjøre om variasjonen fra ulike prosesser er normal eller unormal, og om svingninger indikerer en trend eller en tilfeldig variasjon som følger mønstre vi har sett tidligere. @Nolan2016 peker på mulige konsekvenser i organisasjoner av å trekke feilslutninger om variasjon: Skylden for problemer legges på ansatte som er utenfor deres kontroll, kostnader til nytt utstyr som ikke er nødvendig, bortkastet tidsbruk for å lete etter forklaringer på en antatt trend når ingenting egentlig har endret seg og gjennomføre tiltak når det ville ha vært bedre å ikke gjøre noe.   
+
+![modifisert fra Nolan & Provost, 1990, s.9, figur 2](nolan_provost.png)
+Avslutningsvis i dette kapittelet er det på sin plass å presisere at selv om en prosess kun har naturlig variasjon og således er kontrollert betyr ikke det at verken variasjonen eller resultatet er akseptabelt [@Leavengood1999; @Benneyan2003; @fastingStatisticalProcessControl2003a]. En kontrollert prosess innebærer kun at variasjonen er forutsigbar etter statistisk etablerte grenser [@Nolan2016]. Vi kan dermed forutsi prosessens resultater inntil det skjer en fundamental endring i prosessen. Det vi også kan si er at dersom man ikke er tilfreds med variasjon og resultat fra en prosess kan man gjøre noe med dette (=forbedre prosessen) dersom prosessen er kontrollert [@Mohammed2001]. 
+
+@Deming1986 peker på at det store rommet for forbedring (94 %) ligger i endring av prosessen – altså i å jobbe med den normale variasjonen (gitt at prosessen er stabil). Kun 6 % av potensialet ligger i å fikse spesielle ting – unormal variasjon – som skjer. Her ser vi en veldig klar kobling til ledelsesaspektet og ledelsesansvaret som ligger i å realisere potensialet for forbedringer. Det er imidlertid viktig å alltid huske tre "sannheter" om kvalitetsarbeid [@plsekTutorialIntroductionControl23]:
+
+1. Variasjon i resultat er naturlig i alle prosesser.
+2. Tilstedeværelse av variasjon er derfor ikke nok grunnlag for å konkludere med at prosessen er ute av kontroll eller trenger endringer.
+3. Hvis vi gjennomfører endringer uten å kjenne til hva slags variasjon vi har kan vi ende opp med å øke variasjonen.
+
+**Variasjon er med andre ord ikke synonymt med varierende kvalitet**
+
+For beslutningstakere kan vi derfor sette opp tre handlingsmønstre:
+
+1. Hvis prosessen viser unormal variasjon må vi forsøke å finne og eliminere den unormale variasjonen.
+2. Hvis prosessen viser normal variasjon og vi er tilfredse med resultetene er det best å ikke gjøre noe med prosessen ut over å monitorere variasjonen.
+3. Hvis prosessen viser normal variasjon og vi *ikke* er tilfredse med resultatene må vi jobbe med selve prosessen for å redusere variasjonen.
+
+
+

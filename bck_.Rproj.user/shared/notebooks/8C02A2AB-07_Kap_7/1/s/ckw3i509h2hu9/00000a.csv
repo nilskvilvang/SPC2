@@ -1,0 +1,5 @@
+"0",""
+"0","kontr_eks <- as_tibble(kontr_eks)"
+"0",""
+"0","write_xlsx(kontr_eks, ""kontr-eks.xlsx"")"
+"0",""

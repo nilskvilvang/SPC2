@@ -1,0 +1,136 @@
+# Vedlegg 10 - Formler prosesskapabilitet {.unnumbered}
+
+Basert på @kaneProcessCapabilityIndices1986a, @chanNewMeasureProcess1988,@taguchiQualityEngineeringProduction1989, @pearnDistributionalInferentialProperties1992a, @englishProcessCapabilityAnalysis1993a, @lucenoProcessCapabilityIndex1996, @delerydPragmaticViewProcess1999a, @tangComputingProcessCapability1999a, @wuOverviewTheoryPractice2009a, @wheelerProblemLongTermCapability2013, @Montgomery2020, @mcneeseWhatProcessCapability2020
+
+## Måledata {.unnumbered}
+
+### *C~p~* {.unnumbered}
+
+*C~p~* = $\frac{ønsket/tillatt spredning}{faktisk spredning}$
+
+*C~p~* = $\frac{USL - LSL}{6\sigma}$
+
+der:
+
+- *USL = Øvre toleransegrense (Upper Specification Limit)*
+- *LSL = Nedre toleransegrense (Lower Specification Limit)*
+- $\sigma$ = standardavvik for prosessen beregnet ut fra data kontrolldiagrammet
+
+Formelen over forutsetter at både USL og LSL er i bruk (tosidig). Dersom man skal ha en ensidig *C~p~* brukes:
+
+- *C~pu~* = $\frac{USL - \mu}{3\sigma}$ = øvre toleransegrense
+- *C~pl~* = $\frac{\mu - LSL}{3\sigma}$ = nedre toleransegrense
+
+
+Og en hendig formel for prosent kapabilitet:
+
+*P* = $(\frac{1}{C~p~})100$
+
+der:
+
+*P = prosenten av kapabiliteten ("the specification band") prosessen bruker*
+
+### *P~p~* {.unnumbered}
+
+*P~p~* = $\frac{USL - LSL}{6s}$
+
+der:
+
+- s = standardavvik for prosessen beregnet ut fra all tidligere data for prosessen (som ikke er det samme som $\sigma$, jfr formel for *C~p~*).
+
+
+### *C~pk~* {.unnumbered}
+
+*C~pk~ = min(C~pu~,C~pl~)*
+
+der:
+
+- *C~pu~* = $\frac{USL - \mu}{3\sigma}$
+- *C~pl~* = $\frac{\mu - LSL}{3\sigma}$
+- $\mu$ = *prosessgjennomsnitt*
+
+Alternativ måte å uttrykke samme formel [@wheelerProblemLongTermCapability2013]:
+
+*C~pk~* = $\frac{2 DNS}{6\sigma}$
+
+der:
+
+- DNS = "Distance to the nearer specification", altså avstanden fra gjennomsnitt til den spesifikasjonsgrensen som ligger nærmest snittet. 
+
+Alternativ *C~pk~* av @chanNewMeasureProcess1988:
+
+*C~pk~=C~p~(1-k)*
+
+der:
+
+*k=tilfeldig variabel*
+
+### *P~pk~* {.unnumbered}
+
+*P~pk~ = min(P~pu~,P~pl~)*
+
+der:
+
+- *P~pu~* = $\frac{USL - \mu}{3s}$
+- *P~pl~* = $\frac{\mu - LSL}{3s}$
+- $\mu$ = *prosessgjennomsnitt*
+- s = standardavvik for prosessen beregnet ut fra all tidligere data for prosessen (som ikke er det samme som $\sigma$, jfr formel for *C~pk~*)
+
+Alternativ måte å uttrykke samme formel [@wheelerProblemLongTermCapability2013]:
+
+*P~pk~* = $\frac{2 DNS}{6s}$
+
+der:
+
+- DNS = "Distance to the nearer specification", altså avstanden fra gjennomsnitt til den spesifikasjonsgrensen som ligger nærmest snittet. 
+
+### *C~pm~* {.unnumbered}
+
+*C~pm~* = $\frac{USL - LSL}{6\sqrt{\sigma^{2} + (\mu - T)^{2}}}$
+
+### *C~pmk~* {.unnumbered}
+
+*C~pmk~* = $\frac{d-|\mu-m|}{3\sqrt{\sigma^{2}+(\mu-T)^{2}}}$
+
+## Telledata {.unnumbered}
+
+### *DPU* {.unnumbered}
+
+*DPU* = $\frac{T_{d}}{T_{e}}$
+
+der:
+
+- *DPU = Defects Per Unit*
+- *T~d~ = Totalt antall defekter*
+- *T~e~ = Totalt antall enheter*
+
+### *DPMO* {.unnumbered}
+
+*DPMO* = $\frac{T_{d}}{{N_{u}*N_{o}}}$
+
+der:
+
+- *DPMO = Defects per millon opportunities*
+- *T~d~ = Totalt antall defekter*
+- *N~u~ = Antall enheter (Number of units)*
+- *N~o~ = Antall muligheter (Number of opportunities)*
+
+
+### *Loss function* {.unnumbered}
+
+*L* = $k(Y-T)^{2}$
+
+### *Ikke-normale data* {.unnumbered}
+
+"Surrogat *C~p~*" [@tangComputingProcessCapability1999a]
+
+*C~p~* = $\frac{USL - LSL}{U~p~-L~p~}$
+
+der:
+
+- *U~p~=øvre 0.135% punkt*
+- *L~p~=nedre 0.135% punkt*
+
+Et annet forslag på kapabilitetsindeks for ikke-normale data [@lucenoProcessCapabilityIndex1996]:
+
+*C~pc~* = $\frac{USL - LSL}{6\sqrt{\frac{\pi}{2}E|X-T|}}$

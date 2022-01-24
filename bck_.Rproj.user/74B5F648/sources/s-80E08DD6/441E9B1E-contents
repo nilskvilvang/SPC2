@@ -1,0 +1,12 @@
+.libPaths()
+myPaths <- .libPaths()   # get the paths
+myPaths <- c(myPaths[2], myPaths[1])  # switch them
+.libPaths(myPaths)  # reassign them
+
+x <- c(1,2,3,4,5)
+y <- c(2,4,6,8,10)
+
+plot(x,y)
+
+install.packages("rmarkdown")
+library(rmarkdown)

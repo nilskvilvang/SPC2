@@ -1,0 +1,144 @@
+---
+bibliography: referanser.bib 
+---
+
+# Kvalitet, kvalitetsarbeid og statistisk prosesskontroll
+
+En bok om kvalitet og kvalitetsarbeid bør selvsagt tidlig slå fast hva man mener med nettopp begrepene kvalitet og kvalitetsarbeid. Begrepet kvalitet kan gis mange definisjoner og bety ulike ting i ulike kontekster. På et veldig overordnet nivå kan man si at kvalitet er alle egenskaper og karakteristikker en tjeneste eller produkt har som bidrar til å dekke et definert behov [@alemiRiskadjustedControlCharts1996a]. @antonyKeyIngredientsEffective2000a peker på at en tjenestes/et produkts kvalitet er evnen til å oppfylle eller overgå en brukers spesifikke behov eller forventninger. Kvalitet er derfor nært knyttet til en oppfattelse av måloppnåelse [@mainzHvadErKvalitet2018], noe som understreker at kvalitet har både en objektiv og en subjektiv dimensjon. Hvis vi leverer en tjeneste eller et produkt må vi ha antakelser om mottakers forventninger og/eller forholde oss til bestemte forhåndsdefinerte objektive standarder [@elwynRespectingSubjectiveQuality2007; @wallanderQualityLifeMeasurement2001].
+
+Kvalitet kan derfor utrykkes som et forhold mellom resultat og forventninger. 
+Noen elementer av kvalitet kan vi kanskje måle relativt objektivt, mens andre elementer er av mer subjektiv eller skjønnsmessig karakter. Norsk Standard [-@standardnorgeKvalitetsledelseISO90002000] definerer kvalitet som "i hvilken grad en samling av iboende egenskaper oppfyller krav". Disse egenskapene kan være f.eks. kvalitative eller kvantitative, fysiske, sensoriske, atferdsmessige, tidsmessige, ergonomiske og/eller funksjonelle.Men uansett er kvalitet et umulig begrep å forholde seg til uten at man har en eller annen form for sammenlikning med "noe annet". 
+
+Et siste poeng vi vil nevne her er at kvalitet og kvalitesarbeid i en organisasjon må være knyttet til hva organisasjonen har en rimelig grad av kontroll over [@chinWhatQualityQuality2003].
+
+## Hva er statistisk prosesskontroll?
+
+I følge @Benneyan1998 er SPC grafisk og statistisk analyse av prosessdata i den hensikt å forstå, monitorere og forbedre prosessytelse. Kort fortalt handler SPC om å samle inn data fra en prosess, sette disse dataene i et tidsperspektiv, analysere og vurdere om prosessen har en normal eller unormal variasjon, og dermed legge grunnlaget for forbedringsarbeid. I tillegg kan SPC overvåke prosesser for å fange opp endringer i resultater på et tidlig tidspunkt. 
+
+Selv om SPC som regel spores tilbake til Walter A. Shewghart og 1930-tallet, og ikke minst til W. Edward Deming etter 2.verdenskrig, viser @Benneyan1998 til Frank Gilberths arbeid med prosessanalyser i sykehus så tidlig som i 1916. SPC, og Demings arbeid i Japan, tilskrives mye av æren for den japanske bilindustriens eventyrlige vekst. I følge @Leavengood1999 er det rikelig med dokumentasjon på at SPC kan redusere kostnader, øke produktiviteten, øke kundelojalitet, øke kundegrunnlaget og virke positivt inn på ansattes motivasjon. Dessuten, SPC hviler på et solid og robust teoretisk og statistisk grunnlag [@thorApplicationStatisticalProcess2007a].
+
+Vi vil likevel advare mot å tro at SPC er en "quick fix" som nærmest magisk forbedrer prosesser. SPC krever innsikt i prosessene man jobber med, og kan, som alle andre verktøy, produsere absolutt ingenting av verdi eller i verste fall negativ verdi om det brukes på feil måte. @rungtusanathamImprovedQualityMotivational2001a viser at som regel skyldes manglende effekt av SPC i organisasjoner ikke SPC i seg selv, men ineffektivitet og naivitet i implenteringen av teknikkene ^[Sosio-teknisk systemteori belyser nettopp samspillet mellom sosiale/menneskelige og tekniske faktorer i organisasjonsutvikling. Klassisk litteratur på dette omfatter f.eks. @burnsManagementInnovation1961, @tristSocialPsychologicalConsequences1951 og @woodwardManagementTechnology1958 - se f.eks. @appelbaumSocioTechnicalSystems1997 for en god og oversiktlig introduksjon til temaet.] [jfr. f.eks. @lightburnCRITIQUESTATISTICALPROCESS1992]. Et annet aspekt verdt å merke seg er at diagrammene og analysene fra SPC gjennomgående beskrives som lette å tolke, skal man være observant på at de kan kontrueres feil [@thorApplicationStatisticalProcess2007a]. Et av målene for denne boka er naturligvis å redusere akkurat den muligheten.^[I vedlegg 9 har vi oversatt og gjengitt 14 dimensjoner ved implementering av SPC fra @ConceptualizingOrganizationalImplementation1997]
+
+Selv om opprinnelsen til SPC gjennom Shwehart og Deming kan sies å være knyttet til industrielle produksjonsprosesser kan teknikkene anvendes på en hvilken som helst prosess [@Benneyan2003].
+
+I en noe forenklet språkdrakt kan SPC sies å være et virkemiddel for å [basert på @Benneyan1998a]:
+
+1. Forstå den nåværende prosessens ytelse og karakteristikker
+2. Oppnå en konsistent prosesskvalitet og -ytelse
+3. Monitorere prosesser for å fange opp begynnende forringelse
+4. Redusere prosessvariasjonen
+
+Sentralt i SPC er altså (blant annet) å forstå prosessene og variasjonen i prosessene som ligger til grunn for et eller annet produkt eller tjeneste, som utgangspunkt for forbedringsarbeid. @alemiTutorialRiskAdjusted2001a påpeker at beslutningstakere ofte feilaktig tilegner positive resultater med (deres) intervensjoner og tiltak, og negative resultater med tilfeldigheter eller eksterne hendelser. Gjennom SPC kan beslutningstakere få en forståelse av hvordan prosessene varierer, og om et dårlig resultat påvirkes av tilfeldige/unormale hendelser (som vanskelig kan kontrolleres eller påvirkes) eller er et utslag av systemet i seg selv (som **kan** kontrolleres eller påvirkes).   
+
+De tre viktigste verktøyene i SPC er seriediagram, kontrolldiagram og analyse av prosesskapabilitet. Disse tre behandles i egne kapitler. Kort fortalt er seriediagram en sekvensiell plotting av data fra en prosess uten utregning av kontrollgrenser eller hensyn til hva slags data (måledata eller attributtdata - se senere kapitler) vi har. Et seriediagram bør være det første diagrammet man utarbeider og vil si oss noe om variasjonen og om vi kan gå videre med kontrolldiagram. Et kontrolldiagram viser også prosessdata over tid plottet i et diagram, men her regner man ut kontrollgrenser basert på dataene slik at man kan få mer nyanserte analyser. I motsetning til seriediagrammet har vi ulike kontrolldiagram ut fra hvilken type data man har. Til slutt har vi kapabilitetsanalyser. Disse utfører vi for å vurdere om en prosess er i stand til å møte forventninger, og vi kan sammenlikne resultatet fra en prosess med gitte grenser for hva man anser som akseptable grenser.
+
+Ofte deles SPC-arbeid inn i to faser [@sachlasRiskAdjustedControlCharts2019a]. Den første fasen omfatter innsamling av data og retrospektive analyser for å undersøke om prosessen er "under kontroll" (altså om variasjonen man observerer er normal eller unormal - se kapittel om variasjon). Den andre fasen brukes SPC til å monitorere prosessen fortløpende for å fange opp endringer i prosessen tidlig. I tillegg vil vi legge til en tredje fase som er forbedringsarbeidet - strengt tatt vil vi ikke definere dette som en distinkt fase da forbedringsarbeidet bør være en kontinuerlig prosess. 
+
+Vi må også fastslå at SPC er et bredt felt, og det er utenfor rekkevidden av denne boka å omfatte alle tekniske og metodiske aspekter ved SPC. 
+
+## Hvorfor er tid viktig?
+
+La oss anta at et sykehus har en prosess der man har registrert antall avvik gjennom året. I 2019 hadde man 30 avvik i snitt pr måned. Ledelsen mente mot slutten av 2019 at dette var for høyt og bestemte at man skulle innføre en ny prosedyre fra årsskiftet. Ved overgangen til 2021 så man at man gjennom 2020 hadde ca. 24 avvik pr måned i snitt ^[Eksempelet er modifisert fra @Carey2003. Se også @anhojStatistiskProcesstyringSundhedsvaesenet2009 og @NHS2009] ^[Hvis du ønsker å bruke R og koden må du laste ned fila og lagre den i samme mappe som din R-fil/ditt R-prosjekt ligger - se forøvrig vedlegg om installasjon av R/RStudio for tips om organisering av filer]:
+
+```{r echo = FALSE, fig.cap = "Eksempel på prosess over 2 år"}
+
+library(tidyverse)
+library(readxl)
+library(ggpubr)
+library(hrbrthemes)
+
+xfun::embed_file('prepost_eksempel_long.xlsx')
+
+prepost_eksempel_long <- as_tibble(read_excel("prepost_eksempel_long.xlsx"))
+
+ggbarplot(prepost_eksempel_long, x = "Periode", y = "Verdi", add = c("mean"), color = "blue", fill = "lightblue")
+```
+
+Når man så nærmere på tallene kunne man også se at variasjonen mellom månedene var blitt mindre:
+
+```{r  echo = FALSE, fig.cap = "Prosess over 2 år - spredning"}
+ggline(prepost_eksempel_long, x = "Periode", y = "Verdi", add = c("mean_se", "jitter"))
+```
+
+Dette er nok en kjent tilnærming og konklusjon for mange som har jobbet med eller i organisasjoner som gjør tiltak for å heve kvaliteten. Dessverre er det en tilnærming som i beste fall er unøyaktig, men som i verste fall tåkelegger hva som faktisk skjer og som over tid kan gi dårligere kvalitet. Problemet er at man ikke har sett dataene i et tidsperspektiv. Siden man har data for avvik hver eneste måned vil tidsperspektivet kunne gi helt andre innsikter og konklusjoner.
+
+```{r echo = FALSE, fig.cap = "Prosess over 2 år i et tidsperspektiv"}
+t <- 1:24
+
+z <- c(prepost_eksempel_long$Verdi)
+  
+plot(t,z, type="l", col="blue", lwd=3, xlab="Periode", ylab="Antall", xaxt="n")
+axis(1, seq(0,24,2))
+
+abline(v=12, col="red", lwd = 3)
+text(15.5, 40, "Endring i prosedyre", col = "red")
+
+```
+
+I diagrammet over har vi plottet inn hver enkelt måned slik at vi får en blå linje som viser utvikling fra måned til måned. Den oransje horisontale streken angir snittet for året (tilsvarende histogrammet lenger opp). Den røde vertikale streken angir årsskiftet og tidspunktet for endring av rutinen. Rent visuelt vil vi nå ha problemer med å konkludere med at endringen av rutinen var en suksess. Vi vil heller tenke at utviklingen gjennom 2019 var veldig positiv, men at endringen ved årsskiftet 2019-2020 har gjort at trenden nå er klart negativ ift at avvikene øker jevnt og trutt igjen. Så kan man spekulere i at det kanskje er innføring av ny rutine som gjør at man igjen får flere avvik og at på litt lengre sikt vil man ha en positiv effekt. Kanskje, det vil vi ikke se før tallene for 2021 begynner å tikke inn. Men det er grunn til å si at dersom man kunne se denne trenden etter 1.kvartal i 2020 hadde man kanskje vurdert tiltak for å endre trenden (eller i det minste gjort en grundig analyse av rutiner og tiltak).
+
+Eksempelet ovenfor er konstruert. Likevel er det grunn til å tro at det ikke er spesielt uvanlig. Mange vil nok kunne kjenne seg igjen i at det jobbes mye med kvalitet i ulike organisasjoner, men at man kanskje ikke har spesielt god kontroll på hva endringer gjør med prosesser, eller at man ikke klarer å fange opp tidsnok at utviklingen går i feil retning. Kanskje har man egentlig lite kontroll på selve prosessen *før* man starter en endringsprosess? Tidsaspektet er med andre ord et viktig aspekt å ha med seg, og helt essensielt i statistisk prosesskontroll som vi hevder bør ha en sentral plass i kvalitetsarbeid.
+
+## Hva er utgangspunktet vi skal korrigere fra?
+
+Det kan kanskje virke selvsagt, men en forbedringsprosess vil ha små og tilfeldige sjanser for å lykkes hvis vi ikke kjenner utgangspunktet. Vi vil påstå at mange slike prosesser likevel starter opp med et noe svakt kjennskap til hva startstedet egentlig er. Kvalitetsarbeid -- forbedringsprosesser -- startes som regel fordi man har en oppfatning av at det man leverer ikke er like godt som det man mener man kan og bør levere. Men hva er egentlig problemet? Er det treffsikkerheten (treffer vi målet, det vi sikter mot) eller konsistensen (klarer vi å repetere hendelsen gang etter gang), eller begge deler?^[Illustrasjonen er modifisert fra @Montgomery2020, jfr. @Leavengood2015b]
+
+```{r  echo = FALSE, fig.cap = "Kjenne til utgangspunktet før vi gjør endringer"}
+pacman::p_load(plotrix, imager)
+
+par(mfrow=c(2,2))
+
+plot(1:11, type = "n", main = "Ikke konsistent, ikke treffsikker", xlab = "", ylab = "")
+draw.circle(6,6,0.5)
+draw.circle(6,6,1)
+draw.circle(6,6,1.5)
+draw.circle(6,6,2)
+draw.circle(6,6,2.5)
+
+draw.circle(5,8,0.1,col="black")
+draw.circle(8,3,0.1,col="black")
+draw.circle(4.5,5,0.1,col="black")
+draw.circle(6,3.2,0.1,col="black")
+draw.circle(4.7,8,0.1,col="black")
+
+plot(1:11, type = "n", main = "Konsistent, men ikke treffsikker", xlab = "", ylab = "")
+draw.circle(6,6,0.5)
+draw.circle(6,6,1)
+draw.circle(6,6,1.5)
+draw.circle(6,6,2)
+draw.circle(6,6,2.5)
+
+draw.circle(5,5,0.1,col="black")
+draw.circle(5,6,0.1,col="black")
+draw.circle(4.5,5,0.1,col="black")
+draw.circle(4.8,5.2,0.1,col="black")
+draw.circle(4.7,4.5,0.1,col="black")
+
+plot(1:11, type = "n", main = "Ikke konsistent, men treffsikker", xlab = "", ylab = "")
+draw.circle(6,6,0.5)
+draw.circle(6,6,1)
+draw.circle(6,6,1.5)
+draw.circle(6,6,2)
+draw.circle(6,6,2.5)
+
+draw.circle(5.5,7.8,0.1,col="black")
+draw.circle(7,5.5,0.1,col="black")
+draw.circle(5,6,0.1,col="black")
+draw.circle(5.9,4.5,0.1,col="black")
+draw.circle(6.7,7.8,0.1,col="black")
+
+plot(1:11, type = "n", main = "Konsistent, og treffsikker", xlab = "", ylab = "")
+draw.circle(6,6,0.5)
+draw.circle(6,6,1)
+draw.circle(6,6,1.5)
+draw.circle(6,6,2)
+draw.circle(6,6,2.5)
+
+draw.circle(6,6,0.1,col="black")
+draw.circle(6,6.3,0.1,col="black")
+draw.circle(5.7,6,0.1,col="black")
+draw.circle(5.9,6.3,0.1,col="black")
+draw.circle(6.2,5.6,0.1,col="black")
+```
+
+Det er ganske innlysende at vi vil ha langt større sannsynlighet for å lykkes med en forbedringsprosess om vi har kontroll på hva startsituasjonen er. Her kommer statistisk prosesskontroll inn og kan være et viktig verktøy. Med unntak av den nedre høyre illustrasjonen, der både treffsikkerhet og konsistens er bra, viser alle målskivene en variasjon i hvordan treffene er. Variasjon er et essensielt begrep i statistisk prosesskontroll, og forståelse av variasjon vil følgelig være et viktig tema før vi gir oss i kast med selve analysene. Uten forståelse av prosess og variasjon er det fare for at man forsøker å justere en prosess på feil grunnlag, og i verste fall ville vi kommet bedre ut av endringsprosessen ved å ikke gjøre noe som helst.

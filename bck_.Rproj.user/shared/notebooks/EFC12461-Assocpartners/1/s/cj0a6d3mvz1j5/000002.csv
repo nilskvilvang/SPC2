@@ -1,0 +1,78 @@
+"0",""
+"0","library(flextable)"
+"2","
+Attaching package: ‘flextable’
+
+"
+"2","The following objects are masked from ‘package:ggpubr’:
+
+    border, font, rotate
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    compose
+
+"
+"0","library(magrittr)"
+"2","
+Attaching package: ‘magrittr’
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    set_names
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    extract
+
+"
+"0","set_flextable_defaults(fonts_ignore=TRUE) "
+"0",""
+"0","assocpartners <- data.frame(Organization = c(""Forestry South Africa (FSA)"", "
+"0","                                             ""Department of Higher Education, Science and Technology (DHEST)"","
+"0","                                             ""Council on Higher Education (CHE)"", "
+"0","                                             ""Fibre Processing and Manufacturing Sector Training Authority (FP&M SETA"",                                                                                     ""Department of Environment, Forestry, and Fisheries (DEFF)"", "
+"0","                                             ""Council for Scientific and Industrial Research                                                     (CSIR)"", "
+"0","                                             ""South African Qualifications Authority""),"
+"0","                            Type = c(""Forestry Industry Association"", "
+"0","                                     ""National Department (Ministry)"", "
+"0","                                     ""Statutory Corporate Body"", "
+"0","                                     ""Sector Training Authority"", "
+"0","                                     ""National Department (Ministry)-sector leader"", "
+"0","                                     ""Research & Development Organisation"",                                            "
+"0","                                     ""Statutory Board (Quality Council)""),"
+"0","                            Place = c(""Johannesburg"", ""Pretoria"", ""Pretoria"", ""Johannesburg"", ""Pretoria"", ""Pretoria"", ""Pretoria""), "
+"0","                            Country = c(""South Africa"", ""South Africa"",""South Africa"",""South Africa"",""South Africa"",""South Africa"",""South Africa""),"
+"0","                            Role = c(""Coordinator of the South African core-Partners \n Co-funder \n Dissemination partner \n Advisory Board member Dr. Ronald                                        â€“ Director: Research & Protection"","
+"0","                                     ""Advisory Board Member Dr. Diane Parker, Deputy Director-General"","
+"0","                                     ""Advisory Board Member Prof. Kethamonie Naidoo, Director: Programme Accreditation"", "
+"0","                                     ""Prospective core-funder \n Development partner \n Advisory board member Mr. Johnny Modiba â€“ General Manager: Quality                                            Assurance"", "
+"0","                                     ""Climate change partner (authority) \n Advisory Board Member Ms. Irene Mathabela, Deputy Director: Sector Capacity                                               Development"", "
+"0","                                     ""Prospective Advisory Board Member"", ""Prospective Board Member""),"
+"0","                            Activities = c(""WP1: Coordinating Associate Partners participation \n WP4: Dissemination"", "
+"0","                                           ""WP3: Advice on issues of Quality"", "
+"0","                                           ""WP3:Advise on issues of Quality Promotion & assurance"", "
+"0","                                           ""WP2: Development"", "
+"0","                                           ""WP2 & 3: Advice on climatre-smart forestry curricula quality; advice on matters of quality process management"","
+"0","                                           ""WP2: Advice on climate change issues to the climate-smart forestry curricula"", "
+"0","                                           ""Advice on matters of qualification registration""))"
+"0","                        "
+"0","                        "
+"0","assocpartners <- flextable(assocpartners)"
+"0","assocpartners <- set_caption(assocpartners, ""Associated Partners"")"
+"0",""
+"0","assocpartners <- height(assocpartners, height = .3) %>% "
+"0","  hrule(rule = ""exact"", part = ""body"")  "
+"0",""
+"0","assocpartners %>%  "
+"0","  theme_vanilla() %>%"
+"0","  width(j=~Organization, width = 1.3) %>%"
+"0","  width(j=~Type, width = 1) %>%"
+"0","  width(j=~Place, width = 1) %>%"
+"0","  width(j=~Country, width = 1) %>%"
+"0","  width(j=~Role, width = 2.5) %>%"
+"0","  width(j=~Activities, width = 2) %>%"
+"0","  bg(bg = ""#ADDFAD"", part = ""header"")"

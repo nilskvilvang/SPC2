@@ -1,0 +1,3 @@
+"0","AD_alpha <- as_tibble(read_excel(""C:/Users/nilsk/OneDrive - Høgskolen i Innlandet/Undervisning/SPC_book/AD-alpha2.xlsx""))"
+"0",""
+"0","print(AD_alpha, n = nrow(AD_alpha)) "

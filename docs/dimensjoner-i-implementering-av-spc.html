@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Dimensjoner i implementering av SPC | Statistisk prosesskontroll</title>
+  <meta name="description" content="Dimensjoner i implementering av SPC | Statistisk prosesskontroll" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Dimensjoner i implementering av SPC | Statistisk prosesskontroll" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Dimensjoner i implementering av SPC | Statistisk prosesskontroll" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SPC</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduksjon</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#versjoner"><i class="fa fa-check"></i>Versjoner</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html"><i class="fa fa-check"></i><b>1</b> Hvorfor denne boka?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html#programvare"><i class="fa fa-check"></i><b>1.1</b> Programvare</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><i class="fa fa-check"></i><b>2</b> Kvalitet, kvalitetsarbeid og statistisk prosesskontroll</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-statistisk-prosesskontroll"><i class="fa fa-check"></i><b>2.1</b> Hva er statistisk prosesskontroll?</a></li>
+<li class="chapter" data-level="2.2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hvorfor-er-tid-viktig"><i class="fa fa-check"></i><b>2.2</b> Hvorfor er tid viktig?</a></li>
+<li class="chapter" data-level="2.3" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-utgangspunktet-vi-skal-korrigere-fra"><i class="fa fa-check"></i><b>2.3</b> Hva er utgangspunktet vi skal korrigere fra?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="variasjon.html"><a href="variasjon.html"><i class="fa fa-check"></i><b>3</b> Variasjon</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variasjon.html"><a href="variasjon.html#simulering-av-trakteksperimentet-i-r"><i class="fa fa-check"></i><b>3.1</b> Simulering av trakteksperimentet i R</a></li>
+<li class="chapter" data-level="3.2" data-path="variasjon.html"><a href="variasjon.html#normal-og-unormal-variasjon"><i class="fa fa-check"></i><b>3.2</b> Normal og unormal variasjon</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html"><i class="fa fa-check"></i><b>4</b> Datatyper og datafordelinger</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling"><i class="fa fa-check"></i><b>4.1</b> Normalfordeling</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#varians-og-standardavvik"><i class="fa fa-check"></i><b>4.1.1</b> Varians og standardavvik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling-standardavvik-og-forventninger"><i class="fa fa-check"></i><b>4.1.2</b> Normalfordeling, standardavvik og forventninger</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#binomialfordeling"><i class="fa fa-check"></i><b>4.2</b> Binomialfordeling</a></li>
+<li class="chapter" data-level="4.3" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#poissonfordeling"><i class="fa fa-check"></i><b>4.3</b> Poissonfordeling</a></li>
+<li class="chapter" data-level="4.4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#geometrisk-fordeling"><i class="fa fa-check"></i><b>4.4</b> Geometrisk fordeling</a></li>
+<li class="chapter" data-level="4.5" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#eksponensiell-fordeling"><i class="fa fa-check"></i><b>4.5</b> Eksponensiell fordeling</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html"><i class="fa fa-check"></i><b>5</b> Er dataene dine normalfordelte?</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#q-q-plott"><i class="fa fa-check"></i><b>5.1</b> Q-Q plott</a></li>
+<li class="chapter" data-level="5.2" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#anderson-darling-test-for-normalitet"><i class="fa fa-check"></i><b>5.2</b> Anderson-Darling test for normalitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="seriediagram.html"><a href="seriediagram.html"><i class="fa fa-check"></i><b>6</b> Seriediagram</a></li>
+<li class="chapter" data-level="7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html"><i class="fa fa-check"></i><b>7</b> Kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#mønstre-i-kontrolldiagram"><i class="fa fa-check"></i><b>7.1</b> Mønstre i kontrolldiagram</a></li>
+<li class="chapter" data-level="7.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#tolkning-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.2</b> Tolkning av kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#punkter-utenfor-kontrollgrensene"><i class="fa fa-check"></i><b>7.2.1</b> Punkter utenfor kontrollgrensene:</a></li>
+<li class="chapter" data-level="7.2.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-3-påfølgende-punkter-er-mer-enn-2-sigma-fra-gjennomsnittsverdien-i-sone-a-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.2</b> 2 av 3 påfølgende punkter er mer enn 2 sigma fra gjennomsnittsverdien (i sone A) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-5-påfølgende-punkter-er-mer-enn-1-sigma-fra-gjennomsnittsverdien-sone-a-og-b-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.3</b> 4 av 5 påfølgende punkter er mer enn 1 sigma fra gjennomsnittsverdien (sone A og B) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-på-samme-side-av-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.4</b> 8 påfølgende punkter er på samme side av gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-i-stigende-eller-synkende-trend-etter-hverandre"><i class="fa fa-check"></i><b>7.2.5</b> 6 påfølgende punkter er i stigende eller synkende trend (etter hverandre)</a></li>
+<li class="chapter" data-level="7.2.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-innenfor---1-sigma-fra-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.6</b> 15 påfølgende punkter er innenfor +/- 1 sigma fra gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-alternerer-opp-og-ned-annenhver-opp-og-ned-i-forhold-til-foregående-verdi"><i class="fa fa-check"></i><b>7.2.7</b> 14 påfølgende punkter alternerer opp og ned (annenhver opp og ned i forhold til foregående verdi)</a></li>
+<li class="chapter" data-level="7.2.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-på-samme-side-av-gjennomsnittet-og-ingen-innenfor---1-sigma"><i class="fa fa-check"></i><b>7.2.8</b> 8 påfølgende punkter på samme side av gjennomsnittet og ingen innenfor +/- 1 sigma</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#telledata-attributter"><i class="fa fa-check"></i><b>7.3</b> Telledata (attributter)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#p-diagram"><i class="fa fa-check"></i><b>7.3.1</b> p-diagram</a></li>
+<li class="chapter" data-level="7.3.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-p-diagram"><i class="fa fa-check"></i><b>7.3.2</b> Laney’s p-diagram</a></li>
+<li class="chapter" data-level="7.3.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#np-diagram"><i class="fa fa-check"></i><b>7.3.3</b> np-diagram</a></li>
+<li class="chapter" data-level="7.3.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#u-diagram"><i class="fa fa-check"></i><b>7.3.4</b> u-diagram</a></li>
+<li class="chapter" data-level="7.3.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-u-diagram"><i class="fa fa-check"></i><b>7.3.5</b> Laney’s u-diagram</a></li>
+<li class="chapter" data-level="7.3.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#c-diagram"><i class="fa fa-check"></i><b>7.3.6</b> c-diagram</a></li>
+<li class="chapter" data-level="7.3.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#g-diagram"><i class="fa fa-check"></i><b>7.3.7</b> g-diagram</a></li>
+<li class="chapter" data-level="7.3.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#utfordringer-med-telledata-og-distribusjon-på-dataene"><i class="fa fa-check"></i><b>7.3.8</b> Utfordringer med telledata og distribusjon på dataene</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#måledata-variabler"><i class="fa fa-check"></i><b>7.4</b> Måledata (variabler)</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#imr-xmr"><i class="fa fa-check"></i><b>7.4.1</b> IMR (XMR)</a></li>
+<li class="chapter" data-level="7.4.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbarr"><i class="fa fa-check"></i><b>7.4.2</b> XbarR</a></li>
+<li class="chapter" data-level="7.4.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbars"><i class="fa fa-check"></i><b>7.4.3</b> XbarS</a></li>
+<li class="chapter" data-level="7.4.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#t-diagram"><i class="fa fa-check"></i><b>7.4.4</b> T-diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#spesielle-kontrolldiagram-cusum-og-ewma"><i class="fa fa-check"></i><b>7.5</b> Spesielle kontrolldiagram (CUSUM og EWMA)</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#cusum"><i class="fa fa-check"></i><b>7.5.1</b> CUSUM</a></li>
+<li class="chapter" data-level="7.5.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#ewma"><i class="fa fa-check"></i><b>7.5.2</b> EWMA</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#risikojustering-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.6</b> Risikojustering av kontrolldiagram</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html"><i class="fa fa-check"></i><b>8</b> Prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#histogrammer"><i class="fa fa-check"></i><b>8.1</b> Histogrammer</a></li>
+<li class="chapter" data-level="8.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#boxplots"><i class="fa fa-check"></i><b>8.2</b> Boxplots</a></li>
+<li class="chapter" data-level="8.3" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#kapabilitetsindekser"><i class="fa fa-check"></i><b>8.3</b> Kapabilitetsindekser</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#cp"><i class="fa fa-check"></i><b>8.3.1</b> <em>C<sub>p</sub></em></a></li>
+<li class="chapter" data-level="8.3.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#cpk"><i class="fa fa-check"></i><b>8.3.2</b> <em>C<sub>pk</sub></em></a></li>
+<li class="chapter" data-level="8.3.3" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#cpm"><i class="fa fa-check"></i><b>8.3.3</b> <em>C<sub>pm</sub></em></a></li>
+<li class="chapter" data-level="8.3.4" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#cpmk"><i class="fa fa-check"></i><b>8.3.4</b> <em>C<sub>pmk</sub></em></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#loss-function"><i class="fa fa-check"></i><b>8.4</b> Loss function</a></li>
+<li class="chapter" data-level="8.5" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#ikke-normale-data"><i class="fa fa-check"></i><b>8.5</b> Ikke-normale data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="forbedringsarbeid---spc-i-en-større-kvalitetskontekst.html"><a href="forbedringsarbeid---spc-i-en-større-kvalitetskontekst.html"><i class="fa fa-check"></i><b>9</b> Forbedringsarbeid - SPC i en større kvalitetskontekst</a></li>
+<li class="chapter" data-level="" data-path="referanser.html"><a href="referanser.html"><i class="fa fa-check"></i>Referanser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-1---r-kode.html"><a href="vedlegg-1---r-kode.html"><i class="fa fa-check"></i>Vedlegg 1 - R kode</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---session-info.html"><a href="vedlegg-9---session-info.html"><i class="fa fa-check"></i>Vedlegg 9 - Session Info</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><a href="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 2 - Kritiske verdier i kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-3---chebyshevs-teorem.html"><a href="vedlegg-3---chebyshevs-teorem.html"><i class="fa fa-check"></i>Vedlegg 3 - Chebyshevs teorem</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><a href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><i class="fa fa-check"></i>Vedlegg 4 - Sentralgrenseteoremet (Central Limit Theorem)</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><a href="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 5 - Tabell med konstanter for kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-6---utregning-av-kontrollgrenser.html"><a href="vedlegg-6---utregning-av-kontrollgrenser.html"><i class="fa fa-check"></i>Vedlegg 6 - Utregning av kontrollgrenser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-7---anderson-darling-test-for-normalitet.html"><a href="vedlegg-7---anderson-darling-test-for-normalitet.html"><i class="fa fa-check"></i>Vedlegg 7 - Anderson-Darling test for normalitet</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><i class="fa fa-check"></i>Vedlegg 8 - Nedlasting, installasjon og enkel bruk av R og RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-r"><i class="fa fa-check"></i>Nedlasting og installasjon av R</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-rstudio"><i class="fa fa-check"></i>Nedlasting og installasjon av RStudio</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#rstudio"><i class="fa fa-check"></i>RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#grunnleggende-bruk-av-rstudio"><i class="fa fa-check"></i>Grunnleggende bruk av RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dimensjoner-i-implementering-av-spc.html"><a href="dimensjoner-i-implementering-av-spc.html"><i class="fa fa-check"></i>Dimensjoner i implementering av SPC</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistisk prosesskontroll</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dimensjoner-i-implementering-av-spc" class="section level1 unnumbered">
+<h1>Dimensjoner i implementering av SPC</h1>
+<p>Basert på <span class="citation">Rungtusanatham, Anderson, and Dooley (1997)</span></p>
+<table class=" lightable-classic" style="font-size: 12px; font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Nr
+</th>
+<th style="text-align:left;">
+Dimensjon
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+Ledelsens beslutninger og retningslinjer for å støtte implementering og praktisering av SPC
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+Betydning og synlighet av kontrolldiagram som verktøy for monitorering og kontroll av prosessytelser
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Identifikasjon av kritiske måleparametre for kritiske prosesser og/eller produktegenskaper som påvirker de kritiske prosessene
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Måleverktøyenes teknologisk modenhet og robusthet brukt i datainnsamling
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+Operatøransvar for korrekt bruk av kontrolldiagram for prosesskontroll
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+Verifisering av at forutsetningene for bruk av kontrolldiagram er tilstrekkelig ivaretatt
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+Bruk av kontrlldiagram i kontinuerlig forbedringsarbeid
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+Utvalgsstrategier for datainnsamling til kontrolldiagram
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+Opplæring og trening i statistiske og kognitive metoder for prosesskontroll og -forbedringer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+Teknisk støtte for implementering og bruk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+Kvalitetsforbedringsgruppe som støtte til praksis
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+Fravær av sluttinspeksjon/sluttkontroll som kvalitetsstrategi
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+Dokumentasjon og oppdatering av prosesskompetanse
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+Evaluering og revisjon av SPC praksis og resultater
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nilskvilvang/SPC/edit/master/XX_Vedlegg_9_Dimensjoner.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/nilskvilvang/SPC/blob/master/XX_Vedlegg_9_Dimensjoner.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

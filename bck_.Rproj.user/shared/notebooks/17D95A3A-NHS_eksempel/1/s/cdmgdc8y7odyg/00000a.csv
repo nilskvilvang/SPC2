@@ -1,0 +1,6 @@
+"0",""
+"0","## Sammenlimning av periodene på snitt og spredning"
+"0",""
+"0","ggline(prepost_eksempel_long, x = ""Periode"", y = ""Verdi"", "
+"0","       add = c(""mean_se"", ""jitter""))"
+"0",""

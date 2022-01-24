@@ -1,0 +1,28 @@
+h1:datatyper-og-datafordelinger Datatyper og datafordelinger
+h2:normalfordeling Normalfordeling
+fig:echo Høydefordeling for 100 tilfeldige menn, genererte data
+fig:echo Høydefordeling for 100 andre tilfeldige menn, genererte data
+fig:echo Genererte standard normalfordelte data
+fig:echo Genererte standard normalfordelte data med normalfordelingskurve
+fig:echo Normalfordelingskurve
+h3:varians-og-standardavvik Varians og standardavvik
+fig:echo Basert på Field (2009)
+h3:normalfordeling-standardavvik-og-forventninger Normalfordeling, standardavvik og forventninger
+fig:echo Normalfordeling med 1 standardavvik
+fig:echo Normalfordeling med 2 standardavvik
+fig:echo Normalfordeling med 3 standardavvik
+fig:echo Normalfordeling med standardavvik
+h2:binomialfordeling Binomialfordeling
+fig:echo Binomialfordeling med lik sannsynlighet
+fig:echo Binomialfordeling med ulik sannsynlighet
+fig:echo 10 terningkast
+fig:echo 100 terningkast
+fig:echo 6 000 000 terningkast
+h2:poissonfordeling Poissonfordeling
+fig:echo Poissonfordelinger
+fig:echo Poissonfordeling mål i VM-kamp fotball
+h2:geometrisk-fordeling Geometrisk fordeling
+fig:echo Geometrisk fordeling
+h2:eksponensiell-fordeling Eksponensiell fordeling
+fig:echo Eksponensiell fordeling
+

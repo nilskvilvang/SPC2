@@ -1,0 +1,4 @@
+"0",""
+"0","prepost_eksempel_long <- as_tibble(read_excel(""prepost_eksempel_long.xlsx""))"
+"0",""
+"0","ggbarplot(prepost_eksempel_long, x = ""Periode"", y = ""Verdi"", add = c(""mean""), color = ""blue"", fill = ""lightblue"")"

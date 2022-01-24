@@ -1,0 +1,5 @@
+install.packages("pacman")
+2+2
+install.packages("rmarkdown")
+
+pacman::p_load(rmarkdown, bookdown)

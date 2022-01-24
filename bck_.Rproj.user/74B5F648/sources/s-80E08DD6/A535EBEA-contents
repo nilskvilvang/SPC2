@@ -1,0 +1,138 @@
+---
+bibliography: referanser.bib 
+---
+
+# Vedlegg 6 - Utregning av kontrollgrenser{.unnumbered}
+
+Jfr. @Laney2002 og @Montgomery2020
+
+```{r echo=FALSE, eval=TRUE}
+pacman::p_load(knitr, tidyverse, kableExtra)
+```
+
+
+**Notasjon**
+
+```{r echo=FALSE, eval=TRUE}
+
+pacman::p_load(knitr, tidyverse, kableExtra)
+
+text_tbl1 <- data.frame(
+    'Notasjon' = c("CL", "UCL", "LCL", "*n*", "$\\hat{\\sigma}$", "$\\overline{x}$", "$\\overline{\\overline{x}}$", "*R*", "$\\hat{R}$", "USL", "LSL"),
+    'Innhold'= c("Sentraltendens (Central Line)", "Øvre kontrollgrense (Upper Control Limit)", "Nedre kontrollgrense (Lower Control Limit)", "Utvalgsstørrelse", "Standardavvik i prosessen", "Gjennomsnitt av målinger", "Gjennomsnitt av gjennomsnitt", "Spenn (Range)", "Gjennomsnitt av spenn (Average of Range)", "Øvre spesifiseringsgrense (Upper Specification Limit)", "Nedre spesifiseringsgrense (Lower Specification Limit)")
+)
+
+kable(text_tbl1, 
+  align = "cl",
+  escape = F, 
+  caption = NULL) %>%
+  kable_styling(latex_options = "hold_position", full_width = F) %>%
+  column_spec(2, width = '4cm') %>%
+  column_spec(2, width = '10cm')
+```
+
+
+**Måledata**
+
+```{r echo=FALSE, eval=TRUE}
+
+pacman::p_load(knitr, tidyverse, kableExtra)
+
+text_tbl2 <- data.frame(
+    'Grense' = c("CL", "UCL", "LCL"),
+    'X'= c("$$\\overline{\\overline{x}}$$", "$$\\overline{\\overline{x}} + A_2\\hat{R}$$","$$\\overline{\\overline{x}} - A_2\\hat{R}$$"),
+    'R' =c("$$\\hat{R}$$", "$$\\hat{R}D_4$$ ", "$$\\hat{R}D_3$$")
+)
+
+kable(text_tbl2, 
+  align = "cccc",
+  escape = F, 
+  caption = NULL) %>%
+  kable_styling(latex_options = "hold_position", full_width = F) %>%
+  column_spec(2, width = '5cm') %>%
+  column_spec(3, width = '5cm')
+```
+For A~2~, D~3~ og D~4~: Se vedlegg 5
+
+For IMR (XMR):
+
+```{r echo=FALSE, eval=TRUE}
+
+pacman::p_load(knitr, tidyverse, kableExtra)
+
+text_tbl3 <- data.frame(
+    'Grense' = c("CL", "UCL", "LCL"),
+    'I'= c("$$\\overline{x}$$", "$$\\overline{x} + 3 \\times \\frac{\\overline{MR}}{d_2}$$", "$$\\overline{x} - 3 \\times \\frac{\\overline{MR}}{d_2}$$"),
+    'MR' =c("$$\\overline{MR}$$", "$$\\overline{MR}D_4$$", "")
+)
+
+kable(text_tbl3, 
+  align = "cccc",
+  escape = F, 
+  caption = NULL) %>%
+  kable_styling(latex_options = "hold_position", full_width = F) %>%
+  column_spec(2, width = "5cm") %>%
+  column_spec(3, width = '5cm')
+```
+
+Utregning av gjennomsnittlig x-verdi: $\overline{x}$ = $\frac{\sum_{i = 1}^{m}x_i}{m}$   
+
+Utregning av Moving Range: $MR_i$ = $|x_i-x_i-1|$, der $x_i$ er et datapunkt og $x_i-1$ er datapunktets foregående datapunkt.
+
+Utregning av gjennomsnittlig Moving Range: $\overline{MR}$ = $\frac{\sum_{i = 2}^{m}MR_i}{m-1}$
+
+**Attributtdata**
+
+```{r echo=FALSE, eval=TRUE}
+
+pacman::p_load(knitr, tidyverse, kableExtra)
+
+text_tbl4 <- data.frame(
+    'Grense' = c("CL", "UCL", "LCL"),
+    'p'= c("$$\\overline{p}$$", "$$\\overline{p} + 3\\sqrt{\\frac{\\overline{p}(1-\\overline{p})}{n}}$$", "$$\\overline{p} - 3\\sqrt{\\frac{\\overline{p}(1-\\overline{p})}{n}}$$"),
+    'np' = c("$$n\\overline{p}$$", "$$n\\overline{p} + 3\\sqrt{n\\overline{p}(1-\\overline{p})}$$", "$$n\\overline{p} - 3\\sqrt{n\\overline{p}(1-\\overline{p})}$$"),
+    'c' = c("$$\\overline{c}$$", "$$\\overline{c} + 3\\sqrt{\\overline{c}}$$", "$$\\overline{c} - 3\\sqrt{\\overline{c}}$$"),
+    'u' = c("$$\\overline{u}$$", "$$\\overline{u} + 3\\sqrt{\\frac{\\overline{u}}{n}}$$", "$$\\overline{u} - 3\\sqrt{\\frac{\\overline{u}}{n}}$$")
+)
+
+kable(text_tbl4, 
+  align = "cccc",
+  escape = F, 
+  caption = NULL) %>%
+  kable_styling(latex_options = "hold_position", full_width = F) %>%
+  column_spec(1, width = '3cm') %>%
+  column_spec(2, width = '5cm') %>%
+  column_spec(3, width = '5cm') %>%
+  column_spec(4, width = '5cm')
+```
+
+```{r echo=FALSE, eval=TRUE}
+
+pacman::p_load(knitr, tidyverse, kableExtra)
+
+text_tbl5 <- data.frame(
+    'Grense' = c("CL", "UCL", "LCL"),
+    'Laney p´'= c("$$\\overline{p}$$", "$$\\overline{p} + 3\\sigma_z\\sqrt{\\frac{\\overline{p}(1-\\overline{p})}{n_i}}$$", "$$\\overline{p} - 3\\sigma_z\\sqrt{\\frac{\\overline{p}(1-\\overline{p})}{n_i}}$$"),
+    'Laney u´' = c("$$\\overline{u}$$", "$$\\overline{u} + 3\\sigma_z\\sqrt{\\frac{\\overline{u}}{n_i}}$$", "$$\\overline{u} - 3\\sigma_z\\sqrt{\\frac{\\overline{u}}{n_i}}$$"),
+    'g' = c("$$\\overline{g}*0.693$$", "$$\\overline{g} + 3\\sqrt{\\overline{g}(\\overline{g}+1)}$$", "$$\\overline{g} - 3\\sqrt{\\overline{g}(\\overline{g}+1)}$$")
+)
+
+kable(text_tbl5, 
+  align = "ccc",
+  escape = F, 
+  caption = NULL) %>%
+  kable_styling(latex_options = "hold_position", full_width = F) %>%
+  column_spec(1, width = '3cm') %>%
+  column_spec(2, width = '5cm') %>%
+  column_spec(3, width = '5cm')
+```
+
+z-konvertering for Laneys p’: $z_i$ = $\frac{p_i-\overline{p}}{\sqrt{\frac{\overline{p}(1-\overline{p})}{n_i}}}$
+
+z-konvertering for Laneys u’: $z_i$ = $\frac{u_i-\overline{u}}{\sqrt{\frac{\overline{u}}{n_i}}}$
+
+standardavvik for z: $\sigma_z$ = $\frac{\overline{R}}{d_2}$
+
+MR snitt for Laneys u’: $M\overline{R}$ = $\frac{\sum{MR}}{(k-1)}$
+
+

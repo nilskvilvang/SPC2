@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Vedlegg 5 - Tabell med konstanter for kontrolldiagram | Statistisk prosesskontroll</title>
+  <meta name="description" content="Vedlegg 5 - Tabell med konstanter for kontrolldiagram | Statistisk prosesskontroll" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Vedlegg 5 - Tabell med konstanter for kontrolldiagram | Statistisk prosesskontroll" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Vedlegg 5 - Tabell med konstanter for kontrolldiagram | Statistisk prosesskontroll" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"/>
+<link rel="next" href="vedlegg-6---utregning-av-kontrollgrenser.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SPC</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduksjon</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#versjoner"><i class="fa fa-check"></i>Versjoner</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html"><i class="fa fa-check"></i><b>1</b> Hvorfor denne boka?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html#programvare"><i class="fa fa-check"></i><b>1.1</b> Programvare</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><i class="fa fa-check"></i><b>2</b> Kvalitet, kvalitetsarbeid og statistisk prosesskontroll</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-statistisk-prosesskontroll"><i class="fa fa-check"></i><b>2.1</b> Hva er statistisk prosesskontroll?</a></li>
+<li class="chapter" data-level="2.2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hvorfor-er-tid-viktig"><i class="fa fa-check"></i><b>2.2</b> Hvorfor er tid viktig?</a></li>
+<li class="chapter" data-level="2.3" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-utgangspunktet-vi-skal-korrigere-fra"><i class="fa fa-check"></i><b>2.3</b> Hva er utgangspunktet vi skal korrigere fra?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="variasjon.html"><a href="variasjon.html"><i class="fa fa-check"></i><b>3</b> Variasjon</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variasjon.html"><a href="variasjon.html#simulering-av-trakteksperimentet-i-r"><i class="fa fa-check"></i><b>3.1</b> Simulering av trakteksperimentet i R</a></li>
+<li class="chapter" data-level="3.2" data-path="variasjon.html"><a href="variasjon.html#normal-og-unormal-variasjon"><i class="fa fa-check"></i><b>3.2</b> Normal og unormal variasjon</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html"><i class="fa fa-check"></i><b>4</b> Datatyper og datafordelinger</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling"><i class="fa fa-check"></i><b>4.1</b> Normalfordeling</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#varians-og-standardavvik"><i class="fa fa-check"></i><b>4.1.1</b> Varians og standardavvik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling-standardavvik-og-forventninger"><i class="fa fa-check"></i><b>4.1.2</b> Normalfordeling, standardavvik og forventninger</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#binomialfordeling"><i class="fa fa-check"></i><b>4.2</b> Binomialfordeling</a></li>
+<li class="chapter" data-level="4.3" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#poissonfordeling"><i class="fa fa-check"></i><b>4.3</b> Poissonfordeling</a></li>
+<li class="chapter" data-level="4.4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#geometrisk-fordeling"><i class="fa fa-check"></i><b>4.4</b> Geometrisk fordeling</a></li>
+<li class="chapter" data-level="4.5" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#eksponensiell-fordeling"><i class="fa fa-check"></i><b>4.5</b> Eksponensiell fordeling</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html"><i class="fa fa-check"></i><b>5</b> Er dataene dine normalfordelte?</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#q-q-plott"><i class="fa fa-check"></i><b>5.1</b> Q-Q plott</a></li>
+<li class="chapter" data-level="5.2" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#anderson-darling-test-for-normalitet"><i class="fa fa-check"></i><b>5.2</b> Anderson-Darling test for normalitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="seriediagram.html"><a href="seriediagram.html"><i class="fa fa-check"></i><b>6</b> Seriediagram</a></li>
+<li class="chapter" data-level="7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html"><i class="fa fa-check"></i><b>7</b> Kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#mønstre-i-kontrolldiagram"><i class="fa fa-check"></i><b>7.1</b> Mønstre i kontrolldiagram</a></li>
+<li class="chapter" data-level="7.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#tolkning-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.2</b> Tolkning av kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#punkter-utenfor-kontrollgrensene"><i class="fa fa-check"></i><b>7.2.1</b> Punkter utenfor kontrollgrensene:</a></li>
+<li class="chapter" data-level="7.2.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-3-påfølgende-punkter-er-mer-enn-2-sigma-fra-gjennomsnittsverdien-i-sone-a-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.2</b> 2 av 3 påfølgende punkter er mer enn 2 sigma fra gjennomsnittsverdien (i sone A) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-5-påfølgende-punkter-er-mer-enn-1-sigma-fra-gjennomsnittsverdien-sone-a-og-b-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.3</b> 4 av 5 påfølgende punkter er mer enn 1 sigma fra gjennomsnittsverdien (sone A og B) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-på-samme-side-av-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.4</b> 8 påfølgende punkter er på samme side av gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-i-stigende-eller-synkende-trend-etter-hverandre"><i class="fa fa-check"></i><b>7.2.5</b> 6 påfølgende punkter er i stigende eller synkende trend (etter hverandre)</a></li>
+<li class="chapter" data-level="7.2.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-innenfor---1-sigma-fra-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.6</b> 15 påfølgende punkter er innenfor +/- 1 sigma fra gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-alternerer-opp-og-ned-annenhver-opp-og-ned-i-forhold-til-foregående-verdi"><i class="fa fa-check"></i><b>7.2.7</b> 14 påfølgende punkter alternerer opp og ned (annenhver opp og ned i forhold til foregående verdi)</a></li>
+<li class="chapter" data-level="7.2.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-på-samme-side-av-gjennomsnittet-og-ingen-innenfor---1-sigma"><i class="fa fa-check"></i><b>7.2.8</b> 8 påfølgende punkter på samme side av gjennomsnittet og ingen innenfor +/- 1 sigma</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#telledata-attributter"><i class="fa fa-check"></i><b>7.3</b> Telledata (attributter)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#p-diagram"><i class="fa fa-check"></i><b>7.3.1</b> p-diagram</a></li>
+<li class="chapter" data-level="7.3.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-p-diagram"><i class="fa fa-check"></i><b>7.3.2</b> Laney’s p-diagram</a></li>
+<li class="chapter" data-level="7.3.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#np-diagram"><i class="fa fa-check"></i><b>7.3.3</b> np-diagram</a></li>
+<li class="chapter" data-level="7.3.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#u-diagram"><i class="fa fa-check"></i><b>7.3.4</b> u-diagram</a></li>
+<li class="chapter" data-level="7.3.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-u-diagram"><i class="fa fa-check"></i><b>7.3.5</b> Laney’s u-diagram</a></li>
+<li class="chapter" data-level="7.3.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#c-diagram"><i class="fa fa-check"></i><b>7.3.6</b> c-diagram</a></li>
+<li class="chapter" data-level="7.3.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#g-diagram"><i class="fa fa-check"></i><b>7.3.7</b> g-diagram</a></li>
+<li class="chapter" data-level="7.3.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#utfordringer-med-telledata-og-distribusjon-på-dataene"><i class="fa fa-check"></i><b>7.3.8</b> Utfordringer med telledata og distribusjon på dataene</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#måledata-variabler"><i class="fa fa-check"></i><b>7.4</b> Måledata (variabler)</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#imr-xmr"><i class="fa fa-check"></i><b>7.4.1</b> IMR (XMR)</a></li>
+<li class="chapter" data-level="7.4.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbarr"><i class="fa fa-check"></i><b>7.4.2</b> XbarR</a></li>
+<li class="chapter" data-level="7.4.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbars"><i class="fa fa-check"></i><b>7.4.3</b> XbarS</a></li>
+<li class="chapter" data-level="7.4.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#t-diagram"><i class="fa fa-check"></i><b>7.4.4</b> T-diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#spesielle-kontrolldiagram-cusum-og-ewma"><i class="fa fa-check"></i><b>7.5</b> Spesielle kontrolldiagram (CUSUM og EWMA)</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#cusum"><i class="fa fa-check"></i><b>7.5.1</b> CUSUM</a></li>
+<li class="chapter" data-level="7.5.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#ewma"><i class="fa fa-check"></i><b>7.5.2</b> EWMA</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#risikojustering-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.6</b> Risikojustering av kontrolldiagram</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html"><i class="fa fa-check"></i><b>8</b> Prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#histogrammer"><i class="fa fa-check"></i><b>8.1</b> Histogrammer</a></li>
+<li class="chapter" data-level="8.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#boxplots"><i class="fa fa-check"></i><b>8.2</b> Boxplots</a></li>
+<li class="chapter" data-level="8.3" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#kapabilitetsindekser"><i class="fa fa-check"></i><b>8.3</b> Kapabilitetsindekser</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#måledata"><i class="fa fa-check"></i><b>8.3.1</b> Måledata</a></li>
+<li class="chapter" data-level="8.3.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#telledata"><i class="fa fa-check"></i><b>8.3.2</b> Telledata</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#loss-function"><i class="fa fa-check"></i><b>8.4</b> Loss function</a></li>
+<li class="chapter" data-level="8.5" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#ikke-normale-data"><i class="fa fa-check"></i><b>8.5</b> Ikke-normale data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><i class="fa fa-check"></i><b>9</b> SPC som del av et helhetlig og kontinuerlig kvalitetsarbeid</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#dmaic"><i class="fa fa-check"></i><b>9.1</b> DMAIC</a></li>
+<li class="chapter" data-level="9.2" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#pareto"><i class="fa fa-check"></i><b>9.2</b> Pareto</a></li>
+<li class="chapter" data-level="9.3" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#flytdiagram"><i class="fa fa-check"></i><b>9.3</b> Flytdiagram</a></li>
+<li class="chapter" data-level="9.4" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#eksperimenter"><i class="fa fa-check"></i><b>9.4</b> Eksperimenter</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referanser.html"><a href="referanser.html"><i class="fa fa-check"></i>Referanser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-1---r-kode.html"><a href="vedlegg-1---r-kode.html"><i class="fa fa-check"></i>Vedlegg 1 - R kode</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><a href="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 2 - Kritiske verdier i kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-3---chebyshevs-teorem.html"><a href="vedlegg-3---chebyshevs-teorem.html"><i class="fa fa-check"></i>Vedlegg 3 - Chebyshevs teorem</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><a href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><i class="fa fa-check"></i>Vedlegg 4 - Sentralgrenseteoremet (Central Limit Theorem)</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><a href="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 5 - Tabell med konstanter for kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-6---utregning-av-kontrollgrenser.html"><a href="vedlegg-6---utregning-av-kontrollgrenser.html"><i class="fa fa-check"></i>Vedlegg 6 - Utregning av kontrollgrenser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-7---anderson-darling-test-for-normalitet.html"><a href="vedlegg-7---anderson-darling-test-for-normalitet.html"><i class="fa fa-check"></i>Vedlegg 7 - Anderson-Darling test for normalitet</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><i class="fa fa-check"></i>Vedlegg 8 - Nedlasting, installasjon og enkel bruk av R og RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-r"><i class="fa fa-check"></i>Nedlasting og installasjon av R</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-rstudio"><i class="fa fa-check"></i>Nedlasting og installasjon av RStudio</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#rstudio"><i class="fa fa-check"></i>RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#grunnleggende-bruk-av-rstudio"><i class="fa fa-check"></i>Grunnleggende bruk av RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><a href="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><i class="fa fa-check"></i>Vedlegg 9 - Dimensjoner i implementering av SPC</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html"><i class="fa fa-check"></i>Vedlegg 10 - Formler prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#måledata-1"><i class="fa fa-check"></i>Måledata</a>
+<ul>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cp-1"><em>C<sub>p</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#pp"><em>P<sub>p</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpk-1"><em>C<sub>pk</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ppk"><em>P<sub>pk</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpm-1"><em>C<sub>pm</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpmk-1"><em>C<sub>pmk</sub></em></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#telledata-1"><i class="fa fa-check"></i>Telledata</a>
+<ul>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpu"><em>DPU</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpmo"><em>DPMO</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#loss-function-1"><em>Loss function</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ikke-normale-data-1"><em>Ikke-normale data</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---session-info.html"><a href="vedlegg-9---session-info.html"><i class="fa fa-check"></i>Vedlegg 9 - Session Info</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistisk prosesskontroll</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram" class="section level1 unnumbered">
+<h1>Vedlegg 5 - Tabell med konstanter for kontrolldiagram</h1>
+<pre><code>## package &#39;diffobj&#39; successfully unpacked and MD5 sums checked
+## package &#39;brio&#39; successfully unpacked and MD5 sums checked
+## package &#39;desc&#39; successfully unpacked and MD5 sums checked
+## package &#39;pkgload&#39; successfully unpacked and MD5 sums checked
+## package &#39;praise&#39; successfully unpacked and MD5 sums checked
+## package &#39;waldo&#39; successfully unpacked and MD5 sums checked
+## package &#39;testthat&#39; successfully unpacked and MD5 sums checked
+## package &#39;xtable&#39; successfully unpacked and MD5 sums checked
+## package &#39;SixSigma&#39; successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+##  C:\Users\nilsk\AppData\Local\Temp\Rtmp6TFe05\downloaded_packages</code></pre>
+<template id="999e197d-39cf-4f61-82f0-aa1be6bb24c4"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-356a0704{}.cl-355ffca0{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-355ffca1{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-356023ce{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:6pt;padding-top:6pt;padding-left:6pt;padding-right:6pt;line-height: 1;background-color:transparent;}.cl-3561f6f4{width:54pt;background-color:rgba(239, 239, 239, 1.00);vertical-align: middle;border-bottom: 0.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3561f6f5{width:54pt;background-color:rgba(239, 239, 239, 1.00);vertical-align: middle;border-bottom: 0.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3561f6f6{width:54pt;background-color:rgba(239, 239, 239, 1.00);vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3561f6f7{width:54pt;background-color:rgba(239, 239, 239, 1.00);vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-356a0704'>
+<thead><tr style="overflow-wrap:break-word;"><td  colspan="9"class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">Tabell med konstanter for kontrolldiagram</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">n</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">A2</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">d2</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">d3</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">c4</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">D3</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">D4</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">B3</span></p></td><td class="cl-3561f6f7"><p class="cl-356023ce"><span class="cl-355ffca0">B4</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">2</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">1.8799712</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">1.128379</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">0.8525025</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">0.7978846</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">3.266532</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f4"><p class="cl-356023ce"><span class="cl-355ffca1">3.266532</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.0233267</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.692569</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8883680</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8862269</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.574591</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.568170</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">4</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7285972</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.058751</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8798082</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9213177</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.282052</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.266047</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">5</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.5768193</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.325929</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8640819</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9399856</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.114499</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.088998</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">6</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.4832460</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.534413</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8480397</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9515329</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.00000000</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.003830</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.03036321</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.969637</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">7</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.4192840</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.704357</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8332053</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9593688</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.07570774</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.924292</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.11768503</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.882315</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">8</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.3725274</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.847201</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8198311</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9650305</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.13617141</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.863829</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.18508960</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.814910</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">9</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.3366974</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">2.970026</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.8078343</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9693107</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.18401302</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.815987</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.23913280</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.760867</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">10</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.3082637</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.077505</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7970507</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9726593</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.22302266</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.776977</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.28370556</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.716294</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">11</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2850836</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.172873</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7873146</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9753501</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.25558190</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.744418</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.32128015</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.678720</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">12</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2657779</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.258455</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7784783</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9775594</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.28326927</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.716731</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.35351183</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.646488</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">13</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2494170</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.335980</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7704162</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9794056</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.30717560</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.692824</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.38155570</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.618444</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">14</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2353506</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.406763</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7630231</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9809714</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.32808088</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.671919</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.40624538</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.593755</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">15</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2231092</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.471827</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7562114</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9823162</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.34655893</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.653441</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.42819954</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.571800</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">16</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2123453</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.531983</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7499081</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9834835</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.36304213</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.636958</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.44788816</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.552112</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">17</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.2027955</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.587884</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7440518</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9845064</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.37786302</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.622137</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.46567554</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.534324</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">18</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1942567</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.640064</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7385908</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9854100</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.39128196</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.608718</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.48184896</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.518151</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">19</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1865693</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.688963</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7334815</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9862141</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.40350597</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.596494</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.49663844</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.503362</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">20</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1796063</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.734949</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7286908</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9869343</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.41469824</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.585302</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.51023059</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.489769</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">21</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1732651</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.778336</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7241733</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9875829</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.42500612</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.574994</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.52277862</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.477221</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">22</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1674621</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.819385</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7199148</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9881703</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.43453079</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.565469</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.53440963</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.465590</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">23</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1621283</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.858323</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7158868</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9887045</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.44336956</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.556630</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.54523009</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.454770</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">24</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.1572061</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">3.895348</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.7120682</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.9891927</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.45160110</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.548399</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">0.55532993</span></p></td><td class="cl-3561f6f5"><p class="cl-356023ce"><span class="cl-355ffca1">1.444670</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">25</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">0.1526473</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">3.930629</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">0.7084408</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">0.9896404</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">0.45929204</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">1.540708</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">0.56478571</span></p></td><td class="cl-3561f6f6"><p class="cl-356023ce"><span class="cl-355ffca1">1.435214</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="1510fda5-a5ff-4bba-bc0b-a1e1fbdc860b"></div>
+<script>
+var dest = document.getElementById("1510fda5-a5ff-4bba-bc0b-a1e1fbdc860b");
+var template = document.getElementById("999e197d-39cf-4f61-82f0-aa1be6bb24c4");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vedlegg-6---utregning-av-kontrollgrenser.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nilskvilvang/SPC2/edit/master/XX_Vedlegg_F_Konstanter.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/nilskvilvang/SPC2/blob/master/XX_Vedlegg_F_Konstanter.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

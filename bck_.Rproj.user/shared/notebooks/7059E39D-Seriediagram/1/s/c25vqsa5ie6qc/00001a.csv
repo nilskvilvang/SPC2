@@ -1,0 +1,7 @@
+"0",""
+"0","pacman::p_load(qicharts2, ggplot2, tidyverse, readxl)"
+"0",""
+"0","# datasett <- read_excel(""C://Users/nilsk/OneDrive - Høgskolen i Innlandet/Undervisning/Helselederutdanning/Egne gjennomføringer/M7 - Surnadal/Eksamen/Datasett.xlsx"")"
+"0",""
+"0",""
+"0","seriediagram <- qic(datasett$`Antal avvik`, title = ""Eksempel på seriediagram - normalfordelte genererte tall"", ylab = ""Verdi"", xlab = ""Hendelse"",   method = ""anhoej"", print.summary = TRUE)"

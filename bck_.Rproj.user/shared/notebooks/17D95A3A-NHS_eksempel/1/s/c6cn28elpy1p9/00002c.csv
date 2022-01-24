@@ -1,0 +1,8 @@
+"0",""
+"0","mean1 <- mean(prepost_eksempel$Pre)"
+"2","Unknown or uninitialised column: `Pre`."
+"2","argument is not numeric or logical: returning NA"
+"0","mean2 <- mean(prepost_eksempel$Post)"
+"2","Unknown or uninitialised column: `Post`."
+"2","argument is not numeric or logical: returning NA"
+"0","segments(x0=0,y0=mean1,x1=12,y1=mean1,col=""orange"", lwd = 3)"

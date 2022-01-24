@@ -1,0 +1,51 @@
+h1:kontrolldiagram Kontrolldiagram
+fig:echo Eksempel kontrolldiagram i *qicharts*
+fig:echo Eksempel kontrolldiagram i *qcc*
+h2:mønstre-i-kontrolldiagram Mønstre i kontrolldiagram
+h2:tolkning-av-kontrolldiagram Tolkning av kontrolldiagram
+fig:echo Oversikt regler kontrolldiagram
+fig:echo Oversikt regler kontrolldiagram
+h3:punkter-utenfor-kontrollgrensene Punkter utenfor kontrollgrensene:
+h3:av-3-påfølgende-punkter-er-mer-enn-2-sigma-fra-gjennomsnittsverdien-i-sone-a-og-i-samme-retning 2 av 3 påfølgende punkter er mer enn 2 sigma fra gjennomsnittsverdien (i sone A) og i samme retning
+h3:av-5-påfølgende-punkter-er-mer-enn-1-sigma-fra-gjennomsnittsverdien-sone-a-og-b-og-i-samme-retning 4 av 5 påfølgende punkter er mer enn 1 sigma fra gjennomsnittsverdien (sone A og B) og i samme retning
+h3:påfølgende-punkter-er-på-samme-side-av-gjennomsnittet 8 påfølgende punkter er på samme side av gjennomsnittet
+h3:påfølgende-punkter-er-i-stigende-eller-synkende-trend-etter-hverandre 6 påfølgende punkter er i stigende eller synkende trend (etter hverandre)
+h3:påfølgende-punkter-er-innenfor---1-sigma-fra-gjennomsnittet 15 påfølgende punkter er innenfor +/- 1 sigma fra gjennomsnittet
+h3:påfølgende-punkter-alternerer-opp-og-ned-annenhver-opp-og-ned-i-forhold-til-foregående-verdi 14 påfølgende punkter alternerer opp og ned (annenhver opp og ned i forhold til foregående verdi)
+h3:påfølgende-punkter-på-samme-side-av-gjennomsnittet-og-ingen-innenfor---1-sigma 8 påfølgende punkter på samme side av gjennomsnittet og ingen innenfor +/- 1 sigma
+h2:telledata-attributter Telledata (attributter)
+h3:p-diagram p-diagram
+fig:echo p-diagram data
+fig:echo p-diagram
+h3:laneys-p-diagram Laney’s p-diagram
+fig:echo p
+fig:echo p-diagram for Laney
+h3:np-diagram np-diagram
+fig:echo np-diagram data
+fig:echo np-diagram
+h3:u-diagram u-diagram
+fig:echo u-diagram data
+fig:echo u-diagram
+h3:laneys-u-diagram Laney’s u-diagram
+fig:echo u-diagram data
+h3:c-diagram c-diagram
+fig:echo c-diagram data
+fig:echo c-diagram
+h3:g-diagram g-diagram
+fig:echo g-diagram data
+h3:utfordringer-med-telledata-og-distribusjon-på-dataene Utfordringer med telledata og distribusjon på dataene
+h2:måledata-variabler Måledata (variabler)
+h3:imr-xmr IMR (XMR)
+fig:echo IMR-diagram data
+fig:echo IMR-diagram
+h3:xbarr XbarR
+fig:echo XbarR-diagram data
+h3:xbars XbarS
+fig:echo XbarS-diagram data
+h3:t-diagram T-diagram
+fig:echo t-diagram
+h2:spesielle-kontrolldiagram-cusum-og-ewma Spesielle kontrolldiagram (CUSUM og EWMA)
+h3:cusum CUSUM
+h3:ewma EWMA
+h2:risikojustering-av-kontrolldiagram Risikojustering av kontrolldiagram
+

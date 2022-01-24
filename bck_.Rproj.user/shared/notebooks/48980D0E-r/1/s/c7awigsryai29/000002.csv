@@ -1,0 +1,4 @@
+"0",""
+"0","eqd2 <- function(x){2.36 * (3 * (2 * x)) - 1.34 * 2}"
+"0","ggplot(data.frame(x=c(0, 15)), aes(x=x)) + "
+"0","  stat_function(fun=eqd2)"

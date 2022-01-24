@@ -1,0 +1,19 @@
+---
+bibliography: referanser.bib 
+---
+
+# Vedlegg 9 - Dimensjoner i implementering av SPC {.unnumbered}
+
+Basert på @rungtusanathamConceptualizingOrganizationalImplementation1997
+
+```{r echo = FALSE}
+
+pacman::p_load(kableExtra)
+
+dimensjoner <- data.frame(Nr = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"),
+                            Dimensjon = c("Ledelsens beslutninger og retningslinjer for å støtte implementering og praktisering av SPC", "Betydning og synlighet av kontrolldiagram som verktøy for monitorering og kontroll av prosessytelser", "Identifikasjon av kritiske måleparametre for kritiske prosesser og/eller produktegenskaper som påvirker de kritiske prosessene", "Måleverktøyenes teknologisk modenhet og robusthet brukt i datainnsamling", "Operatøransvar for korrekt bruk av kontrolldiagram for prosesskontroll", "Verifisering av at forutsetningene for bruk av kontrolldiagram er tilstrekkelig ivaretatt", "Bruk av kontrlldiagram i kontinuerlig forbedringsarbeid", "Utvalgsstrategier for datainnsamling til kontrolldiagram", "Opplæring og trening i statistiske og kognitive metoder for prosesskontroll og -forbedringer", "Teknisk støtte for implementering og bruk", "Kvalitetsforbedringsgruppe som støtte til praksis", "Fravær av sluttinspeksjon/sluttkontroll som kvalitetsstrategi", "Dokumentasjon og oppdatering av prosesskompetanse", "Evaluering og revisjon av SPC praksis og resultater"))
+
+kbl(dimensjoner) %>%
+  kable_classic(full_width = F, html_font = "Cambria", font_size = 14) 
+
+```

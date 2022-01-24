@@ -1,0 +1,18 @@
+"0",""
+"0","pacman::p_load(qcc, tidyverse, readxl)"
+"0",""
+"0","XbarRdiagr <- as_tibble(read_excel(""XbarR_diagram.xlsx""))"
+"2","New names:
+* UCL -> UCL...8
+* `+2 Sigma` -> `+2 Sigma...9`
+* `+1 Sigma` -> `+1 Sigma...10`
+* Average -> Average...11
+* `-1 Sigma` -> `-1 Sigma...12`
+* ...
+"
+"0","XbarR_chart <- with(XbarRdiagr, qcc(XbarRdiagr, type = ""xbar""))"
+"0",""
+"0","XbarR_chart2 <- with(XbarRdiagr, qcc(XbarRdiagr, type = ""R""))"
+"0",""
+"0","plot(XbarR_chart2, title = ""R-diagram"")"
+"2","Removed 2 rows containing missing values (geom_text)."

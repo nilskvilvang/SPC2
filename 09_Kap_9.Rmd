@@ -1,0 +1,13 @@
+---
+bibliography: referanser.bib  
+---
+
+# SPC som del av et helhetlig og kontinuerlig kvalitetsarbeid
+
+## DMAIC
+
+## Pareto
+
+## Flytdiagram
+
+## Eksperimenter

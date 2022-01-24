@@ -1,0 +1,68 @@
+---
+bibliography: referanser.bib  
+---
+
+# Hvorfor denne boka?
+
+Tanken på å lage denne boka oppsto gjennom forberedelser til innføring av et nytt emne i Kvalitetsledelse på Høgskolen i Innlandet, og gjennom erfaringer fra liknende kurs i helsesektoren rundt om i Kommune-Norge. Kvalitetsarbeid er et sentralt element i svært mange virksomheter. I mange virksomheter, som i helsesektoren, finnes det også lovpålegg som omhandler kvalitet. Det finnes et utall metodikker, tilbydere, bøker og artikler om temaet. Likevel følte vi at akkurat denne boka manglet. Vi savnet en kobling mellom mye av det som blir beskrevet i bøker om kvalitet og kvalitetsledelse, og en grundigere behandling av grunnlaget (= datagrunnlaget) for mye av dette kvalitetsarbeidet. Denne koblingen var fundamental i utviklingen av kvalitetsarbeid gjennom frontfigurer som Walter A. Shewhart og W. Edwards Deming, men har etter vår mening til en viss grad havnet litt i bakleksa.
+
+Det grunnleggende premisset bak denne boka og vår tilnærming til kvalitetsarbeid er: Uten en god forståelse av datagrunnlag og analyse av prosesser er sjansene for å lykkes med kvalitetsarbeid små og tilfeldige. I beste fall har man kastet bort ressurser. I verste fall har man kastet bort ressurser, økt frustrasjonen blant ansatte og fått dårligere kvalitet. Derfor mener vi at statistisk prosesskontroll må ha en helt sentral plass i kvalitetsarbeid.
+
+Denne boka har til hensikt å drøfte kvalitetsarbeid. Vi ønsker a dekke et gap. For det første er det skrevet på norsk. Mye av litteraturen er skrevet på engelsk og kan for mange være vanskelig tilgjengelig av den grunn. Videre er det overraskende lite om statistisk prosesskontroll som verktøy i kvalitetsarbeid, langt mindre på norsk. Der det er et tema, er det i liten grad koblet inn i en større kvalitetssammenheng. Til slutt ønsker vi også å gi leseren en praktisk introduksjon gjennom å vise konkret anvendelse av statistisk prosesskontroll ved å bruke ulike dataverktøy. Til syvende og sist gjelder postulatet «godt gjort er bedre enn godt sagt». Det er vårt klare håp at denne boka kan være både en kilde til forståelse og et praktisk oppslagsverk.
+
+## Programvare
+
+Det kan synes unødvendig eller overflødig å vise bruk av flere dataverktøy, men hensikten er å gjøre dette lettere tilgjengelig og mer anvendbart for praktikere som har tilgang til ulike dataverktøy. Excel [@Microsoft2021] og R [@RCoreTeam2015]^[Strengt tatt bruker vi R og RStudio, men dette vil bli forklart i vedlegget som omhandler nedlasting og installasjon av disse. R er programvaren og motoren, RStudio er brukergrensesnittet vi legger utenpå R som gjør det langt enklere å bruke] er fritt tilgjengelig (dvs Excel er for så vidt ikke fritt tilgjengelig, men så utbredt at det er naturlig å ta det med^[Vi viser til Excel, men man kan like gjerne bruke [Apache Open Office](https://www.openoffice.org/no/), en gratis programvarepakke som inkluderer Calc. Videoene hvor vi viser framgangsmåte i Excel kan enkelt brukes med [Calc](https://www.openoffice.org/no/product/calc.html) (selv om mindre forskjeller kan eksistere).]). Det finnes veldig gode tilleggsprogrammer til Excel som integrerer seg sømløst med Excel^[Vi er ikke kjent med tilsvarende tilleggsprogram for Open Office Calc.] og gjør at arbeidet med statistisk prosesskontroll blir veldig enkelt i et kjent grensesnitt. I forbindelse med arbeidet med denne boka har vi testet ut [Analyse-It](https://analyse-it.com/), [SPC for Excel](https://www.spcforexcel.com/) og [QIMacros](https://www.qimacros.com/) som gir Excel veldig god funksjonalitet ^[Et annet eksempel på tilsvarende tillegg til Excel er [XLSTAT](https://www.xlstat.com/en/)] ^[Analyse-It som inkluderer kvalitetsmodulen koster i skrivende stund $ 249 for en årlig lisens, eller $ 649 for en permanent lisens.] ^[Om man vil ha et gratis alternativ for statistiske analyser som legger seg i Excel kan også [Real Statistics Resource Pack](https://www.real-statistics.com/) være et ok alternativ, men dette tillegget har ikke noen funksjonalitet for statistisk prosesskontroll].
+
+Analyse-it kan fremstå som dyrt, men sammenliknet med "ekte" statistikkprogram som SPSS eller Stata er kostnaden relativt lav. Imidlertid finnes det veldig gode alternativer rettet spesielt mot statistisk prosesskontroll og kvalitetsarbeid. De to vi har testet ut er "SPC for Excel" og "QIMacros". Begge integrerer seg sømløst med Excel, har all funksjonalitet man med veldig stor sannsynlighet vil trenge i denne sammenheng og er enkle i bruk. Men alle tilleggene utover standard Excel koster noe. Skal man jobbe en del med statistisk prosesskontroll med Excel som er det imidlertid vel verdt pengene mener vi -- og i organisasjoner kan man få volumrabatter o.l. Selv om vi har laget videoer som forklarer framgangsmåte i Excel for flere av analysene og man fint kan lage ulike diagrammer selv, er det uten tvil mer krøkkete. Det er enormt tidsbesparende å ha en plug-in i Excel om man skal jobbe med statistisk prosesskontroll. Om man velger å skaffe seg et av tilleggene til Excel blir et spørsmål om hvor ofte man har behov for å gjøre dette.
+
+R [@RCoreTeam2015] er en velkjent programvare innenfor statistikk, dataanalyse, datamodellering osv. R har noen store fordeler; det er gratis, det kjører på "alle" operativsystemer, og det har et svært stort bruker- og utviklermiljø som i all hovedsak deler alt gratis. Det er også enkelt å finne løsninger på det meste gjennom veiledninger og brukerforum på nett. Selve R er et programmeringsspråk og utviklermiljø for statistikk som gir en kjernefunksjonalitet innenfor datahåndtering, kalkulasjoner, dataanalyse, datamodellering, grafisk framstilling av data o.l. Brukerne av R utvikler imidlertid "pakker" som man bruker i R, det finnes p.t. over 18000 ulike pakker som bygger på kjernen i R. Alle pakkene tilbyr ulike tilrettelagte løsninger -- det finnes f.eks. flere pakker som spesifikt handler om statistisk prosesskontroll som [qicharts2](https://anhoej.github.io/qicharts2/) og [qcc](https://luca-scr.github.io/qcc/articles/qcc.html).
+
+Den største ulempen med R er at brukergrensesnittet er veldig ulikt hva vi kjenner fra Microsoft Office-typen brukergrensesnitt, så det vil ta litt tid å bli kjent med programmet. I tillegg er brukergrensesnittet kodebasert og ikke menybasert, og kan (dessverre) virke avskrekkende. Likevel, det er et utrolig kraftig verktøy hvis man tar seg tid til å lære seg det grunnleggende.
+
+Et spesielt interessant gratis alternativ er statistikkprogrammet [jamovi](https://www.jamovi.org/). Dette er en grafisk tiltalende og funksjonsrik statistikkpakke som kjører med R i bakgrunnen (alle analyser i jamovi bruker R), og som også kan inkludere R kode direkte. Det gjør at man kan utnytte alle pakkene skrevet for R direkte i jamovis grafiske brukergrensesnitt. Jamovi er et ypperlig gratis program for statistiske analyser, men har ingen innebygd funksjonalitet ennå for statistisk prosesskontroll (men man kan som sagt kjøre R-pakker for dette i programmet).
+
+Et annet ypperlig og gratis program er [JASP](https://jasp-stats.org/) som også kjører analyser gjennom R i et grafisk brukergrensesnitt, og som har den samme muligheten til direkte R integrasjon som jamovi -- foreløpig i betaversjon. JASP er i tillegg i ferd med å utvikle en integrert modul for kvalitetskontroll/statistisk prosesskontroll. Det er forventet lansert i løpet av høsten 2021 og vil kunne bli den absolutt foretrukne plattformen siden den da vil kjøre både avanserte statistikkfunksjoner basert på R og SPC-funksjoner i et intuitivt og flott grensesnitt, og er gratis.
+
+Leseren står selvsagt fritt til å hoppe elegant over alle verktøy som ikke er interessante. Det er klare fordeler og ulemper med alle, men forhåpentligvis vil de fleste finne et verktøy de kan bruke i utvalget vi har tatt med.
+
+Der det er naturlig, som ved bruk av R og RStudio [@rstudioteamRStudioIntegratedDevelopment2021], er kodingen inkludert slik at eksempler skal kunne replikeres av leseren, men vi går ikke inn på R utover dette (og en veldig kort introduksjon til hvordan man laster ned og installerer R og RStudio). Kodingen er gjengitt i vedlegg. Vi har brukt R/RStudio og rmarkdown [@Allaire2021] -- en såkalt pakke til R -- i produksjonen av dette notatet. R baserer seg som sagt på bruk av ulike "pakker" som er utviklet av forskjellige utviklere og som er fritt tilgjengelig. Mange av disse har også datasett inkludert slik at det er enkelt å replikere eksempler. Så langt det er mulig har vi basert oss på at det vi viser som eksempler skal være replikerbare for leseren. Når det gjelder pakker for statistisk prosess kontroll har vi brukt pakkene [qicharts2](https://anhoej.github.io/qicharts2/) [@anhojControlChartsQicharts2021] og [qcc](https://luca-scr.github.io/qcc/articles/qcc.html) [@Scrucca2017].
+
+Vi har lite fokus på matematikk og formler i den forstand at vi ikke utleder i dybden forklaring på ulike formler. Vi tror det er fullt mulig å ha en praktisk forståelse og bruk av statistisk prosesskontroll uten å ha dyptgående kjennskap til de matematiske eller statistiske forklaringene -- og det har vært vårt kjerneanliggende med denne boka. Likevel har vi inkludert noe bakgrunnskunnskap for å skape en
+ramme rundt kjernen i notatet der vi tenker det kan være interessant for de som ønsker å fordype seg noe mer. I vedleggene har vi også gjengitt formler og tabeller som kan være interessante.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

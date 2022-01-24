@@ -1,0 +1,4 @@
+"0",""
+"0","lwd = 3"
+"0","# horzintal lines"
+"0","lines(x = c(2,-2), y = c(0.48,0.48), type = ""l"", col=3, lwd = lwd)"

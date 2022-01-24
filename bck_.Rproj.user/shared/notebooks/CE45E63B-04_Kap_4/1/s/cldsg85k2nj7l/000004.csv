@@ -1,0 +1,8 @@
+"0",""
+"0","set.seed(32)"
+"0",""
+"0","terning10 <- sample(1:6, 10, replace = TRUE)"
+"0",""
+"0","stripchart(terning10, method = ""stack"", offset = .5, at = 0, pch = 19,"
+"0","           col = ""steelblue"", main = ""10 terningkast"", xlab = ""Verdi på terning"", ylab = ""Antall"")"
+"0",""

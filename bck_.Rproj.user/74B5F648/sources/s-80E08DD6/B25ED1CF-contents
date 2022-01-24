@@ -1,0 +1,11 @@
+---
+title: "Untitled"
+output: html_document
+---
+```{python}
+2+2
+```
+
+library(tidyverse)
+install.packages("reticulate")
+

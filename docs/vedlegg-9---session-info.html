@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Vedlegg 9 - Session Info | Statistisk prosesskontroll</title>
+  <meta name="description" content="Vedlegg 9 - Session Info | Statistisk prosesskontroll" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Vedlegg 9 - Session Info | Statistisk prosesskontroll" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Vedlegg 9 - Session Info | Statistisk prosesskontroll" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vedlegg-10---formler-prosesskapabilitet.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SPC</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduksjon</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#versjoner"><i class="fa fa-check"></i>Versjoner</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html"><i class="fa fa-check"></i><b>1</b> Hvorfor denne boka?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html#programvare"><i class="fa fa-check"></i><b>1.1</b> Programvare</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><i class="fa fa-check"></i><b>2</b> Kvalitet, kvalitetsarbeid og statistisk prosesskontroll</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-statistisk-prosesskontroll"><i class="fa fa-check"></i><b>2.1</b> Hva er statistisk prosesskontroll?</a></li>
+<li class="chapter" data-level="2.2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hvorfor-er-tid-viktig"><i class="fa fa-check"></i><b>2.2</b> Hvorfor er tid viktig?</a></li>
+<li class="chapter" data-level="2.3" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-utgangspunktet-vi-skal-korrigere-fra"><i class="fa fa-check"></i><b>2.3</b> Hva er utgangspunktet vi skal korrigere fra?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="variasjon.html"><a href="variasjon.html"><i class="fa fa-check"></i><b>3</b> Variasjon</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variasjon.html"><a href="variasjon.html#simulering-av-trakteksperimentet-i-r"><i class="fa fa-check"></i><b>3.1</b> Simulering av trakteksperimentet i R</a></li>
+<li class="chapter" data-level="3.2" data-path="variasjon.html"><a href="variasjon.html#normal-og-unormal-variasjon"><i class="fa fa-check"></i><b>3.2</b> Normal og unormal variasjon</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html"><i class="fa fa-check"></i><b>4</b> Datatyper og datafordelinger</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling"><i class="fa fa-check"></i><b>4.1</b> Normalfordeling</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#varians-og-standardavvik"><i class="fa fa-check"></i><b>4.1.1</b> Varians og standardavvik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling-standardavvik-og-forventninger"><i class="fa fa-check"></i><b>4.1.2</b> Normalfordeling, standardavvik og forventninger</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#binomialfordeling"><i class="fa fa-check"></i><b>4.2</b> Binomialfordeling</a></li>
+<li class="chapter" data-level="4.3" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#poissonfordeling"><i class="fa fa-check"></i><b>4.3</b> Poissonfordeling</a></li>
+<li class="chapter" data-level="4.4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#geometrisk-fordeling"><i class="fa fa-check"></i><b>4.4</b> Geometrisk fordeling</a></li>
+<li class="chapter" data-level="4.5" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#eksponensiell-fordeling"><i class="fa fa-check"></i><b>4.5</b> Eksponensiell fordeling</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html"><i class="fa fa-check"></i><b>5</b> Er dataene dine normalfordelte?</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#q-q-plott"><i class="fa fa-check"></i><b>5.1</b> Q-Q plott</a></li>
+<li class="chapter" data-level="5.2" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#anderson-darling-test-for-normalitet"><i class="fa fa-check"></i><b>5.2</b> Anderson-Darling test for normalitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="seriediagram.html"><a href="seriediagram.html"><i class="fa fa-check"></i><b>6</b> Seriediagram</a></li>
+<li class="chapter" data-level="7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html"><i class="fa fa-check"></i><b>7</b> Kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#mønstre-i-kontrolldiagram"><i class="fa fa-check"></i><b>7.1</b> Mønstre i kontrolldiagram</a></li>
+<li class="chapter" data-level="7.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#tolkning-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.2</b> Tolkning av kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#punkter-utenfor-kontrollgrensene"><i class="fa fa-check"></i><b>7.2.1</b> Punkter utenfor kontrollgrensene:</a></li>
+<li class="chapter" data-level="7.2.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-3-påfølgende-punkter-er-mer-enn-2-sigma-fra-gjennomsnittsverdien-i-sone-a-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.2</b> 2 av 3 påfølgende punkter er mer enn 2 sigma fra gjennomsnittsverdien (i sone A) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-5-påfølgende-punkter-er-mer-enn-1-sigma-fra-gjennomsnittsverdien-sone-a-og-b-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.3</b> 4 av 5 påfølgende punkter er mer enn 1 sigma fra gjennomsnittsverdien (sone A og B) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-på-samme-side-av-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.4</b> 8 påfølgende punkter er på samme side av gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-i-stigende-eller-synkende-trend-etter-hverandre"><i class="fa fa-check"></i><b>7.2.5</b> 6 påfølgende punkter er i stigende eller synkende trend (etter hverandre)</a></li>
+<li class="chapter" data-level="7.2.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-innenfor---1-sigma-fra-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.6</b> 15 påfølgende punkter er innenfor +/- 1 sigma fra gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-alternerer-opp-og-ned-annenhver-opp-og-ned-i-forhold-til-foregående-verdi"><i class="fa fa-check"></i><b>7.2.7</b> 14 påfølgende punkter alternerer opp og ned (annenhver opp og ned i forhold til foregående verdi)</a></li>
+<li class="chapter" data-level="7.2.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-på-samme-side-av-gjennomsnittet-og-ingen-innenfor---1-sigma"><i class="fa fa-check"></i><b>7.2.8</b> 8 påfølgende punkter på samme side av gjennomsnittet og ingen innenfor +/- 1 sigma</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#telledata-attributter"><i class="fa fa-check"></i><b>7.3</b> Telledata (attributter)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#p-diagram"><i class="fa fa-check"></i><b>7.3.1</b> p-diagram</a></li>
+<li class="chapter" data-level="7.3.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-p-diagram"><i class="fa fa-check"></i><b>7.3.2</b> Laney’s p-diagram</a></li>
+<li class="chapter" data-level="7.3.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#np-diagram"><i class="fa fa-check"></i><b>7.3.3</b> np-diagram</a></li>
+<li class="chapter" data-level="7.3.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#u-diagram"><i class="fa fa-check"></i><b>7.3.4</b> u-diagram</a></li>
+<li class="chapter" data-level="7.3.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-u-diagram"><i class="fa fa-check"></i><b>7.3.5</b> Laney’s u-diagram</a></li>
+<li class="chapter" data-level="7.3.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#c-diagram"><i class="fa fa-check"></i><b>7.3.6</b> c-diagram</a></li>
+<li class="chapter" data-level="7.3.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#g-diagram"><i class="fa fa-check"></i><b>7.3.7</b> g-diagram</a></li>
+<li class="chapter" data-level="7.3.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#utfordringer-med-telledata-og-distribusjon-på-dataene"><i class="fa fa-check"></i><b>7.3.8</b> Utfordringer med telledata og distribusjon på dataene</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#måledata-variabler"><i class="fa fa-check"></i><b>7.4</b> Måledata (variabler)</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#imr-xmr"><i class="fa fa-check"></i><b>7.4.1</b> IMR (XMR)</a></li>
+<li class="chapter" data-level="7.4.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbarr"><i class="fa fa-check"></i><b>7.4.2</b> XbarR</a></li>
+<li class="chapter" data-level="7.4.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbars"><i class="fa fa-check"></i><b>7.4.3</b> XbarS</a></li>
+<li class="chapter" data-level="7.4.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#t-diagram"><i class="fa fa-check"></i><b>7.4.4</b> T-diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#spesielle-kontrolldiagram-cusum-og-ewma"><i class="fa fa-check"></i><b>7.5</b> Spesielle kontrolldiagram (CUSUM og EWMA)</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#cusum"><i class="fa fa-check"></i><b>7.5.1</b> CUSUM</a></li>
+<li class="chapter" data-level="7.5.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#ewma"><i class="fa fa-check"></i><b>7.5.2</b> EWMA</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#risikojustering-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.6</b> Risikojustering av kontrolldiagram</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html"><i class="fa fa-check"></i><b>8</b> Prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#histogrammer"><i class="fa fa-check"></i><b>8.1</b> Histogrammer</a></li>
+<li class="chapter" data-level="8.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#boxplots"><i class="fa fa-check"></i><b>8.2</b> Boxplots</a></li>
+<li class="chapter" data-level="8.3" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#kapabilitetsindekser"><i class="fa fa-check"></i><b>8.3</b> Kapabilitetsindekser</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#måledata"><i class="fa fa-check"></i><b>8.3.1</b> Måledata</a></li>
+<li class="chapter" data-level="8.3.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#telledata"><i class="fa fa-check"></i><b>8.3.2</b> Telledata</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#loss-function"><i class="fa fa-check"></i><b>8.4</b> Loss function</a></li>
+<li class="chapter" data-level="8.5" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#ikke-normale-data"><i class="fa fa-check"></i><b>8.5</b> Ikke-normale data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><i class="fa fa-check"></i><b>9</b> SPC som del av et helhetlig og kontinuerlig kvalitetsarbeid</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#dmaic"><i class="fa fa-check"></i><b>9.1</b> DMAIC</a></li>
+<li class="chapter" data-level="9.2" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#pareto"><i class="fa fa-check"></i><b>9.2</b> Pareto</a></li>
+<li class="chapter" data-level="9.3" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#flytdiagram"><i class="fa fa-check"></i><b>9.3</b> Flytdiagram</a></li>
+<li class="chapter" data-level="9.4" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#eksperimenter"><i class="fa fa-check"></i><b>9.4</b> Eksperimenter</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referanser.html"><a href="referanser.html"><i class="fa fa-check"></i>Referanser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-1---r-kode.html"><a href="vedlegg-1---r-kode.html"><i class="fa fa-check"></i>Vedlegg 1 - R kode</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><a href="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 2 - Kritiske verdier i kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-3---chebyshevs-teorem.html"><a href="vedlegg-3---chebyshevs-teorem.html"><i class="fa fa-check"></i>Vedlegg 3 - Chebyshevs teorem</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><a href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><i class="fa fa-check"></i>Vedlegg 4 - Sentralgrenseteoremet (Central Limit Theorem)</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><a href="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 5 - Tabell med konstanter for kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-6---utregning-av-kontrollgrenser.html"><a href="vedlegg-6---utregning-av-kontrollgrenser.html"><i class="fa fa-check"></i>Vedlegg 6 - Utregning av kontrollgrenser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-7---anderson-darling-test-for-normalitet.html"><a href="vedlegg-7---anderson-darling-test-for-normalitet.html"><i class="fa fa-check"></i>Vedlegg 7 - Anderson-Darling test for normalitet</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><i class="fa fa-check"></i>Vedlegg 8 - Nedlasting, installasjon og enkel bruk av R og RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-r"><i class="fa fa-check"></i>Nedlasting og installasjon av R</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-rstudio"><i class="fa fa-check"></i>Nedlasting og installasjon av RStudio</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#rstudio"><i class="fa fa-check"></i>RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#grunnleggende-bruk-av-rstudio"><i class="fa fa-check"></i>Grunnleggende bruk av RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><a href="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><i class="fa fa-check"></i>Vedlegg 9 - Dimensjoner i implementering av SPC</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html"><i class="fa fa-check"></i>Vedlegg 10 - Formler prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#måledata-1"><i class="fa fa-check"></i>Måledata</a>
+<ul>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cp-1"><em>C<sub>p</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#pp"><em>P<sub>p</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpk-1"><em>C<sub>pk</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ppk"><em>P<sub>pk</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpm-1"><em>C<sub>pm</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpmk-1"><em>C<sub>pmk</sub></em></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#telledata-1"><i class="fa fa-check"></i>Telledata</a>
+<ul>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpu"><em>DPU</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpmo"><em>DPMO</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#loss-function-1"><em>Loss function</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ikke-normale-data-1"><em>Ikke-normale data</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---session-info.html"><a href="vedlegg-9---session-info.html"><i class="fa fa-check"></i>Vedlegg 9 - Session Info</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistisk prosesskontroll</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vedlegg-9---session-info" class="section level1 unnumbered">
+<h1>Vedlegg 9 - Session Info</h1>
+<pre><code>## R version 4.1.2 (2021-11-01)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 19043)
+## 
+## Locale:
+##   LC_COLLATE=Norwegian Bokmål_Norway.1252 
+##   LC_CTYPE=Norwegian Bokmål_Norway.1252   
+##   LC_MONETARY=Norwegian Bokmål_Norway.1252
+##   LC_NUMERIC=C                            
+##   LC_TIME=Norwegian Bokmål_Norway.1252    
+## 
+## Package version:
+##   abind_1.4-5              askpass_1.1              assertthat_0.2.1        
+##   backports_1.4.1          base64enc_0.1-3          bit_4.0.4               
+##   bit64_4.0.5              blob_1.2.2               bmp_0.3                 
+##   bookdown_0.24            boot_1.3.28              brio_1.1.3              
+##   broom_0.7.11             callr_3.7.0              car_3.0-12              
+##   carData_3.0-5            caret_6.0.90             cellranger_1.1.0        
+##   class_7.3.19             cli_3.1.1                clipr_0.7.1             
+##   codetools_0.2.18         colorspace_2.0-2         compiler_4.1.2          
+##   conquer_1.2.1            corrplot_0.92            cowplot_1.1.1           
+##   cpp11_0.4.2              crayon_1.4.2             curl_4.3.2              
+##   data.table_1.14.2        DBI_1.1.2                dbplyr_2.1.1            
+##   desc_1.4.0               diffobj_0.3.5            digest_0.6.29           
+##   downloader_0.4           dplyr_1.0.7              dtplyr_1.2.1            
+##   e1071_1.7.9              ellipsis_0.3.2           evaluate_0.14           
+##   extrafont_0.17           extrafontdb_1.0          fansi_1.0.2             
+##   farver_2.1.0             fastmap_1.1.0            flextable_0.6.10        
+##   forcats_0.5.1            foreach_1.5.1            foreign_0.8.81          
+##   fs_1.5.2                 future_1.23.0            future.apply_1.8.1      
+##   gargle_1.2.0             gdtools_0.2.3            generics_0.1.1          
+##   ggforce_0.3.3            ggfortify_0.4.14         ggplot2_3.3.5           
+##   ggpubr_0.4.0             ggrepel_0.9.1            ggsci_2.9               
+##   ggsignif_0.6.3           globals_0.14.0           glue_1.6.0              
+##   googledrive_2.0.0        googlesheets4_1.0.0      gower_0.2.2             
+##   graphics_4.1.2           grDevices_4.1.2          grid_4.1.2              
+##   gridExtra_2.3            gtable_0.3.0             haven_2.4.3             
+##   highr_0.9                hms_1.1.1                hrbrthemes_0.8.0        
+##   htmltools_0.5.2          httr_1.4.2               ids_1.0.1               
+##   igraph_1.2.11            imager_0.42.11           ipred_0.9.12            
+##   isoband_0.2.5            iterators_1.0.13         jpeg_0.1-9              
+##   jquerylib_0.1.4          jsonlite_1.7.3           kableExtra_1.3.4        
+##   KernSmooth_2.23.20       knitr_1.37               labeling_0.4.2          
+##   lattice_0.20-45          lava_1.6.10              lifecycle_1.0.1         
+##   listenv_0.8.0            lme4_1.1.27.1            lubridate_1.8.0         
+##   magrittr_2.0.1           maptools_1.1.2           MASS_7.3-54             
+##   Matrix_1.3.4             MatrixModels_0.5.0       matrixStats_0.61.0      
+##   methods_4.1.2            mgcv_1.8.38              mime_0.12               
+##   minqa_1.2.4              ModelMetrics_1.2.2.2     modelr_0.1.8            
+##   munsell_0.5.0            nlme_3.1.153             nloptr_1.2.2.3          
+##   nnet_7.3.16              normtest_1.1             nortest_1.0-4           
+##   numDeriv_2016.8.1.1      officer_0.4.1            openssl_1.4.6           
+##   pacman_0.5.1             parallel_4.1.2           parallelly_1.30.0       
+##   pbkrtest_0.5.1           pillar_1.6.4             pkgconfig_2.0.3         
+##   pkgload_1.2.4            plotrix_3.8-2            plyr_1.8.6              
+##   png_0.1-7                polyclip_1.10-0          polynom_1.4.0           
+##   praise_1.0.0             prettyunits_1.1.1        pROC_1.18.0             
+##   processx_3.5.2           prodlim_2019.11.13       progress_1.2.2          
+##   progressr_0.10.0         proxy_0.4.26             ps_1.6.0                
+##   purrr_0.3.4              qcc_2.7                  qicharts2_0.7.2         
+##   quadprog_1.5-8           quantmod_0.4.18          quantreg_5.86           
+##   R6_2.5.1                 rappdirs_0.3.3           RColorBrewer_1.1.2      
+##   Rcpp_1.0.8               RcppArmadillo_0.10.7.5.0 RcppEigen_0.3.3.9.1     
+##   readbitmap_0.1.5         readr_2.1.1              readxl_1.3.1            
+##   recipes_0.1.17           rematch_1.0.1            rematch2_2.1.2          
+##   remotes_2.4.2            reprex_2.0.1             reshape2_1.4.4          
+##   rJava_1.0-6              rlang_0.4.12             rmarkdown_2.11          
+##   rpart_4.1.15             rprojroot_2.0.2          rstatix_0.7.0           
+##   rstudioapi_0.13          Rttf2pt1_1.3.9           rvest_1.0.2             
+##   scales_1.1.1             selectr_0.4.2            SixSigma_0.10.3         
+##   sp_1.4.6                 SparseM_1.81             splines_4.1.2           
+##   SQUAREM_2021.1           stats_4.1.2              stats4_4.1.2            
+##   stringi_1.7.6            stringr_1.4.0            survival_3.2.13         
+##   svglite_2.0.0            sys_3.4                  systemfonts_1.0.3       
+##   testthat_3.1.2           tibble_3.1.6             tidyr_1.1.4             
+##   tidyselect_1.1.1         tidyverse_1.3.1          tiff_0.1-10             
+##   timeDate_3043.102        tinytex_0.36             tools_4.1.2             
+##   truncnorm_1.0-8          tseries_0.10-49          TTR_0.24.3              
+##   tweenr_1.0.2             tzdb_0.2.0               utf8_1.2.2              
+##   utils_4.1.2              uuid_1.0-3               vctrs_0.3.8             
+##   viridisLite_0.4.0        vroom_1.5.7              waldo_0.3.1             
+##   webshot_0.5.2            withr_2.4.3              writexl_1.4.0           
+##   xfun_0.29                xlsx_0.6.5               xlsxjars_0.6.1          
+##   xml2_1.3.3               xtable_1.8-4             xts_0.12.1              
+##   yaml_2.2.1               zip_2.2.0                zoo_1.8-9</code></pre>
+
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Strengt tatt bruker vi R og RStudio, men dette vil bli forklart i vedlegget som omhandler nedlasting og installasjon av disse. R er programvaren og motoren, RStudio er brukergrensesnittet vi legger utenpå R som gjør det langt enklere å bruke<a href="hvorfor-denne-boka.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Vi viser til Excel, men man kan like gjerne bruke <a href="https://www.openoffice.org/no/">Apache Open Office</a>, en gratis programvarepakke som inkluderer Calc. Videoene hvor vi viser framgangsmåte i Excel kan enkelt brukes med <a href="https://www.openoffice.org/no/product/calc.html">Calc</a> (selv om mindre forskjeller kan eksistere).<a href="hvorfor-denne-boka.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Vi er ikke kjent med tilsvarende tilleggsprogram for Open Office Calc.<a href="hvorfor-denne-boka.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Et annet eksempel på tilsvarende tillegg til Excel er <a href="https://www.xlstat.com/en/">XLSTAT</a><a href="hvorfor-denne-boka.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Analyse-It som inkluderer kvalitetsmodulen koster i skrivende stund $ 249 for en årlig lisens, eller $ 649 for en permanent lisens.<a href="hvorfor-denne-boka.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Om man vil ha et gratis alternativ for statistiske analyser som legger seg i Excel kan også <a href="https://www.real-statistics.com/">Real Statistics Resource Pack</a> være et ok alternativ, men dette tillegget har ikke noen funksjonalitet for statistisk prosesskontroll<a href="hvorfor-denne-boka.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Sosio-teknisk systemteori belyser nettopp samspillet mellom sosiale/menneskelige og tekniske faktorer i organisasjonsutvikling. Klassisk litteratur på dette omfatter f.eks. <span class="citation">Burns and Stalker (1961)</span>, <span class="citation">Trist and Bamforth (1951)</span> og <span class="citation">Woodward (1958)</span> - se f.eks. <span class="citation">Appelbaum (1997)</span> for en god og oversiktlig introduksjon til temaet.<a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>I vedlegg 9 har vi oversatt og gjengitt 14 dimensjoner ved implementering av SPC fra <span class="citation">(<strong>ConceptualizingOrganizationalImplementation1997?</strong>)</span><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Eksempelet er modifisert fra <span class="citation">Carey (2003)</span>. Se også <span class="citation">Anhøj (2009)</span> og <span class="citation">NHS (2009)</span><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>Hvis du ønsker å bruke R og koden må du laste ned fila og lagre den i samme mappe som din R-fil/ditt R-prosjekt ligger - se forøvrig vedlegg om installasjon av R/RStudio for tips om organisering av filer<a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>Illustrasjonen er modifisert fra <span class="citation">Montgomery (2020)</span>, jfr. <span class="citation">Leavengood and Reeb (2015a)</span><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>Matematisk sett vil standardavviket ved å legge til n uavhengige tilfeldige observasjoner øke med kvadratroten av n ganger standardavviket for den individuelle observasjonen. Samlet sett dobles variansen, hvilket gir 1,4 ganger høyere standardavvik (siden standardavvik er kvadratroten av variansen, og <span class="math inline">\(\sqrt{2}\)</span> <span class="math inline">\(\approx\)</span> 1.4<a href="variasjon.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>R-kode for utregning av areal mellom to x-verdier i en normalfordeing (=sannsynlighet for at en gitt x-verdi ligger i intervallet mellom de to x-verdiene): pnorm(2,mean=0,sd=1)-pnorm(-2,mean=0,sd=1)<a href="datatyper-og-datafordelinger.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>pnorm(3,mean=0,sd=1)-pnorm(-3,mean=0,sd=1)<a href="datatyper-og-datafordelinger.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<li id="fn15"><p>Normalfordelingen er dessuten en god tilnærming til binomialfordeling med høyt antall observasjoner (høy n), og også til poissonfordeling med høy frekvens. Dette forfølger vi imidlertid ikke videre i dette kompendiet.<a href="datatyper-og-datafordelinger.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<li id="fn16"><p>Chebyshevs teorem vil imidlertid gjelde for alle datasett. Teoremet belyses i eget vedlegg for de spesielt interesserte<a href="datatyper-og-datafordelinger.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn17"><p>Det er tildels stor uenighet om hvor alvorlig avvik fra normalfordelingens teoretiske forventning man kan være for likevel å bruke ulike statistiske analyser. Mange analyser er ganske robuste for avvik. Det beste rådet tror vi er å være bevisst på dette og sjekke med statistikkbøker og artikler hvor robuste de enkelte analysene er for avvik<a href="er-dataene-dine-normalfordelte.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p>Gitt at vi har valgt 5% signifikansnivå<a href="er-dataene-dine-normalfordelte.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<li id="fn19"><p>I norsk litteratur og nettsteder brukes ofte betegnelsen «run diagram» (se f.eks. <span class="citation">Brudvik (2009)</span>). Selv om vi ikke har noe religiøst forhold til å finne norske begreper på ethvert engelsk begrep mener vi likevel begrepet seriediagram er et mer intuitivt begrep enn «run diagram».<a href="seriediagram.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>Har man en serie med oddetall observasjoner vil medianverdien utgjøres av et punkt, mens om man har et partall observasjoner utgjør gjennomsnittet av de to nærmest midten medianverdien.<a href="seriediagram.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<li id="fn21"><p>I en prosess som er tilfeldig vil det være 50-50 sjanse for å krysse medianlinjen mellom to punkter som kommer etter hverandre. Det totale antallet krysninger har således en binomialfordeling <span class="citation">(Anhøj 2015)</span><a href="seriediagram.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>Dette er nærmere drøftet i kapittel 4 og 5<a href="kontrolldiagram.html#fnref22" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vedlegg-10---formler-prosesskapabilitet.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nilskvilvang/SPC2/edit/master/XX_Vedlegg_L_Session.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/nilskvilvang/SPC2/blob/master/XX_Vedlegg_L_Session.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

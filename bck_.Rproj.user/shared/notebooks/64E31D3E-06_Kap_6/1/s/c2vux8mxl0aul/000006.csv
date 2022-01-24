@@ -1,0 +1,7 @@
+"0",""
+"0","pacman::p_load(qicharts2, ggplot2)"
+"0",""
+"0","serie3 <- qic(eksempelrun, title = ""Eksempel på seriediagram - endring i prosess"", ylab = ""Verdi"", xlab = ""Hendelse"", method = ""anhoej"", part = 14)"
+"0",""
+"0","serie3 + geom_point(size = 2)"
+"0",""

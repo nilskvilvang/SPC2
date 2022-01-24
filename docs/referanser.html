@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Referanser | Statistisk prosesskontroll</title>
+  <meta name="description" content="Referanser | Statistisk prosesskontroll" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Referanser | Statistisk prosesskontroll" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Referanser | Statistisk prosesskontroll" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"/>
+<link rel="next" href="vedlegg-1---r-kode.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SPC</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduksjon</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#versjoner"><i class="fa fa-check"></i>Versjoner</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html"><i class="fa fa-check"></i><b>1</b> Hvorfor denne boka?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html#programvare"><i class="fa fa-check"></i><b>1.1</b> Programvare</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><i class="fa fa-check"></i><b>2</b> Kvalitet, kvalitetsarbeid og statistisk prosesskontroll</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-statistisk-prosesskontroll"><i class="fa fa-check"></i><b>2.1</b> Hva er statistisk prosesskontroll?</a></li>
+<li class="chapter" data-level="2.2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hvorfor-er-tid-viktig"><i class="fa fa-check"></i><b>2.2</b> Hvorfor er tid viktig?</a></li>
+<li class="chapter" data-level="2.3" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-utgangspunktet-vi-skal-korrigere-fra"><i class="fa fa-check"></i><b>2.3</b> Hva er utgangspunktet vi skal korrigere fra?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="variasjon.html"><a href="variasjon.html"><i class="fa fa-check"></i><b>3</b> Variasjon</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variasjon.html"><a href="variasjon.html#simulering-av-trakteksperimentet-i-r"><i class="fa fa-check"></i><b>3.1</b> Simulering av trakteksperimentet i R</a></li>
+<li class="chapter" data-level="3.2" data-path="variasjon.html"><a href="variasjon.html#normal-og-unormal-variasjon"><i class="fa fa-check"></i><b>3.2</b> Normal og unormal variasjon</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html"><i class="fa fa-check"></i><b>4</b> Datatyper og datafordelinger</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling"><i class="fa fa-check"></i><b>4.1</b> Normalfordeling</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#varians-og-standardavvik"><i class="fa fa-check"></i><b>4.1.1</b> Varians og standardavvik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling-standardavvik-og-forventninger"><i class="fa fa-check"></i><b>4.1.2</b> Normalfordeling, standardavvik og forventninger</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#binomialfordeling"><i class="fa fa-check"></i><b>4.2</b> Binomialfordeling</a></li>
+<li class="chapter" data-level="4.3" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#poissonfordeling"><i class="fa fa-check"></i><b>4.3</b> Poissonfordeling</a></li>
+<li class="chapter" data-level="4.4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#geometrisk-fordeling"><i class="fa fa-check"></i><b>4.4</b> Geometrisk fordeling</a></li>
+<li class="chapter" data-level="4.5" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#eksponensiell-fordeling"><i class="fa fa-check"></i><b>4.5</b> Eksponensiell fordeling</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html"><i class="fa fa-check"></i><b>5</b> Er dataene dine normalfordelte?</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#q-q-plott"><i class="fa fa-check"></i><b>5.1</b> Q-Q plott</a></li>
+<li class="chapter" data-level="5.2" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#anderson-darling-test-for-normalitet"><i class="fa fa-check"></i><b>5.2</b> Anderson-Darling test for normalitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="seriediagram.html"><a href="seriediagram.html"><i class="fa fa-check"></i><b>6</b> Seriediagram</a></li>
+<li class="chapter" data-level="7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html"><i class="fa fa-check"></i><b>7</b> Kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#mønstre-i-kontrolldiagram"><i class="fa fa-check"></i><b>7.1</b> Mønstre i kontrolldiagram</a></li>
+<li class="chapter" data-level="7.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#tolkning-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.2</b> Tolkning av kontrolldiagram</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#punkter-utenfor-kontrollgrensene"><i class="fa fa-check"></i><b>7.2.1</b> Punkter utenfor kontrollgrensene:</a></li>
+<li class="chapter" data-level="7.2.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-3-påfølgende-punkter-er-mer-enn-2-sigma-fra-gjennomsnittsverdien-i-sone-a-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.2</b> 2 av 3 påfølgende punkter er mer enn 2 sigma fra gjennomsnittsverdien (i sone A) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-5-påfølgende-punkter-er-mer-enn-1-sigma-fra-gjennomsnittsverdien-sone-a-og-b-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.3</b> 4 av 5 påfølgende punkter er mer enn 1 sigma fra gjennomsnittsverdien (sone A og B) og i samme retning</a></li>
+<li class="chapter" data-level="7.2.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-på-samme-side-av-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.4</b> 8 påfølgende punkter er på samme side av gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-i-stigende-eller-synkende-trend-etter-hverandre"><i class="fa fa-check"></i><b>7.2.5</b> 6 påfølgende punkter er i stigende eller synkende trend (etter hverandre)</a></li>
+<li class="chapter" data-level="7.2.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-innenfor---1-sigma-fra-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.6</b> 15 påfølgende punkter er innenfor +/- 1 sigma fra gjennomsnittet</a></li>
+<li class="chapter" data-level="7.2.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-alternerer-opp-og-ned-annenhver-opp-og-ned-i-forhold-til-foregående-verdi"><i class="fa fa-check"></i><b>7.2.7</b> 14 påfølgende punkter alternerer opp og ned (annenhver opp og ned i forhold til foregående verdi)</a></li>
+<li class="chapter" data-level="7.2.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-på-samme-side-av-gjennomsnittet-og-ingen-innenfor---1-sigma"><i class="fa fa-check"></i><b>7.2.8</b> 8 påfølgende punkter på samme side av gjennomsnittet og ingen innenfor +/- 1 sigma</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#telledata-attributter"><i class="fa fa-check"></i><b>7.3</b> Telledata (attributter)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#p-diagram"><i class="fa fa-check"></i><b>7.3.1</b> p-diagram</a></li>
+<li class="chapter" data-level="7.3.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-p-diagram"><i class="fa fa-check"></i><b>7.3.2</b> Laney’s p-diagram</a></li>
+<li class="chapter" data-level="7.3.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#np-diagram"><i class="fa fa-check"></i><b>7.3.3</b> np-diagram</a></li>
+<li class="chapter" data-level="7.3.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#u-diagram"><i class="fa fa-check"></i><b>7.3.4</b> u-diagram</a></li>
+<li class="chapter" data-level="7.3.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-u-diagram"><i class="fa fa-check"></i><b>7.3.5</b> Laney’s u-diagram</a></li>
+<li class="chapter" data-level="7.3.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#c-diagram"><i class="fa fa-check"></i><b>7.3.6</b> c-diagram</a></li>
+<li class="chapter" data-level="7.3.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#g-diagram"><i class="fa fa-check"></i><b>7.3.7</b> g-diagram</a></li>
+<li class="chapter" data-level="7.3.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#utfordringer-med-telledata-og-distribusjon-på-dataene"><i class="fa fa-check"></i><b>7.3.8</b> Utfordringer med telledata og distribusjon på dataene</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#måledata-variabler"><i class="fa fa-check"></i><b>7.4</b> Måledata (variabler)</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#imr-xmr"><i class="fa fa-check"></i><b>7.4.1</b> IMR (XMR)</a></li>
+<li class="chapter" data-level="7.4.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbarr"><i class="fa fa-check"></i><b>7.4.2</b> XbarR</a></li>
+<li class="chapter" data-level="7.4.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbars"><i class="fa fa-check"></i><b>7.4.3</b> XbarS</a></li>
+<li class="chapter" data-level="7.4.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#t-diagram"><i class="fa fa-check"></i><b>7.4.4</b> T-diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#spesielle-kontrolldiagram-cusum-og-ewma"><i class="fa fa-check"></i><b>7.5</b> Spesielle kontrolldiagram (CUSUM og EWMA)</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#cusum"><i class="fa fa-check"></i><b>7.5.1</b> CUSUM</a></li>
+<li class="chapter" data-level="7.5.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#ewma"><i class="fa fa-check"></i><b>7.5.2</b> EWMA</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#risikojustering-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.6</b> Risikojustering av kontrolldiagram</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html"><i class="fa fa-check"></i><b>8</b> Prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#histogrammer"><i class="fa fa-check"></i><b>8.1</b> Histogrammer</a></li>
+<li class="chapter" data-level="8.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#boxplots"><i class="fa fa-check"></i><b>8.2</b> Boxplots</a></li>
+<li class="chapter" data-level="8.3" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#kapabilitetsindekser"><i class="fa fa-check"></i><b>8.3</b> Kapabilitetsindekser</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#måledata"><i class="fa fa-check"></i><b>8.3.1</b> Måledata</a></li>
+<li class="chapter" data-level="8.3.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#telledata"><i class="fa fa-check"></i><b>8.3.2</b> Telledata</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#loss-function"><i class="fa fa-check"></i><b>8.4</b> Loss function</a></li>
+<li class="chapter" data-level="8.5" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#ikke-normale-data"><i class="fa fa-check"></i><b>8.5</b> Ikke-normale data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><i class="fa fa-check"></i><b>9</b> SPC som del av et helhetlig og kontinuerlig kvalitetsarbeid</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#dmaic"><i class="fa fa-check"></i><b>9.1</b> DMAIC</a></li>
+<li class="chapter" data-level="9.2" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#pareto"><i class="fa fa-check"></i><b>9.2</b> Pareto</a></li>
+<li class="chapter" data-level="9.3" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#flytdiagram"><i class="fa fa-check"></i><b>9.3</b> Flytdiagram</a></li>
+<li class="chapter" data-level="9.4" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#eksperimenter"><i class="fa fa-check"></i><b>9.4</b> Eksperimenter</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referanser.html"><a href="referanser.html"><i class="fa fa-check"></i>Referanser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-1---r-kode.html"><a href="vedlegg-1---r-kode.html"><i class="fa fa-check"></i>Vedlegg 1 - R kode</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><a href="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 2 - Kritiske verdier i kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-3---chebyshevs-teorem.html"><a href="vedlegg-3---chebyshevs-teorem.html"><i class="fa fa-check"></i>Vedlegg 3 - Chebyshevs teorem</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><a href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><i class="fa fa-check"></i>Vedlegg 4 - Sentralgrenseteoremet (Central Limit Theorem)</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><a href="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 5 - Tabell med konstanter for kontrolldiagram</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-6---utregning-av-kontrollgrenser.html"><a href="vedlegg-6---utregning-av-kontrollgrenser.html"><i class="fa fa-check"></i>Vedlegg 6 - Utregning av kontrollgrenser</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-7---anderson-darling-test-for-normalitet.html"><a href="vedlegg-7---anderson-darling-test-for-normalitet.html"><i class="fa fa-check"></i>Vedlegg 7 - Anderson-Darling test for normalitet</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><i class="fa fa-check"></i>Vedlegg 8 - Nedlasting, installasjon og enkel bruk av R og RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-r"><i class="fa fa-check"></i>Nedlasting og installasjon av R</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-rstudio"><i class="fa fa-check"></i>Nedlasting og installasjon av RStudio</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#rstudio"><i class="fa fa-check"></i>RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#grunnleggende-bruk-av-rstudio"><i class="fa fa-check"></i>Grunnleggende bruk av RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><a href="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><i class="fa fa-check"></i>Vedlegg 9 - Dimensjoner i implementering av SPC</a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html"><i class="fa fa-check"></i>Vedlegg 10 - Formler prosesskapabilitet</a>
+<ul>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#måledata-1"><i class="fa fa-check"></i>Måledata</a>
+<ul>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cp-1"><em>C<sub>p</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#pp"><em>P<sub>p</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpk-1"><em>C<sub>pk</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ppk"><em>P<sub>pk</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpm-1"><em>C<sub>pm</sub></em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpmk-1"><em>C<sub>pmk</sub></em></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#telledata-1"><i class="fa fa-check"></i>Telledata</a>
+<ul>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpu"><em>DPU</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpmo"><em>DPMO</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#loss-function-1"><em>Loss function</em></a></li>
+<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ikke-normale-data-1"><em>Ikke-normale data</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vedlegg-9---session-info.html"><a href="vedlegg-9---session-info.html"><i class="fa fa-check"></i>Vedlegg 9 - Session Info</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistisk prosesskontroll</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="referanser" class="section level1 unnumbered">
+<h1>Referanser</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Alemi, Farrokh, Walter Rom, and Eric Eisenstein. 1996. <span>“Risk-Adjusted Control Charts for Health Care Assessment.”</span> <em>Annals of Operations Research</em> 67(1):45–60. doi: <a href="https://doi.org/10.1007/BF02187023">10.1007/BF02187023</a>.
+</div>
+<div class="csl-entry">
+Alemi, Farrokh, and Thomas Sullivan. 2001. <span>“Tutorial on <span>Risk Adjusted X-Bar Charts</span>: <span>Applications</span> to <span>Measurement</span> of <span>Diabetes Control</span>.”</span> <em>Quality Management in Healthcare</em> 9(3).
+</div>
+<div class="csl-entry">
+Allaire, J., Yihui Xie, J. McPherson, J. Luraschi, K. Ushey, A. Atkins, Hadley Wickham, J. Cheng, W. Chang, and R. Iannone. 2021. <span>“Rmarkdown: <span>Dynamic</span> Documents for r.”</span>
+</div>
+<div class="csl-entry">
+Alwan, Layth C. 1991. <span>“Time-Series Effects and Degradation of Control Chart Performance Resulting from Overadjustment.”</span> <em>Total Quality Management</em> 2(1):99–112. doi: <a href="https://doi.org/10.1080/09544129100000009">10.1080/09544129100000009</a>.
+</div>
+<div class="csl-entry">
+Anderson, T. W., and D. A. Darling. 1952. <span>“Asymptotic Theory of Certain" Goodness of Fit" Criteria Based on Stochastic Processes.”</span> 23(2):193–212.
+</div>
+<div class="csl-entry">
+Anderson, T. W., and D. A. Darling. 1954. <span>“A Test of Goodness of Fit.”</span> <em>Journal of the American Statistical Association</em> 49(268):765. doi: <a href="https://doi.org/10.2307/2281537">10.2307/2281537</a>.
+</div>
+<div class="csl-entry">
+Anhøj, Jacob. 2009. <span>“Statistisk Processtyring i Sundhedsvæsenet.”</span> <em>Ugeskr Læger</em> 171(21):1764–68.
+</div>
+<div class="csl-entry">
+Anhøj, Jacob. 2015. <span>“Diagnostic <span>Value</span> of <span>Run Chart Analysis</span>: <span>Using Likelihood Ratios</span> to <span>Compare Run Chart Rules</span> on <span>Simulated Data Series</span>”</span> edited by R. K. Hills. <em>PLOS ONE</em> 10(3):e0121349. doi: <a href="https://doi.org/10.1371/journal.pone.0121349">10.1371/journal.pone.0121349</a>.
+</div>
+<div class="csl-entry">
+Anhøj, Jacob. 2020. <span>“Qicharts2: <span>Quality Improvement Charts</span>. <span>An</span> Implementation of Statistical Process Control Charts for <span>R</span>.”</span>
+</div>
+<div class="csl-entry">
+Anhøj, Jacob. 2021a. <span>“Control <span>Charts</span> with Qicharts for <span>R</span>.”</span>
+</div>
+<div class="csl-entry">
+Anhøj, Jacob. 2021b. <span>“Quality <span>Improvement Charts</span>. <span>An</span> Implementation of Statistical Process Control Charts for <span>R</span>.”</span>
+</div>
+<div class="csl-entry">
+Anhøj, Jacob, and Brian Bjørn. 2009. <span>“Statistisk Processtyring i Sundhedsvæsenet.”</span> <em>Ugeskr Læger</em> 171(21):1764–68.
+</div>
+<div class="csl-entry">
+Anhøj, Jacob, and Anne Vingaard Olesen. 2014. <span>“Run <span>Charts Revisited</span>: <span>A Simulation Study</span> of <span>Run Chart Rules</span> for <span>Detection</span> of <span>Non-Random Variation</span> in <span>Health Care Processes</span>”</span> edited by R. K. Hills. <em>PLoS ONE</em> 9(11):e113825. doi: <a href="https://doi.org/10.1371/journal.pone.0113825">10.1371/journal.pone.0113825</a>.
+</div>
+<div class="csl-entry">
+Anhøj, Jacob, and Tore Wentzel-Larsen. 2020. <span>“Smooth Operator: <span>Modifying</span> the <span>Anhøj</span> Rules to Improve Runs Analysis in Statistical Process Control”</span> edited by M. A. Fernández. <em>PLOS ONE</em> 15(6):e0233920. doi: <a href="https://doi.org/10.1371/journal.pone.0233920">10.1371/journal.pone.0233920</a>.
+</div>
+<div class="csl-entry">
+Antony, Jiju, Alejandro Balbontin, and Tolga Taner. 2000. <span>“Key Ingredients for the Effective Implementation of Statistical Process Control.”</span> <em>Work Study</em> 49(6):242–47. doi: <a href="https://doi.org/10.1108/00438020010343417">10.1108/00438020010343417</a>.
+</div>
+<div class="csl-entry">
+Appelbaum, Steven H. 1997. <span>“Socio-Technical Systems Theory: An Intervention Strategy for Organizational Development.”</span> <em>Management Decision</em> 35(6):452–63. doi: <a href="https://doi.org/10.1108/00251749710173823">10.1108/00251749710173823</a>.
+</div>
+<div class="csl-entry">
+Auguie, Baptiste. 2017. <span>“<span class="nocase">gridExtra</span>: <span>Miscellaneous</span> Functions for "<span>Grid</span>" Graphics.”</span>
+</div>
+<div class="csl-entry">
+Bache, Stefan Milton, and Hadley Wickham. 2020. <span>“Magrittr: <span>A</span> Forward-Pipe Operator for r.”</span>
+</div>
+<div class="csl-entry">
+Balestracci, Davis. 2014. <span>“Control <span>Charts</span>: <span>Simple Elegance</span> or <span>Legalized Torture</span>?”</span>
+</div>
+<div class="csl-entry">
+Barthelme, Simon. 2021. <span>“Imager: <span>Image</span> Processing Library Based on ’<span>CImg</span>’.”</span>
+</div>
+<div class="csl-entry">
+Benneyan, J. C., R. C. Lloyd, and P. E. Plsek. 2003. <span>“Statistical Process Control as a Tool for Research and Healthcare Improvement.”</span> <em>BMJ Quality &amp; Safety</em> 12(6):458–64. doi: <a href="https://doi.org/10.1136/qhc.12.6.458">10.1136/qhc.12.6.458</a>.
+</div>
+<div class="csl-entry">
+Benneyan, James C. 1998a. <span>“Statistical Quality Control Methods in Infection Control and Hospital Epidemiology, Part <span>I</span>: <span>Introduction</span> and Basic Theory.”</span> <em>Infection Control and Hospital Epidemiology</em> 19(3):194–214. doi: <a href="https://doi.org/10.2307/30143442">10.2307/30143442</a>.
+</div>
+<div class="csl-entry">
+Benneyan, James C. 1998b. <span>“Statistical Quality Control Methods in Infection Control and Hospital Epidemiology, Part <span>II</span>: <span>Chart</span> Use, Statistical Properties, and Research Issues.”</span> <em>Infection Control &amp; Hospital Epidemiology</em> 19(4):265–83. doi: <a href="https://doi.org/DOI: 10.1017/S0195941700087397">DOI: 10.1017/S0195941700087397</a>.
+</div>
+<div class="csl-entry">
+Benneyan, James C. 2001. <span>“Number-Between g-<span>Type</span> Statistical Quality Control Charts for Monitoring Adverse Events.”</span> <em>Health Care Management Science</em> 4:305–18. doi: <a href="https://doi.org/10.1023/a:1011846412909">10.1023/a:1011846412909</a>.
+</div>
+<div class="csl-entry">
+Berardinelli, Carl, and Lew Yerian. n.d. <span>“Run Charts: <span>A</span> Simple and Powerful Tool for Process Improvement.”</span> <em>ISIXSIGMA</em>.
+</div>
+<div class="csl-entry">
+Brudvik, Marie. 2009. <span>“Valg Av Passende <span class="nocase">SPC-diagram</span>.”</span> <em>Helsebiblioteket.no</em>.
+</div>
+<div class="csl-entry">
+Burns, Tom, and George Stalker. 1961. <em>The <span>Management</span> of <span>Innovation</span></em>. <span>London</span>: <span>Tavistock Publications</span>.
+</div>
+<div class="csl-entry">
+Cano, Eimili L., Javier M. Moguerza, and Andres Redchuk. 2012. <span>“Six <span>Sigma</span> with <span>R</span>.”</span>
+</div>
+<div class="csl-entry">
+Carey, Raymond G. 2002. <span>“How Do You Know That Your Care Is Improving? <span>Part I</span>: <span>Basic</span> Concepts in Statistical Thinking.”</span> <em>The Journal of Ambulatory Care Management</em> 25(1).
+</div>
+<div class="csl-entry">
+Carey, Raymond G. 2003. <em>Improving Healthcare with Control Charts. <span>Basic</span> and Advanced <span>SPC</span> Methods and Case Studies</em>. <span>Milwaukee</span>: <span>ASQ Quality Press</span>.
+</div>
+<div class="csl-entry">
+Chan, Lai K., Smiley W. Cheng, and Frederick A. Spiring. 1988. <span>“A <span>New Measure</span> of <span>Process Capability</span>: <span> <em></em> </span><span><em>C</em></span><span> <em></em> </span><span><em><sub>pm</sub></em></span><span> <em></em> </span>.”</span> <em>Journal of Quality Technology</em> 20(3):162–75. doi: <a href="https://doi.org/10.1080/00224065.1988.11979102">10.1080/00224065.1988.11979102</a>.
+</div>
+<div class="csl-entry">
+Chin, Marshall H., and Naoko Muramatsu. 2003. <span>“What <span>Is</span> the <span>Quality</span> of <span>Quality</span> of <span>Medical Care Measures</span>?: <span>Rashomon</span> -Like <span>Relativism</span> and <span>Real-World Applications</span>.”</span> <em>Perspectives in Biology and Medicine</em> 46(1):5–20. doi: <a href="https://doi.org/10.1353/pbm.2003.0002">10.1353/pbm.2003.0002</a>.
+</div>
+<div class="csl-entry">
+Crostic, Michael. 2015. <span>“The Funnel Experiment.”</span> <em>YouTube</em>.
+</div>
+<div class="csl-entry">
+D’Agostino, R. B., and M. A. Stephens, eds. 1986. <em>Goodness-of Fit Techniques</em>. <span>Marcel Dekker</span>.
+</div>
+<div class="csl-entry">
+Deleryd, Mats. 1999. <span>“A Pragmatic View on Process Capability Studies.”</span> <em>International Journal of Production Economics</em> 58(3):319–30. doi: <a href="https://doi.org/10.1016/S0925-5273(98)00214-X">10.1016/S0925-5273(98)00214-X</a>.
+</div>
+<div class="csl-entry">
+Deming, W. E. 1986. <em>Out of the Crisis</em>. <span>Cambridge, MA</span>: <span>Institute of Technology Center for Advanced Engineering Study</span>.
+</div>
+<div class="csl-entry">
+Elwyn, Glyn, Stephen Buetow, Judith Hibbard, and Michel Wensing. 2007. <span>“Respecting the Subjective: Quality Measurement from the Patient’s Perspective.”</span> <em>BMJ</em> 335(7628):1021–22. doi: <a href="https://doi.org/10.1136/bmj.39339.490301.AD">10.1136/bmj.39339.490301.AD</a>.
+</div>
+<div class="csl-entry">
+English, J. R., and G. D. Taylor. 1993. <span>“Process Capability Analysis – a Robustness Stud.”</span> <em>International Journal of Production Research</em> 31(7):1621–35.
+</div>
+<div class="csl-entry">
+Fasting, Sigurd, and Sven E. Gisvold. 2003. <span>“Statistical Process Control Methods Allow the Analysis and Improvement of Anesthesia Care.”</span> <em>Canadian Journal of Anesthesia/Journal Canadien d’anesthésie</em> 50(8):767–74. doi: <a href="https://doi.org/10.1007/BF03019371">10.1007/BF03019371</a>.
+</div>
+<div class="csl-entry">
+Fedit, Ben. 2018. <span>“Central <span>Limit Theorem</span> -Example Using <span>R</span>.”</span> <em>Ben’s Blog</em>.
+</div>
+<div class="csl-entry">
+Field, Andy. 2009. <em>Discovering Statistics Using <span>SPSS</span></em>. Third. <span>London</span>: <span>SAGE Publications Ltd</span>.
+</div>
+<div class="csl-entry">
+Field, Andy, Jeremy Miles, and Zoë Field. 2012. <em>Discovering Statistics Using r</em>. <span>SAGE Publications</span>.
+</div>
+<div class="csl-entry">
+Gavrilov, Ilya, and Ruslan Pusev. 2014. <span>“Normtest: <span>Tests</span> for Normality.”</span>
+</div>
+<div class="csl-entry">
+Georgantzas, Nicholas C., and Joyce N. Orsini. 2003. <span>“Tampering Dynamics.”</span> in <em>Proceedings of the 21st <span>International System Dynamics Society Conference</span></em>. <span>New York</span>.
+</div>
+<div class="csl-entry">
+Gohel, David. 2021a. <span>“Flextable: <span>Functions</span> for Tabular Reporting.”</span>
+</div>
+<div class="csl-entry">
+Gohel, David. 2021b. <span>“Officer: <span>Manipulation</span> of Microsoft Word and <span>PowerPoint</span> Documents.”</span>
+</div>
+<div class="csl-entry">
+Good, I. J. 1973. <span>“What Are Degrees of Freedom?”</span> <em>The American Statistician</em> 27(5):227–28. doi: <a href="https://doi.org/10.1080/00031305.1973.10479042">10.1080/00031305.1973.10479042</a>.
+</div>
+<div class="csl-entry">
+Gross, Juergen, and Uwe Ligges. 2015. <span>“Nortest: <span>Tests</span> for Normality.”</span>
+</div>
+<div class="csl-entry">
+Guthrie, William F. 2020. <span>“<a href="https://doi.org/10.18434/M32189"><span>NIST</span>/<span>SEMATECH</span> e-<span>Handbook</span> of <span>Statistical Methods</span> (<span>NIST Handbook</span> 151)</a>.”</span>
+</div>
+<div class="csl-entry">
+Hartmann, K., J. Krois, and B. Waske. 2018a. <span>“Critical <span>Value</span> and the p-<span>Value</span>.”</span> <em>E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin</em>.
+</div>
+<div class="csl-entry">
+Hartmann, K., J. Krois, and B. Waske. 2018b. <span>“Variance and <span>Standard Deviation</span>.”</span> <em>E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin.</em>
+</div>
+<div class="csl-entry">
+Horikoshi, Masaaki, and Yuan Tang. 2016. <span>“Ggfortify: <span>Data Visualization Tools</span> for <span>Statistical Analysis Results</span>.”</span>
+</div>
+<div class="csl-entry">
+Jäntschi, Lorentz, and Sorana D. Bolboacă. 2018. <span>“Computation of Probability Associated with <span>Anderson</span> Statistic.”</span> <em>Mathematics</em> 6(6):88. doi: <a href="https://doi.org/10.3390/math6060088">10.3390/math6060088</a>.
+</div>
+<div class="csl-entry">
+Kane, Victor E. 1986. <span>“Process <span>Capability Indices</span>.”</span> <em>Journal of Quality Technology</em> 18(1):41–52. doi: <a href="https://doi.org/10.1080/00224065.1986.11978984">10.1080/00224065.1986.11978984</a>.
+</div>
+<div class="csl-entry">
+Kassambara, Alboukadel. 2020. <span>“Ggpubr: ’Ggplot2’ Based Publication Ready Plots.”</span>
+</div>
+<div class="csl-entry">
+Laney, David B. 2002. <span>“Improved Control Charts for Attributes.”</span> <em>Quality Engineering</em> 14(4):531–37. doi: <a href="https://doi.org/10.1081/QEN-120003555">10.1081/QEN-120003555</a>.
+</div>
+<div class="csl-entry">
+Lavangnananda, K., and O. Tengsriprasert. 2002. <span>“<a href="https://doi.org/10.1109/ICONIP.2002.1202155">Classification of Time Series Data: A Synergistic Neural Networks Approach</a>.”</span> Pp. 179–83 in <em>Proceedings of the 9th <span>International Conference</span> on <span>Neural Information Processing</span>, 2002. <span>ICONIP</span> ’02.</em> Vol. 1. <span>Singapore</span>: <span>Nanyang Technol. Univ</span>.
+</div>
+<div class="csl-entry">
+Leavengood, Scott, and James E. Reeb. 1999. <em>Statistical Process Control. <span>Part</span> 1: <span>An</span> Introduction</em>. <span>Oregon State University</span>.
+</div>
+<div class="csl-entry">
+Leavengood, Scott, and James E. Reeb. 2015a. <em>Statistical Process Control. <span>Part</span> 2: <span>How</span> and Why <span>SPC</span> Works</em>. <span>Oregon State University</span>.
+</div>
+<div class="csl-entry">
+Leavengood, Scott, and James E. Reeb. 2015b. <em>Statistical Process Control. <span>Part</span> 9: <span>Process</span> Capability Analysis</em>. <span>Oregon State University</span>.
+</div>
+<div class="csl-entry">
+Lemon, J. 2006. <span>“Plotrix: A Package in the Red Light District of <span>R</span>.”</span>
+</div>
+<div class="csl-entry">
+Lightburn, K., and B. G Dale. 1992. <span>“A <span>CRITIQUE OF STATISTICAL PROCESS CONTROL IN A FIRST-LINE MOTOR INDUSTRY SUPPLIER</span>.”</span> <em>Quality Engineering</em> 4(3):371–81. doi: <a href="https://doi.org/10.1080/08982119208918919">10.1080/08982119208918919</a>.
+</div>
+<div class="csl-entry">
+Luceño, Alberto. 1996. <span>“A Process Capability Index with Reliable Confidence Intervals.”</span> <em>Communications in Statistics - Simulation and Computation</em> 25(1):235–45. doi: <a href="https://doi.org/10.1080/03610919608813310">10.1080/03610919608813310</a>.
+</div>
+<div class="csl-entry">
+Mainz, Jan, Toke Bek, Paul Bartels, Petter Rhode, Kjeld Møller Pedersen, and Vibeke Krøll. 2018. <span>“Hvad Er Kvalitet Og Kvalitetsudvikling?”</span> Pp. 19–33 in <em>Kvalitetsudvikling i praksis</em>. <span>København</span>: <span>Munksgaard</span>.
+</div>
+<div class="csl-entry">
+Marsaglia, George, and John Marsaglia. 2004. <span>“Evaluating the Anderson-Darling Distribution.”</span> <em>Journal of Statistical Software</em> 9(2). doi: <a href="https://doi.org/10.18637/jss.v009.i02">10.18637/jss.v009.i02</a>.
+</div>
+<div class="csl-entry">
+McNeese, Bill. 2020. <span>“What <span>Do</span> the <span>Process Capability</span>/<span>Performance Metrics Measure</span>?”</span> <em>BPI Consulting</em>.
+</div>
+<div class="csl-entry">
+Mersmann, Olaf, Heike Trautmann, Detlef Steuer, and Björn Bornkamp. 2018. <span>“Truncnorm: <span>Truncated</span> Normal Distribution.”</span>
+</div>
+<div class="csl-entry">
+Microsoft. 2021. <span>“Microsoft Excel for Microsoft 365.”</span>
+</div>
+<div class="csl-entry">
+Mohammed, M. A., P. Worthington, and W. H. Woodall. 2008. <span>“Plotting Basic Control Charts: Tutorial Notes for Healthcare Practitioners.”</span> <em>Quality and Safety in Health Care</em> 17(2):137–45. doi: <a href="https://doi.org/10.1136/qshc.2004.012047">10.1136/qshc.2004.012047</a>.
+</div>
+<div class="csl-entry">
+Mohammed, Mohammed A., KK Cheng, Andrew Rouse, and Tom Marshall. 2001. <span>“Bristol, <span>Shipman</span>, and Clinical Governance: <span>Shewhart</span>’s Forgotten Lessons.”</span> <em>The Lancet</em> 357(9254):463–67. doi: <a href="https://doi.org/10.1016/S0140-6736(00)04019-8">10.1016/S0140-6736(00)04019-8</a>.
+</div>
+<div class="csl-entry">
+Mohammed, Mohammed, and Peter Worthington. 2012. <span>“Why Traditional Statistical Process Control Charts for Attribute Data Should Be Viewed Alongside an Xmr-Chart.”</span> <em>BMJ Quality &amp; Safety</em> 22. doi: <a href="https://doi.org/10.1136/bmjqs-2012-001324">10.1136/bmjqs-2012-001324</a>.
+</div>
+<div class="csl-entry">
+Montgomery, Douglas C. 2020. <em>Introduction to Statistical Process Quality Control</em>. Eighth. <span>New York</span>: <span>John Wiley &amp; Sons</span>.
+</div>
+<div class="csl-entry">
+Mun, Jonathan. 2008. <span>“<a href="https://doi.org/10.1002/9781119197096.app03">Understanding and Choosing the Right Probability Distributions</a>.”</span> Pp. 899–917 in <em>Advanced analytical models: <span>Over</span> 800 models and 300 applications from the basel <span>II</span> accord to wall street and beyond</em>. <span>Hoboken, NJ, USA</span>: <span>John Wiley &amp; Sons, Inc.</span>
+</div>
+<div class="csl-entry">
+Nelson, Lloyd S. 1984. <span>“The <span>Shewhart Control Chart</span> for <span>Special Causes</span>.”</span> <em>Journal of Quality Technology</em> 16(4):237–39. doi: <a href="https://doi.org/10.1080/00224065.1984.11978921">10.1080/00224065.1984.11978921</a>.
+</div>
+<div class="csl-entry">
+NHS. 2009. <em>A Guide to Creating and Interpreting Run and Control Charts</em>. <span>Coventry</span>: <span>NHS Institute for Innovation and Improvement</span>.
+</div>
+<div class="csl-entry">
+Nolan, Thomas W., and Lloyd P. Provost. 1990. <span>“Understanding Variation.”</span> <em>Quality Progress</em> (May):2–10.
+</div>
+<div class="csl-entry">
+Norge, Standard. 2000. <span>“Kvalitetsledelse - <span>ISO</span> 9000.”</span>
+</div>
+<div class="csl-entry">
+Ooms, Jeroen. 2021. <span>“Writexl: <span>Export</span> Data Frames to Excel ’Xlsx’ Format.”</span>
+</div>
+<div class="csl-entry">
+Pandey, Shanta, and Charlotte Lyn Bright. 2008. <span>“What Are Degrees of Freedom?”</span> <em>Social Work Research</em> 32(2):119–28.
+</div>
+<div class="csl-entry">
+Pearn, W. L., Samuel Kotz, and Norman L. Johnson. 1992. <span>“Distributional and <span>Inferential Properties</span> of <span>Process Capability Indices</span>.”</span> <em>Journal of Quality Technology</em> 24(4):216–31. doi: <a href="https://doi.org/10.1080/00224065.1992.11979403">10.1080/00224065.1992.11979403</a>.
+</div>
+<div class="csl-entry">
+Perla, Rocco J., Lloyd P. Provost, and Sandy K. Murray. 2011. <span>“The Run Chart: A Simple Analytical Tool for Learning from Variation in Healthcare Processes.”</span> <em>BMJ Quality &amp; Safety</em> 20(1):46–51. doi: <a href="https://doi.org/10.1136/bmjqs.2009.037895">10.1136/bmjqs.2009.037895</a>.
+</div>
+<div class="csl-entry">
+Plsek, Paul E. 23AD. <span>“Tutorial: <span>Introduction</span> to Control Charts.”</span> <em>Quality Management in Health Care</em> 1(1):65–74. doi: <a href="https://doi.org/10.1097/00019514-199223000-00010">10.1097/00019514-199223000-00010</a>.
+</div>
+<div class="csl-entry">
+Prevette, Steven S. 2008. <span>“Dr. <span>Deming</span>’s Funnel Experiment.”</span> <em>Symphony Technologies</em>.
+</div>
+<div class="csl-entry">
+QIMacros. 2021. <span>“Six <span>Sigma</span> &amp; <span class="nocase">SPC Excel Add-in</span>.”</span>
+</div>
+<div class="csl-entry">
+R Core Team. 2021. <span>“R: <span>A</span> Language and Environment for Statistical Computing.”</span>
+</div>
+<div class="csl-entry">
+Reynolds, Maegan S., Sandra P. Spencer, Ashley Dunaway, Don Buckingham, and Thomas Bartman. 2021. <span>“Scientific <span>Approach</span> to <span>Assess</span> If <span>Change Led</span> to <span>Improvement</span> for <span>Statistical Process Control Analysis</span> in <span>Quality Improvement</span>.”</span> <em>Journal of Emergency Nursing</em> 47(1):198–205. doi: <a href="https://doi.org/10.1016/j.jen.2020.09.002">10.1016/j.jen.2020.09.002</a>.
+</div>
+<div class="csl-entry">
+Rowe, Harry B. 2012. <span>“Understanding <span>Stratification</span> in <span>Statistical Process Control</span>.”</span>
+</div>
+<div class="csl-entry">
+Rudis, Bob. 2020. <span>“Hrbrthemes: <span>Additional</span> Themes, Theme Components and Utilities for ’Ggplot2’.”</span>
+</div>
+<div class="csl-entry">
+Rungtusanatham, Manus. 2001. <span>“Beyond Improved Quality: The Motivational Effects of Statistical Process Control.”</span> <em>Journal of Operations Management</em> 19(6):653–73. doi: <a href="https://doi.org/10.1016/S0272-6963(01)00070-5">10.1016/S0272-6963(01)00070-5</a>.
+</div>
+<div class="csl-entry">
+Rungtusanatham, Manus, John C. Anderson, and Kevin J. Dooley. 1997. <span>“Conceptualizing Organizational Implementation and Practice of Statistical Process Control.”</span> <em>Journal of Quality Management</em> 2(1):113–37. doi: <a href="https://doi.org/10.1016/S1084-8568(97)90024-9">10.1016/S1084-8568(97)90024-9</a>.
+</div>
+<div class="csl-entry">
+Sachlas, Athanasios, Sotirios Bersimis, and Stelios Psarakis. 2019. <span>“Risk-<span>Adjusted Control Charts</span>: <span>Theory</span>, <span>Methods</span>, and <span>Applications</span> in <span>Health</span>.”</span> <em>Statistics in Biosciences</em> 11(3):630–58. doi: <a href="https://doi.org/10.1007/s12561-019-09257-z">10.1007/s12561-019-09257-z</a>.
+</div>
+<div class="csl-entry">
+Scrucca, Luca, Greg Snow, and Peter Bloomfield. 2017. <span>“Qcc: An <span>R</span> Package for Quality Control Charting and Statistical Process Control.”</span>
+</div>
+<div class="csl-entry">
+Soage, José Carlos. 2020. <span>“Poisson Distribution in <span>R</span>.”</span> <em>R Coder</em>.
+</div>
+<div class="csl-entry">
+Sparks, Ross S., and John B. F. Field. 2000. <span>“Using <span>Deming</span>’s <span>Funnel Experiment</span> to <span>Demonstrate Effects</span> of <span>Violating Assumptions Underlying Shewhart</span>’s <span>Control Charts</span>.”</span> <em>The American Statistician</em> 54(4):291. doi: <a href="https://doi.org/10.2307/2685781">10.2307/2685781</a>.
+</div>
+<div class="csl-entry">
+SPC for Excel. 2006. <span>“Over-Controlling a Process: <span>The</span> Funnel Experiment.”</span>
+</div>
+<div class="csl-entry">
+SPC for Excel. 2021. <span>“<span>SPC</span> for Excel.”</span>
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1974. <span>“<span>EDF</span> Statistics for Goodness of Fit and Some Comparisons.”</span> <em>Journal of the American Statistical Association</em> 69(347):730–37. doi: <a href="https://doi.org/10.1080/01621459.1974.10480196">10.1080/01621459.1974.10480196</a>.
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1976. <span>“Asymptotic Results for Goodness-of-Fit Statistics with Unknown Parameters.”</span> <em>The Annals of Statistics</em> 4(2):357–69.
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1977. <span>“Goodness of Fit for the Extreme Value Distribution.”</span> <em>Biometrika</em> 64(3):583–88. doi: <a href="https://doi.org/10.1093/biomet/64.3.583">10.1093/biomet/64.3.583</a>.
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1978. <span>“Goodness of Fit with Special Reference to Tests for Exponentiality.”</span> <em>Technical Report No. 262</em>.
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1979. <span>“Tests of Fit for the Logistic Distribution Based on the Empirical Distribution Function.”</span> <em>Biometrika</em> 66(3):591–95. doi: <a href="https://doi.org/10.1093/biomet/66.3.591">10.1093/biomet/66.3.591</a>.
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1979. <span>“The Anderson-Darling Statistic.”</span> in <em>Technical report no. 39</em>. <span>Stanford</span>: <span>Stanford University</span>.
+</div>
+<div class="csl-entry">
+Taboga, Marco. 2017. <span>“Exponential Distribution.”</span> in <em>Lectures on probability theory and mathematical statistics</em>. <span>Kindle Direct Publishing</span>.
+</div>
+<div class="csl-entry">
+Taguchi, G., E. A. Elsayed, and T. Hsiang. 1989. <em>Quality <span>Engineering</span> in <span>Production Systems</span></em>. <span>New York</span>: <span>McGraw Hill</span>.
+</div>
+<div class="csl-entry">
+Tang, Loon Ching, and Su Ee Than. 1999. <span>“Computing Process Capability Indices for Non-Normal Data: A Review and Comparative Study.”</span> <em>Quality and Reliability Engineering International</em> 15(5):339–53. doi: <a href="https://doi.org/10.1002/(SICI)1099-1638(199909/10)15:5&lt;339::AID-QRE259&gt;3.0.CO;2-A">10.1002/(SICI)1099-1638(199909/10)15:5&lt;339::AID-QRE259&gt;3.0.CO;2-A</a>.
+</div>
+<div class="csl-entry">
+Team, R. Studio. 2021. <span>“<span>RStudio</span>: <span>Integrated Development</span> for <span>R</span>.”</span>
+</div>
+<div class="csl-entry">
+Thor, J., J. Lundberg, J. Ask, J. Olsson, C. Carli, K. P. Harenstam, and M. Brommels. 2007. <span>“Application of Statistical Process Control in Healthcare Improvement: Systematic Review.”</span> <em>Quality and Safety in Health Care</em> 16(5):387–99. doi: <a href="https://doi.org/10.1136/qshc.2006.022194">10.1136/qshc.2006.022194</a>.
+</div>
+<div class="csl-entry">
+Trapletti, Adrian, and Kurt Hornik. 2021. <span>“Tseries: <span>Time</span> Series Analysis and Computational Finance.”</span>
+</div>
+<div class="csl-entry">
+Trist, E. L., and K. W. Bamforth. 1951. <span>“Some <span>Social</span> and <span>Psychological Consequences</span> of the <span>Longwall Method</span> of <span>Coal-Getting</span>: <span>An Examination</span> of the <span>Psychological Situation</span> and <span>Defences</span> of a <span>Work Group</span> in <span>Relation</span> to the <span>Social Structure</span> and <span>Technological Content</span> of the <span>Work System</span>.”</span> <em>Human Relations</em> 4(1):3–38. doi: <a href="https://doi.org/10.1177/001872675100400101">10.1177/001872675100400101</a>.
+</div>
+<div class="csl-entry">
+Ugarte, Maria Dolores, Ana F. Militino, and Alan T. Arnholt. 2016. <em>Probability and <span>Statistics</span> with <span>R</span></em>. Second. <span>Boca Raton</span>: <span>CRC Press</span>.
+</div>
+<div class="csl-entry">
+Walker, Helen M. 1940. <span>“<a href="https://doi.org/10.1037/h0054588">Degrees of Freedom.</a>”</span> <em>Journal of Educational Psychology</em> 31:253–69.
+</div>
+<div class="csl-entry">
+Wallander, Jan L., Margaret Schmitt, and Hans M. Koot. 2001. <span>“Quality of Life Measurement in Children and Adolescents: <span>Issues</span>, Instruments, and Applications.”</span> <em>Journal of Clinical Psychology</em> 57(4):571–85. doi: <a href="https://doi.org/10.1002/jclp.1029">10.1002/jclp.1029</a>.
+</div>
+<div class="csl-entry">
+Western Electric Company. 1956. <em>Statistical Quality Control Handbook</em>. <span>Indianapolis</span>: <span>Western Electric Company</span>.
+</div>
+<div class="csl-entry">
+Wheeler, Donald J. 2013. <span>“The <span>Problem</span> of <span>Long-Term Capability</span>.”</span>
+</div>
+<div class="csl-entry">
+Wheeler, Donald J. 2021. <span>“So You Want to Use a p-<span>Chart</span>? <span>Not</span> All Count-Based Data Will Qualify.”</span> <em>QualityDigest</em>.
+</div>
+<div class="csl-entry">
+Wickham, Hadley. 2016. <em>Ggplot2: <span>Elegant</span> Graphics for Data Analysis</em>. <span>Springer-Verlag New York</span>.
+</div>
+<div class="csl-entry">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, Alex Hayes, Lionel Henry, Jim Hester, Max Kuhn, Thomas Lin Pedersen, Evan Miller, Stephan Milton Bache, Kirill Müller, Jeroen Ooms, David Robinson, Dana Paige Seidel, Vitalie Spinu, Kohske Takahashi, Davis Vaughan, Claus Wilke, Kara Woo, and Hiroaki Yutani. 2019. <span>“Welcome to the Tidyverse.”</span> <em>Journal of Open Source Software</em> 4(43):1686. doi: <a href="https://doi.org/10.21105/joss.01686">10.21105/joss.01686</a>.
+</div>
+<div class="csl-entry">
+Wickham, Hadley, and Jennifer Bryan. 2019. <span>“Readxl: <span>Read</span> Excel Files.”</span>
+</div>
+<div class="csl-entry">
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021. <span>“Dplyr: <span>A</span> Grammar of Data Manipulation.”</span>
+</div>
+<div class="csl-entry">
+Woodward, Jane. 1958. <em>Management and Technology</em>. <span>London</span>: <span>HMSO</span>.
+</div>
+<div class="csl-entry">
+Wu, Chien-Wei, W. L. Pearn, and Samuel Kotz. 2009. <span>“An Overview of Theory and Practice on Process Capability Indices for Quality Assurance.”</span> <em>International Journal of Production Economics</em> 117(2):338–59. doi: <a href="https://doi.org/10.1016/j.ijpe.2008.11.008">10.1016/j.ijpe.2008.11.008</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui. n.d. <span>“Bookdown: <span>Authoring Books</span> and <span>Technical Documents</span> with <span>R Markdown</span>. <span>R</span> Package Version 0.24.”</span>
+</div>
+<div class="csl-entry">
+Xie, Yihui, J. J. Allaire, and Grol. 2019. <em><span>RMarkdown</span>: <span>The</span> Definitive Guide</em>. <span>Boca Raton</span>: <span>CRC Press</span>.
+</div>
+<div class="csl-entry">
+Zaiontz, Charles. 2020. <span>“One-Sample Anderson-Darling Test.”</span> <em>Real Statistics Using Excel</em>.
+</div>
+<div class="csl-entry">
+Zhu, Hao. 2021. <span>“<span class="nocase">kableExtra</span>: <span>Construct</span> Complex Table with ’Kable’ and Pipe Syntax.”</span>
+</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vedlegg-1---r-kode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nilskvilvang/SPC2/edit/master/XX_Vedlegg_A_Referanser.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/nilskvilvang/SPC2/blob/master/XX_Vedlegg_A_Referanser.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

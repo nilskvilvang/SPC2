@@ -1,0 +1,7 @@
+"0",""
+"0","m <- mean(normalfordeling)"
+"0","std <- sqrt(var(normalfordeling))"
+"0",""
+"0","curve(dnorm(x, mean = m, sd = std), "
+"0","      col=""darkblue"", lwd = 3, add = TRUE, yaxt = ""n"")"
+"0",""

@@ -1,0 +1,8 @@
+"0",""
+"0","pacman::p_load(qicharts2, qcc, tidyverse, gridExtra)"
+"0",""
+"0","set.seed(81)"
+"0",""
+"0","kontr_eks <- (rnorm(24))"
+"0",""
+"0","kontr1 <- qic(kontr_eks, chart = 'i', title = ""Eksempel på kontrolldiagram"", subtitle = ""Tilfeldig genererte tall"", ylab = ""Verdi"", xlab = ""Hendelse"") "
