@@ -28,7 +28,7 @@ Boka er laget i [R Markdown](http://rmarkdown.rstudio.com) ved hjelp av en rekke
 
 pacman::p_load(kableExtra)
 
-versjon <- data.frame(Dato = c("16.nov 2021", "09.jan 2022", "11.jan 2022", "12.jan 2022", "13.jan 2022", "14.jan 2022", "15.jan 2022", "16.jan 2022", "19.januar"),
+versjon <- data.frame(Dato = c("16.nov 2021", "09.jan 2022", "11.jan 2022", "12.jan 2022", "13.jan 2022", "14.jan 2022", "15.jan 2022", "16.jan 2022", "19.januar 2022"),
                             Endring = c("Grunnversjon", "Oppdatert forside med versjonstabell. Lagt til nytt delkapittel 7.1 om mønstre for kontrolldiagram. Oppdatert vedlegg 4", "Oppdatert bibliografi med R-pakker som er brukt", "Rettet opp feil i vedlegg 1 (koder)", "Oppdatert kap 7 med nytt delkapittel om tolkning av kontrolldiagrammer", "Mindre endringer i kap 1. Ny innledning kap 2.", "Oppdatering i kap 2.1. Endringer i kap 3. Mindre endringer i kap 6. Mindre endringer i kap 7. Nytt vedlegg 9. Nytt vedlegg 10.", "Oppdatert kap 8.Oppdatert vedlegg 10 med flere formler.", "Oppdatert kap 6 med videoeksempel på utarbeidelse av seriediagram i Excel."))
 
 kbl(versjon) %>%

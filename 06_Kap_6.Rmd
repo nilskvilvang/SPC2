@@ -50,7 +50,7 @@ serie2 + geom_point(size = 2)
 
 I det modifiserte seriediagrammet har vi like mange punkter som det forrige (24) så vi burde forvente minst 8 krysninger (regel 2) og siden vi har flere punkter enn 8 etter hverandre på samme side (regel 1) har vi brudd på begge reglene. Dette indikerer en prosess ute av kontroll med unormal variasjon.  
 
-Man må imidlertid være observant på eventuelle endringer i prosesser. I eksempelet ovenfor kan man tenke seg en prosessendring etter hendelse 15. Hvis vi legger dette så vi får et brudd i dataserien etter hendelse 15 inn får vi et annet bilde:
+Man må imidlertid være observant på eventuelle endringer i prosesser. I eksempelet ovenfor kan man tenke seg en prosessendring etter hendelse 15. Hvis vi legger dette så vi får et brudd i dataserien før hendelse 15 og vi får et annet bilde:
 
 ```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "Eksempel seriediagram - modifiserte tall - brudd i prosess"}
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Seriediagram | Statistisk prosesskontroll</title>
   <meta name="description" content="6 Seriediagram | Statistisk prosesskontroll" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Seriediagram | Statistisk prosesskontroll" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="er-dataene-dine-normalfordelte.html"/>
 <link rel="next" href="kontrolldiagram.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,77 +47,13 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -277,19 +211,19 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#måledata-1"><i class="fa fa-check"></i>Måledata</a>
 <ul>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cp-1"><em>C<sub>p</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#pp"><em>P<sub>p</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpk-1"><em>C<sub>pk</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ppk"><em>P<sub>pk</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpm-1"><em>C<sub>pm</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpmk-1"><em>C<sub>pmk</sub></em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#cp-1"><i class="fa fa-check"></i><em>C<sub>p</sub></em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#pp"><i class="fa fa-check"></i><em>P<sub>p</sub></em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#cpk-1"><i class="fa fa-check"></i><em>C<sub>pk</sub></em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#ppk"><i class="fa fa-check"></i><em>P<sub>pk</sub></em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#cpm-1"><i class="fa fa-check"></i><em>C<sub>pm</sub></em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#cpmk-1"><i class="fa fa-check"></i><em>C<sub>pmk</sub></em></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#telledata-1"><i class="fa fa-check"></i>Telledata</a>
 <ul>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpu"><em>DPU</em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpmo"><em>DPMO</em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#loss-function-1"><em>Loss function</em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ikke-normale-data-1"><em>Ikke-normale data</em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#dpu"><i class="fa fa-check"></i><em>DPU</em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#dpmo"><i class="fa fa-check"></i><em>DPMO</em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#loss-function-1"><i class="fa fa-check"></i><em>Loss function</em></a></li>
+<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#ikke-normale-data-1"><i class="fa fa-check"></i><em>Ikke-normale data</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="vedlegg-9---session-info.html"><a href="vedlegg-9---session-info.html"><i class="fa fa-check"></i>Vedlegg 9 - Session Info</a></li>
@@ -312,15 +246,15 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="seriediagram" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Seriediagram</h1>
-<p>Den første analysen vi gir oss i kast med etter å ha fått en forståelse av dataene våre er et seriediagram. Et seriediagram <span class="citation">(jfr. Anhøj and Bjørn 2009)</span> (ofte referert til som “run diagram” siden dette er den engelske betegnelsen) <a href="vedlegg-9---session-info.html#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> er en framstilling av en serie hendelser sekvensielt i tid. Et seriediagram er enkelt å konstruere og tolke. I dette diagrammet kan vi bruke både måledata og telledata, og det spiller ingen rolle om det er hendelser, prosenter eller andeler (i kontrolldiagrammer vil vi være nøye med å skille mellom hvilke typer data vi har slik at vi velger rett kontrolldiagram). Den eneste forutsetningen vi må ha med oss for seriediagrammer er at punktene er uavhengige, altså at verdien i et punkt ikke er påvirket av verdien på foregående punkt. I tillegg anbefales minst 10 punkter av <span class="citation">Berardinelli and Yerian (n.d.)</span>, 15 punkter <span class="citation">(Reynolds et al. 2021)</span>, mens <span class="citation">Anhøj and Bjørn (2009)</span> anbefaler mellom 20 og 30 datapunkter for å få et robust seriediagram. Anbefalingen på mellom 20 og 30 hviler på en balanse mellom å se unormal variasjon der prosessen egentlig er stabil (såkalt type-1 feil) og å ikke se unormal variasjon der den faktisk finnes (såkalt type-2 feil). Det er derfor verdt å merke seg at «mer ikke er bedre» - et stort antall datapunkter øker ikke den statistiske styrken, men øker sjansen for type-2 feil. Vi legger til grunn at anbefalingen fra <span class="citation">Anhøj and Bjørn (2009)</span> virker godt fundert.</p>
-<p>Et seriediagram vil kunne vise oss noe om variasjon, men vi kan også gå glipp av noen mer spesielle former for variasjon. Så fordelen i enkelheten må veies opp mot ulempen ved å være litt mindre sensitiv for spesiell variasjon. Plottingen av et seriediagram kan gjøres enkelt med penn og papir ved at man tiden på x-aksen og en verdi av en måling, en observasjon e.l. på y-aksen. Deretter forbinder man punktene med en linje, og legger til medianen (som er verdien av det datapunktet som deler et utvalg i to)<a href="vedlegg-9---session-info.html#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a>.</p>
+<div id="seriediagram" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Seriediagram<a href="seriediagram.html#seriediagram" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Den første analysen vi gir oss i kast med etter å ha fått en forståelse av dataene våre er et seriediagram. Et seriediagram <span class="citation">(jfr. Anhøj and Bjørn 2009)</span> (ofte referert til som “run diagram” siden dette er den engelske betegnelsen) <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> er en framstilling av en serie hendelser sekvensielt i tid. Et seriediagram er enkelt å konstruere og tolke. I dette diagrammet kan vi bruke både måledata og telledata, og det spiller ingen rolle om det er hendelser, prosenter eller andeler (i kontrolldiagrammer vil vi være nøye med å skille mellom hvilke typer data vi har slik at vi velger rett kontrolldiagram). Den eneste forutsetningen vi må ha med oss for seriediagrammer er at punktene er uavhengige, altså at verdien i et punkt ikke er påvirket av verdien på foregående punkt. I tillegg anbefales minst 10 punkter av <span class="citation">Berardinelli and Yerian (n.d.)</span>, 15 punkter <span class="citation">(Reynolds et al. 2021)</span>, mens <span class="citation">Anhøj and Bjørn (2009)</span> anbefaler mellom 20 og 30 datapunkter for å få et robust seriediagram. Anbefalingen på mellom 20 og 30 hviler på en balanse mellom å se unormal variasjon der prosessen egentlig er stabil (såkalt type-1 feil) og å ikke se unormal variasjon der den faktisk finnes (såkalt type-2 feil). Det er derfor verdt å merke seg at «mer ikke er bedre» - et stort antall datapunkter øker ikke den statistiske styrken, men øker sjansen for type-2 feil. Vi legger til grunn at anbefalingen fra <span class="citation">Anhøj and Bjørn (2009)</span> virker godt fundert.</p>
+<p>Et seriediagram vil kunne vise oss noe om variasjon, men vi kan også gå glipp av noen mer spesielle former for variasjon. Så fordelen i enkelheten må veies opp mot ulempen ved å være litt mindre sensitiv for spesiell variasjon. Plottingen av et seriediagram kan gjøres enkelt med penn og papir ved at man tiden på x-aksen og en verdi av en måling, en observasjon e.l. på y-aksen. Deretter forbinder man punktene med en linje, og legger til medianen (som er verdien av det datapunktet som deler et utvalg i to)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
 <p>Hvorfor “serie” (“run”)? En serie er i denne sammenhengen definert som et antall (ett eller flere) punkter i diagrammet på samme side av medianen. I diagrammet under ser vi et eksempel på et seriediagram. Vi plotter ganske enkelt inn hver enkelt observasjon fortløpende i tid utover x-aksen og verdien iht y-aksen. Sentraltendensen er medianen, hvilket innebærer at halvparten av målingene er over og halve under medianstreken.</p>
 <p>Under finner du et eksempel på seriediagram. Vi har laget en kort video som viser hvordan du kan lage et seriediagram i Excel. Den finner du <a href="https://vimeo.com/667862696">her</a>. Dataene som er brukt i Excelvideoen finner du her:
 <a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,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" download="seriediagram_eksempelvideo.xlsx">Download seriediagram_eksempelvideo.xlsx</a></p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-66"></span>
-<img src="SPC-book_files/figure-html/unnamed-chunk-66-1.png" alt="Eksempel seriediagram" width="672" />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="SPC-book_files/figure-html/unnamed-chunk-2-1.png" alt="Eksempel seriediagram" width="672" />
 <p class="caption">
 Figure 6.1: Eksempel seriediagram
 </p>
@@ -328,20 +262,20 @@ Figure 6.1: Eksempel seriediagram
 <p>Når vi skal tolke seriediagrammet finnes det flere sett av retningslinjer, f.eks. gitt av <span class="citation">Carey (2002)</span> og <span class="citation">Perla, Provost, and Murray (2011)</span>. Vi velger å bruke «Anhøj-reglene» <span class="citation">(Anhøj 2015; Anhøj and Wentzel-Larsen 2020)</span> på seriediagrammene. For det første er det vist at disse reglene gir en god balanse mellom type-1 og type-2 feil. For det andre er det to enkle regler å forholde seg til som gjør tolkningen enklere og raskere. Anhøj-reglene ser på to forhold:</p>
 <ol style="list-style-type: decimal">
 <li>Uvanlig lange serier. Her kan man matematisk regne ut hvor lang serien må være for å regnes som «uvanlig lang»: <span class="math inline">\(log2(n)\)</span> der n = antall punkter/hendelser <span class="citation">(Anhøj 2015)</span>. Så for eksempelet ovenfor må serien være <span class="math inline">\(log2(30)+3=8\)</span>. Det innebærer at dersom vi har flere enn 8 datapunkter etter hverandre på samme side av senterlinjen vil indikere et skift i prosessen.</li>
-<li>Uvanlig få krysninger av senterlinjen. Også her kan vi regne ut hvor mange krysningspunkter det bør være <span class="math inline">\(b(n-1.05)\)</span><a href="vedlegg-9---session-info.html#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>. For eksempelet ovenfor blir derfor et minimum antall krysningspunkter 8. Færre enn 8 krysningspunkter vil indikere et skift i prosessen.</li>
+<li>Uvanlig få krysninger av senterlinjen. Også her kan vi regne ut hvor mange krysningspunkter det bør være <span class="math inline">\(b(n-1.05)\)</span><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. For eksempelet ovenfor blir derfor et minimum antall krysningspunkter 8. Færre enn 8 krysningspunkter vil indikere et skift i prosessen.</li>
 </ol>
 <p>Heldigvis kan det settes opp en tabell slik at vi enkelt kan lese ut de kritiske verdiene <span class="citation">(Anhøj and Wentzel-Larsen 2020)</span> (se vedlegg 2). I eksempelet under har vi igjen 24 observasjoner. Vi bør forvente minst 8 krysninger (regel 2) og siden vi har flere punkter enn 8 etter hverandre på samme side (regel 1) har vi brudd på begge reglene. Dette indikerer en prosess ute av kontroll med unormal variasjon.</p>
 <p>I et nytt eksempel kan vi provosere fram brudd på Anhøj-reglene:</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-67"></span>
-<img src="SPC-book_files/figure-html/unnamed-chunk-67-1.png" alt="Eksempel seriediagram - modifiserte tall" width="672" />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="SPC-book_files/figure-html/unnamed-chunk-3-1.png" alt="Eksempel seriediagram - modifiserte tall" width="672" />
 <p class="caption">
 Figure 6.2: Eksempel seriediagram - modifiserte tall
 </p>
 </div>
 <p>I det modifiserte seriediagrammet har vi like mange punkter som det forrige (24) så vi burde forvente minst 8 krysninger (regel 2) og siden vi har flere punkter enn 8 etter hverandre på samme side (regel 1) har vi brudd på begge reglene. Dette indikerer en prosess ute av kontroll med unormal variasjon.</p>
-<p>Man må imidlertid være observant på eventuelle endringer i prosesser. I eksempelet ovenfor kan man tenke seg en prosessendring etter hendelse 15. Hvis vi legger dette så vi får et brudd i dataserien etter hendelse 15 inn får vi et annet bilde:</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-68"></span>
-<img src="SPC-book_files/figure-html/unnamed-chunk-68-1.png" alt="Eksempel seriediagram - modifiserte tall - brudd i prosess" width="672" />
+<p>Man må imidlertid være observant på eventuelle endringer i prosesser. I eksempelet ovenfor kan man tenke seg en prosessendring etter hendelse 15. Hvis vi legger dette så vi får et brudd i dataserien før hendelse 15 og vi får et annet bilde:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="SPC-book_files/figure-html/unnamed-chunk-4-1.png" alt="Eksempel seriediagram - modifiserte tall - brudd i prosess" width="672" />
 <p class="caption">
 Figure 6.3: Eksempel seriediagram - modifiserte tall - brudd i prosess
 </p>
@@ -360,6 +294,14 @@ Figure 6.3: Eksempel seriediagram - modifiserte tall - brudd i prosess
 If it did, then it makes no sense to do a control chart at this time because the overall average of all these data doesn’t exist. (Sort of like: If I put my right foot in a bucket of boiling water and my left foot in a bucket of ice water, on average, I’m pretty comfortable.)”</p>
 </blockquote>
 
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>I norsk litteratur og nettsteder brukes ofte betegnelsen «run diagram» (se f.eks. <span class="citation">Brudvik (2009)</span>). Selv om vi ikke har noe religiøst forhold til å finne norske begreper på ethvert engelsk begrep mener vi likevel begrepet seriediagram er et mer intuitivt begrep enn «run diagram».<a href="seriediagram.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Har man en serie med oddetall observasjoner vil medianverdien utgjøres av et punkt, mens om man har et partall observasjoner utgjør gjennomsnittet av de to nærmest midten medianverdien.<a href="seriediagram.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>I en prosess som er tilfeldig vil det være 50-50 sjanse for å krysse medianlinjen mellom to punkter som kommer etter hverandre. Det totale antallet krysninger har således en binomialfordeling <span class="citation">(Anhøj 2015)</span><a href="seriediagram.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

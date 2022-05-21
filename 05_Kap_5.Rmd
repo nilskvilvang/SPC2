@@ -44,7 +44,7 @@ ggqqplot(qqnorm$value) + ggtitle("Normal Q-Q plott") + labs(x = "Teoretisk forve
 
 Vi ser at dette Q-Q plottet viser oss at vi kan være ganske sikre på at dette datasettet er normalfordelt (noe som gir meninig siden vi har brukt R til å lage et normalfordelt datasett).
 
-Tolkning av Q-Q plott er imidlertid ikke alltid så enkelt som i eksempelet ovenfor - det er en viss grad av subjektivitet involvert. Underhar vi gjengitt noen typiske mønstre vi kan se og hva de skyldes. Som et supplement til Q-Q plott kan vi bruke ulike testverdier (fra f.eks. Shapiro-Wilk og Anderson-Darling). Disse kommer vi tilbake til senere i kapittelet.
+Tolkning av Q-Q plott er imidlertid ikke alltid så enkelt som i eksempelet ovenfor - det er en viss grad av subjektivitet involvert. Under har vi gjengitt noen typiske mønstre vi kan se og hva de skyldes. Som et supplement til Q-Q plott kan vi bruke ulike testverdier (fra f.eks. Shapiro-Wilk og Anderson-Darling). Disse kommer vi tilbake til senere i kapittelet.
 
 I det første eksempelet på avvik fra den helt klare normalfordelingen lager vi et datasett som har en skjevhet mot høyre ("right skewness") - også kalt positiv skjevhet (uten at det legges noe "positivt" i positivt). Datasettet kan lastes ned i Excelformat her:
 
@@ -77,7 +77,6 @@ qqrighthist <- ggplot(qqrightskew, aes(x=value)) + geom_histogram(color="black",
 qqrightskew_plott <- ggqqplot(qqrightskew$value) + ggtitle("Normal Q-Q plott - skjevhet høyre") + labs(x = "Teoretisk forventning", y = "Data")
 
 grid.arrange(qqrighthist, qqrightskew_plott, ncol=2)
-
 ```
 
 I et datasett med høyreskjevhet vil ofte Q-Q plottet vise en bananform med "bunnen"/midten av bananen ned mot høyre hjørne og endene pekende oppover/utover fra den rette linjen.
@@ -116,7 +115,7 @@ grid.arrange(qqlefthist, qqleftskew_plott, ncol=2)
 
 ```
 
-De neste to tilfellene av avvik vi skal ta for oss er såkalte "light-tailed" (lette haler med liten sannsynlighet for ekstreme verdier og utvalg tendeerer til å ikke fravike gjennomsnittet med mye) og "heavy-tailed" (fete/tunge haler med større sannsynlighet for at ekstreme verdier vil forekomme) fordelinger. Datasett for fete haler er her:
+De neste to tilfellene av avvik vi skal ta for oss er såkalte "light-tailed" (lette haler med liten sannsynlighet for ekstreme verdier og utvalg tenderer til å ikke fravike gjennomsnittet med mye) og "heavy-tailed" (fete/tunge haler med større sannsynlighet for at ekstreme verdier vil forekomme) fordelinger. Datasett for fete haler er her:
 ```{r echo=FALSE, eval=TRUE}
 
 xfun::embed_file('QQ_ht.xlsx')
@@ -291,7 +290,7 @@ ad.test(addata4$value)
 ```
 Her ser vi, ikke overraskende, at både p-verdi og kritisk verdi tilsier at datasettet er normalfordelt.
 
-Det finnes flere andre statistiske tester som kan kjøres for å teste for normalitet, f.eks. Kologorov-Smirnov, Shapiro-Wilks og Cramer Von-Mises test. Vi går ikke inn på manuell utregning av disse i Excel. Anderson-Darling er en modifisering/videreutvikling av Kolmogorov-Smirnov [@guthrieNISTSEMATECHEHandbook2020] og anses ofte som en bedre test.For sammenlikningens skyld kjører vi disse i R:
+Det finnes flere andre statistiske tester som kan kjøres for å teste for normalitet, f.eks. Kologorov-Smirnov, Shapiro-Wilks og Cramer Von-Mises test. Vi går ikke inn på manuell utregning av disse i Excel. Anderson-Darling er en modifisering/videreutvikling av Kolmogorov-Smirnov [@guthrieNISTSEMATECHEHandbook2020] og anses ofte som en bedre test av de to, mens andre kilder (se f.eks. @razaliPowerComparisonsShapiroWilk2011) finner at Shapiro-Wilks presterer best i 10 000 simuleringer på ulike distribusjoner.For sammenlikningens skyld kjører vi disse i R:
 
 ```{r echo=FALSE, eval=TRUE}
 

@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Vedlegg 7 - Anderson-Darling test for normalitet | Statistisk prosesskontroll</title>
-  <meta name="description" content="Vedlegg 7 - Anderson-Darling test for normalitet | Statistisk prosesskontroll" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>Vedlegg 7 - Anderson-Darling test for normalitet | XX_Vedlegg_H_Anderson-Darling.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Vedlegg 7 - Anderson-Darling test for normalitet | Statistisk prosesskontroll" />
+  <meta property="og:title" content="Vedlegg 7 - Anderson-Darling test for normalitet | XX_Vedlegg_H_Anderson-Darling.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Vedlegg 7 - Anderson-Darling test for normalitet | Statistisk prosesskontroll" />
+  <meta name="twitter:title" content="Vedlegg 7 - Anderson-Darling test for normalitet | XX_Vedlegg_H_Anderson-Darling.knit" />
   
   
   
@@ -29,9 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="vedlegg-6---utregning-av-kontrollgrenser.html"/>
-<link rel="next" href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,77 +47,13 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -160,139 +94,7 @@ div.csl-indent {
 <li><a href="./">SPC</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduksjon</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#versjoner"><i class="fa fa-check"></i>Versjoner</a></li>
-</ul></li>
-<li class="chapter" data-level="1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html"><i class="fa fa-check"></i><b>1</b> Hvorfor denne boka?</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="hvorfor-denne-boka.html"><a href="hvorfor-denne-boka.html#programvare"><i class="fa fa-check"></i><b>1.1</b> Programvare</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><i class="fa fa-check"></i><b>2</b> Kvalitet, kvalitetsarbeid og statistisk prosesskontroll</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-statistisk-prosesskontroll"><i class="fa fa-check"></i><b>2.1</b> Hva er statistisk prosesskontroll?</a></li>
-<li class="chapter" data-level="2.2" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hvorfor-er-tid-viktig"><i class="fa fa-check"></i><b>2.2</b> Hvorfor er tid viktig?</a></li>
-<li class="chapter" data-level="2.3" data-path="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html"><a href="kvalitet-kvalitetsarbeid-og-statistisk-prosesskontroll.html#hva-er-utgangspunktet-vi-skal-korrigere-fra"><i class="fa fa-check"></i><b>2.3</b> Hva er utgangspunktet vi skal korrigere fra?</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="variasjon.html"><a href="variasjon.html"><i class="fa fa-check"></i><b>3</b> Variasjon</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="variasjon.html"><a href="variasjon.html#simulering-av-trakteksperimentet-i-r"><i class="fa fa-check"></i><b>3.1</b> Simulering av trakteksperimentet i R</a></li>
-<li class="chapter" data-level="3.2" data-path="variasjon.html"><a href="variasjon.html#normal-og-unormal-variasjon"><i class="fa fa-check"></i><b>3.2</b> Normal og unormal variasjon</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html"><i class="fa fa-check"></i><b>4</b> Datatyper og datafordelinger</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling"><i class="fa fa-check"></i><b>4.1</b> Normalfordeling</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#varians-og-standardavvik"><i class="fa fa-check"></i><b>4.1.1</b> Varians og standardavvik</a></li>
-<li class="chapter" data-level="4.1.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#normalfordeling-standardavvik-og-forventninger"><i class="fa fa-check"></i><b>4.1.2</b> Normalfordeling, standardavvik og forventninger</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#binomialfordeling"><i class="fa fa-check"></i><b>4.2</b> Binomialfordeling</a></li>
-<li class="chapter" data-level="4.3" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#poissonfordeling"><i class="fa fa-check"></i><b>4.3</b> Poissonfordeling</a></li>
-<li class="chapter" data-level="4.4" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#geometrisk-fordeling"><i class="fa fa-check"></i><b>4.4</b> Geometrisk fordeling</a></li>
-<li class="chapter" data-level="4.5" data-path="datatyper-og-datafordelinger.html"><a href="datatyper-og-datafordelinger.html#eksponensiell-fordeling"><i class="fa fa-check"></i><b>4.5</b> Eksponensiell fordeling</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html"><i class="fa fa-check"></i><b>5</b> Er dataene dine normalfordelte?</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#q-q-plott"><i class="fa fa-check"></i><b>5.1</b> Q-Q plott</a></li>
-<li class="chapter" data-level="5.2" data-path="er-dataene-dine-normalfordelte.html"><a href="er-dataene-dine-normalfordelte.html#anderson-darling-test-for-normalitet"><i class="fa fa-check"></i><b>5.2</b> Anderson-Darling test for normalitet</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="seriediagram.html"><a href="seriediagram.html"><i class="fa fa-check"></i><b>6</b> Seriediagram</a></li>
-<li class="chapter" data-level="7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html"><i class="fa fa-check"></i><b>7</b> Kontrolldiagram</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#mønstre-i-kontrolldiagram"><i class="fa fa-check"></i><b>7.1</b> Mønstre i kontrolldiagram</a></li>
-<li class="chapter" data-level="7.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#tolkning-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.2</b> Tolkning av kontrolldiagram</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#punkter-utenfor-kontrollgrensene"><i class="fa fa-check"></i><b>7.2.1</b> Punkter utenfor kontrollgrensene:</a></li>
-<li class="chapter" data-level="7.2.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-3-påfølgende-punkter-er-mer-enn-2-sigma-fra-gjennomsnittsverdien-i-sone-a-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.2</b> 2 av 3 påfølgende punkter er mer enn 2 sigma fra gjennomsnittsverdien (i sone A) og i samme retning</a></li>
-<li class="chapter" data-level="7.2.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#av-5-påfølgende-punkter-er-mer-enn-1-sigma-fra-gjennomsnittsverdien-sone-a-og-b-og-i-samme-retning"><i class="fa fa-check"></i><b>7.2.3</b> 4 av 5 påfølgende punkter er mer enn 1 sigma fra gjennomsnittsverdien (sone A og B) og i samme retning</a></li>
-<li class="chapter" data-level="7.2.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-på-samme-side-av-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.4</b> 8 påfølgende punkter er på samme side av gjennomsnittet</a></li>
-<li class="chapter" data-level="7.2.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-i-stigende-eller-synkende-trend-etter-hverandre"><i class="fa fa-check"></i><b>7.2.5</b> 6 påfølgende punkter er i stigende eller synkende trend (etter hverandre)</a></li>
-<li class="chapter" data-level="7.2.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-er-innenfor---1-sigma-fra-gjennomsnittet"><i class="fa fa-check"></i><b>7.2.6</b> 15 påfølgende punkter er innenfor +/- 1 sigma fra gjennomsnittet</a></li>
-<li class="chapter" data-level="7.2.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-alternerer-opp-og-ned-annenhver-opp-og-ned-i-forhold-til-foregående-verdi"><i class="fa fa-check"></i><b>7.2.7</b> 14 påfølgende punkter alternerer opp og ned (annenhver opp og ned i forhold til foregående verdi)</a></li>
-<li class="chapter" data-level="7.2.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#påfølgende-punkter-på-samme-side-av-gjennomsnittet-og-ingen-innenfor---1-sigma"><i class="fa fa-check"></i><b>7.2.8</b> 8 påfølgende punkter på samme side av gjennomsnittet og ingen innenfor +/- 1 sigma</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#telledata-attributter"><i class="fa fa-check"></i><b>7.3</b> Telledata (attributter)</a>
-<ul>
-<li class="chapter" data-level="7.3.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#p-diagram"><i class="fa fa-check"></i><b>7.3.1</b> p-diagram</a></li>
-<li class="chapter" data-level="7.3.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-p-diagram"><i class="fa fa-check"></i><b>7.3.2</b> Laney’s p-diagram</a></li>
-<li class="chapter" data-level="7.3.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#np-diagram"><i class="fa fa-check"></i><b>7.3.3</b> np-diagram</a></li>
-<li class="chapter" data-level="7.3.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#u-diagram"><i class="fa fa-check"></i><b>7.3.4</b> u-diagram</a></li>
-<li class="chapter" data-level="7.3.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#laneys-u-diagram"><i class="fa fa-check"></i><b>7.3.5</b> Laney’s u-diagram</a></li>
-<li class="chapter" data-level="7.3.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#c-diagram"><i class="fa fa-check"></i><b>7.3.6</b> c-diagram</a></li>
-<li class="chapter" data-level="7.3.7" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#g-diagram"><i class="fa fa-check"></i><b>7.3.7</b> g-diagram</a></li>
-<li class="chapter" data-level="7.3.8" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#utfordringer-med-telledata-og-distribusjon-på-dataene"><i class="fa fa-check"></i><b>7.3.8</b> Utfordringer med telledata og distribusjon på dataene</a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#måledata-variabler"><i class="fa fa-check"></i><b>7.4</b> Måledata (variabler)</a>
-<ul>
-<li class="chapter" data-level="7.4.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#imr-xmr"><i class="fa fa-check"></i><b>7.4.1</b> IMR (XMR)</a></li>
-<li class="chapter" data-level="7.4.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbarr"><i class="fa fa-check"></i><b>7.4.2</b> XbarR</a></li>
-<li class="chapter" data-level="7.4.3" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#xbars"><i class="fa fa-check"></i><b>7.4.3</b> XbarS</a></li>
-<li class="chapter" data-level="7.4.4" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#t-diagram"><i class="fa fa-check"></i><b>7.4.4</b> T-diagram</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#spesielle-kontrolldiagram-cusum-og-ewma"><i class="fa fa-check"></i><b>7.5</b> Spesielle kontrolldiagram (CUSUM og EWMA)</a>
-<ul>
-<li class="chapter" data-level="7.5.1" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#cusum"><i class="fa fa-check"></i><b>7.5.1</b> CUSUM</a></li>
-<li class="chapter" data-level="7.5.2" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#ewma"><i class="fa fa-check"></i><b>7.5.2</b> EWMA</a></li>
-</ul></li>
-<li class="chapter" data-level="7.6" data-path="kontrolldiagram.html"><a href="kontrolldiagram.html#risikojustering-av-kontrolldiagram"><i class="fa fa-check"></i><b>7.6</b> Risikojustering av kontrolldiagram</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html"><i class="fa fa-check"></i><b>8</b> Prosesskapabilitet</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#histogrammer"><i class="fa fa-check"></i><b>8.1</b> Histogrammer</a></li>
-<li class="chapter" data-level="8.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#boxplots"><i class="fa fa-check"></i><b>8.2</b> Boxplots</a></li>
-<li class="chapter" data-level="8.3" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#kapabilitetsindekser"><i class="fa fa-check"></i><b>8.3</b> Kapabilitetsindekser</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#måledata"><i class="fa fa-check"></i><b>8.3.1</b> Måledata</a></li>
-<li class="chapter" data-level="8.3.2" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#telledata"><i class="fa fa-check"></i><b>8.3.2</b> Telledata</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#loss-function"><i class="fa fa-check"></i><b>8.4</b> Loss function</a></li>
-<li class="chapter" data-level="8.5" data-path="prosesskapabilitet.html"><a href="prosesskapabilitet.html#ikke-normale-data"><i class="fa fa-check"></i><b>8.5</b> Ikke-normale data</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><i class="fa fa-check"></i><b>9</b> SPC som del av et helhetlig og kontinuerlig kvalitetsarbeid</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#dmaic"><i class="fa fa-check"></i><b>9.1</b> DMAIC</a></li>
-<li class="chapter" data-level="9.2" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#pareto"><i class="fa fa-check"></i><b>9.2</b> Pareto</a></li>
-<li class="chapter" data-level="9.3" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#flytdiagram"><i class="fa fa-check"></i><b>9.3</b> Flytdiagram</a></li>
-<li class="chapter" data-level="9.4" data-path="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html"><a href="spc-som-del-av-et-helhetlig-og-kontinuerlig-kvalitetsarbeid.html#eksperimenter"><i class="fa fa-check"></i><b>9.4</b> Eksperimenter</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="referanser.html"><a href="referanser.html"><i class="fa fa-check"></i>Referanser</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-1---r-kode.html"><a href="vedlegg-1---r-kode.html"><i class="fa fa-check"></i>Vedlegg 1 - R kode</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><a href="vedlegg-2---kritiske-verdier-i-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 2 - Kritiske verdier i kontrolldiagram</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-3---chebyshevs-teorem.html"><a href="vedlegg-3---chebyshevs-teorem.html"><i class="fa fa-check"></i>Vedlegg 3 - Chebyshevs teorem</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><a href="vedlegg-4---sentralgrenseteoremet-central-limit-theorem.html"><i class="fa fa-check"></i>Vedlegg 4 - Sentralgrenseteoremet (Central Limit Theorem)</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><a href="vedlegg-5---tabell-med-konstanter-for-kontrolldiagram.html"><i class="fa fa-check"></i>Vedlegg 5 - Tabell med konstanter for kontrolldiagram</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-6---utregning-av-kontrollgrenser.html"><a href="vedlegg-6---utregning-av-kontrollgrenser.html"><i class="fa fa-check"></i>Vedlegg 6 - Utregning av kontrollgrenser</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-7---anderson-darling-test-for-normalitet.html"><a href="vedlegg-7---anderson-darling-test-for-normalitet.html"><i class="fa fa-check"></i>Vedlegg 7 - Anderson-Darling test for normalitet</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><i class="fa fa-check"></i>Vedlegg 8 - Nedlasting, installasjon og enkel bruk av R og RStudio</a>
-<ul>
-<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-r"><i class="fa fa-check"></i>Nedlasting og installasjon av R</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#nedlasting-og-installasjon-av-rstudio"><i class="fa fa-check"></i>Nedlasting og installasjon av RStudio</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#rstudio"><i class="fa fa-check"></i>RStudio</a>
-<ul>
-<li class="chapter" data-level="" data-path="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html"><a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html#grunnleggende-bruk-av-rstudio"><i class="fa fa-check"></i>Grunnleggende bruk av RStudio</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><a href="vedlegg-9---dimensjoner-i-implementering-av-spc.html"><i class="fa fa-check"></i>Vedlegg 9 - Dimensjoner i implementering av SPC</a></li>
-<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html"><i class="fa fa-check"></i>Vedlegg 10 - Formler prosesskapabilitet</a>
-<ul>
-<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#måledata-1"><i class="fa fa-check"></i>Måledata</a>
-<ul>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cp-1"><em>C<sub>p</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#pp"><em>P<sub>p</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpk-1"><em>C<sub>pk</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ppk"><em>P<sub>pk</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpm-1"><em>C<sub>pm</sub></em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#cpmk-1"><em>C<sub>pmk</sub></em></a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="vedlegg-10---formler-prosesskapabilitet.html"><a href="vedlegg-10---formler-prosesskapabilitet.html#telledata-1"><i class="fa fa-check"></i>Telledata</a>
-<ul>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpu"><em>DPU</em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#dpmo"><em>DPMO</em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#loss-function-1"><em>Loss function</em></a></li>
-<li><a href="vedlegg-10---formler-prosesskapabilitet.html#ikke-normale-data-1"><em>Ikke-normale data</em></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="vedlegg-9---session-info.html"><a href="vedlegg-9---session-info.html"><i class="fa fa-check"></i>Vedlegg 9 - Session Info</a></li>
+<li><a href="#vedlegg-7---anderson-darling-test-for-normalitet">Vedlegg 7 - Anderson-Darling test for normalitet<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -304,7 +106,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistisk prosesskontroll</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -312,8 +114,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="vedlegg-7---anderson-darling-test-for-normalitet" class="section level1 unnumbered">
-<h1>Vedlegg 7 - Anderson-Darling test for normalitet</h1>
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="vedlegg-7---anderson-darling-test-for-normalitet" class="section level1 unnumbered hasAnchor">
+<h1>Vedlegg 7 - Anderson-Darling test for normalitet<a href="#vedlegg-7---anderson-darling-test-for-normalitet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Jfr. <span class="citation">Anderson and Darling (1954)</span>, <span class="citation">Stephens (1979)</span>, <span class="citation">Jäntschi and Bolboacă (2018)</span> og <span class="citation">Zaiontz (2020)</span></p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -386,22 +190,56 @@ Logistisk
 </tbody>
 </table>
 <p>For gammafordeling er <em>k</em> parameteret (“shape parameter”) definert som <span class="math inline">\(\alpha\)</span>.</p>
-<p>Kritiske verdier for Anderson-Darling test. Merk: hvis man søker på nett finner man ulike framstillinger med noen avvikende verdier – vi har basert verdiene for normalfordeling på <span class="citation">D’Agostino and Stephens (1986:123, tabell 4.7)</span>. Øvrige verdier er basert på <span class="citation">Marsaglia and Marsaglia (2004)</span> og Stephens <span class="citation">(1974, 1976, 1977, 1978, 1979)</span>.</p>
+<p>Kritiske verdier for Anderson-Darling test. Merk: hvis man søker på nett finner man ulike framstillinger med noen avvikende verdier – vi har basert verdiene for normalfordeling på <span class="citation">D’Agostino and Stephens (1986, 123, tabell 4.7)</span>. Øvrige verdier er basert på <span class="citation">Marsaglia and Marsaglia (2004)</span> og Stephens <span class="citation">(1974, 1976, 1977, 1978, 1979)</span>.</p>
 <p>Du kan laste ned tabellen i en Excel-fil her:
 <a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,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" download="AD-alpha.xlsx">Download AD-alpha.xlsx</a></p>
 <div class="figure">
 <img src="AD-alpha.png" alt="" />
 <p class="caption">Tabell over <span class="math inline">\(\alpha\)</span> verdier</p>
 </div>
-
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Anderson, T. W., and D. A. Darling. 1954. <span>“A Test of Goodness of Fit.”</span> <em>Journal of the American Statistical Association</em> 49 (268): 765. <a href="https://doi.org/10.2307/2281537">https://doi.org/10.2307/2281537</a>.
+</div>
+<div class="csl-entry">
+D’Agostino, R. B., and M. A. Stephens, eds. 1986. <em>Goodness-of Fit Techniques</em>. <span>Marcel Dekker</span>.
+</div>
+<div class="csl-entry">
+Jäntschi, Lorentz, and Sorana D. Bolboacă. 2018. <span>“Computation of Probability Associated with <span>Anderson</span> Statistic.”</span> <em>Mathematics</em> 6 (6): 88. <a href="https://doi.org/10.3390/math6060088">https://doi.org/10.3390/math6060088</a>.
+</div>
+<div class="csl-entry">
+Marsaglia, George, and John Marsaglia. 2004. <span>“Evaluating the Anderson-Darling Distribution.”</span> <em>Journal of Statistical Software</em> 9 (2). <a href="https://doi.org/10.18637/jss.v009.i02">https://doi.org/10.18637/jss.v009.i02</a>.
+</div>
+<div class="csl-entry">
+Stephens, M. A. 1974. <span>“<span>EDF</span> Statistics for Goodness of Fit and Some Comparisons.”</span> <em>Journal of the American Statistical Association</em> 69 (347): 730–37. <a href="https://doi.org/10.1080/01621459.1974.10480196">https://doi.org/10.1080/01621459.1974.10480196</a>.
+</div>
+<div class="csl-entry">
+———. 1976. <span>“Asymptotic Results for Goodness-of-Fit Statistics with Unknown Parameters.”</span> <em>The Annals of Statistics</em> 4 (2): 357–69.
+</div>
+<div class="csl-entry">
+———. 1977. <span>“Goodness of Fit for the Extreme Value Distribution.”</span> <em>Biometrika</em> 64 (3): 583–88. <a href="https://doi.org/10.1093/biomet/64.3.583">https://doi.org/10.1093/biomet/64.3.583</a>.
+</div>
+<div class="csl-entry">
+———. 1978. <span>“Goodness of Fit with Special Reference to Tests for Exponentiality.”</span> <em>Technical Report No. 262</em>.
+</div>
+<div class="csl-entry">
+———. 1979. <span>“The Anderson-Darling Statistic.”</span> In <em>Technical Report No. 39</em>. <span>Stanford</span>: <span>Stanford University</span>.
+</div>
+<div class="csl-entry">
+———. 1979. <span>“Tests of Fit for the Logistic Distribution Based on the Empirical Distribution Function.”</span> <em>Biometrika</em> 66 (3): 591–95. <a href="https://doi.org/10.1093/biomet/66.3.591">https://doi.org/10.1093/biomet/66.3.591</a>.
+</div>
+<div class="csl-entry">
+Zaiontz, Charles. 2020. <span>“One-Sample Anderson-Darling Test.”</span> <em>Real Statistics Using Excel</em>.
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="vedlegg-6---utregning-av-kontrollgrenser.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="vedlegg-8---nedlasting-installasjon-og-enkel-bruk-av-r-og-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -432,7 +270,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/nilskvilvang/SPC2/edit/master/XX_Vedlegg_H_Anderson-Darling.Rmd",
+"link": "https://github.com/nilskvilvang/SPC2/edit/master/%s",
 "text": "Edit"
 },
 "history": {
@@ -440,14 +278,11 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/nilskvilvang/SPC2/blob/master/XX_Vedlegg_H_Anderson-Darling.Rmd",
+"link": "https://github.com/nilskvilvang/SPC2/blob/master/%s",
 "text": null
 },
 "download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
+"search": false,
 "toc": {
 "collapse": "subsection"
 }

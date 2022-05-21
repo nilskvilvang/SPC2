@@ -174,7 +174,7 @@ text(0, 0.2, "68 %", col = "black")
 
 ```
 
-Ett standardavvik "over og under" 0 (= det skraverte området i grafen over) innebærer at det er 68 % sannsynlighet for at en tilfeldig valgt x-verdi befinner seg i dette intervallet. Vi kan vise det samme for 2 og 3 standardavvik:
+Ett standardavvik "over og under" 0 (= det skraverte området i grafen over) innebærer at i et normalfordelt datasett vil 68 % av tilfeldig valgte x-verdier befinner seg i dette intervallet. Vi kan vise det samme for 2 og 3 standardavvik:
 
 ```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "Normalfordeling med 2 standardavvik"}
 
@@ -198,7 +198,7 @@ text(0, 0.2, "95 %", col = "black")
 
 ```
 
-To standardavvik "over og under" 0 (= det skraverte området i grafen over) innebærer at det er 95 % sannsynlighet for at en tilfeldig valgt x-verdi befinner seg i dette intervallet. Vi kan finne arealet mellom x=-2 og x=2, som er `r pnorm(2,mean=0,sd=1)-pnorm(-2,mean=0,sd=1)`^[R-kode for utregning av areal mellom to x-verdier i en normalfordeing (=sannsynlighet for at en gitt x-verdi ligger i intervallet mellom de to x-verdiene): pnorm(2,mean=0,sd=1)-pnorm(-2,mean=0,sd=1)].
+To standardavvik "over og under" 0 (= det skraverte området i grafen over) innebærer at i et normalfordelt datasett vil 95 % av tilfeldig valgte x-verdier befinner seg i dette intervallet. Vi kan finne arealet mellom x=-2 og x=2, som er `r pnorm(2,mean=0,sd=1)-pnorm(-2,mean=0,sd=1)`^[R-kode for utregning av areal mellom to x-verdier i en normalfordeing (=sannsynlighet for at en gitt x-verdi ligger i intervallet mellom de to x-verdiene): pnorm(2,mean=0,sd=1)-pnorm(-2,mean=0,sd=1)].
 
 ```{r echo = FALSE, message = FALSE, warning=FALSE, fig.cap = "Normalfordeling med 3 standardavvik"}
 
@@ -222,7 +222,7 @@ text(0, 0.2, "99.7 %", col = "black")
 
 ```
 
-Tre standardavvik "over og under" 0 (= det skraverte området i grafen over) innebærer at det er 99.7 % sannsynlighet for at en tilfeldig valgt x-verdi befinner seg i dette intervallet. Vi kan finne arealet mellom x=-3 og x=3, som er `r pnorm(3,mean=0,sd=1)-pnorm(-3,mean=0,sd=1)`^[pnorm(3,mean=0,sd=1)-pnorm(-3,mean=0,sd=1)]. Dette utgjør et kjernepunkt i statistisk prosesskontroll som vi vil komme mye tilbake til.
+Tre standardavvik "over og under" 0 (= det skraverte området i grafen over) innebærer at i et normalfordelt datasett vil 99.7 % av tilfeldig valgte x-verdier befinner seg i dette intervallet. Vi kan finne arealet mellom x=-3 og x=3, som er `r pnorm(3,mean=0,sd=1)-pnorm(-3,mean=0,sd=1)`^[pnorm(3,mean=0,sd=1)-pnorm(-3,mean=0,sd=1)]. Dette utgjør et kjernepunkt i statistisk prosesskontroll som vi vil komme mye tilbake til.
 
 Oppsummert kan vi framstille normalfodeling og standardavvik slik [@hartmannVarianceStandardDeviation2018]:
 

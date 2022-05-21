@@ -137,3 +137,4 @@ dmaic
 pareto
 flytdiagram
 eksperimenter
+tab:unnamed-chunk-5
